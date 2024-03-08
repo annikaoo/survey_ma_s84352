@@ -240,15 +240,18 @@ const surveyJson = {
       html: "Mit Klick auf <b>„Weiter“</b> beginnt die Studie und das erste Diagramm wird gezeigt."
      }
     ]
-   },
+   },   //Diagramm 1
    {
     name: "page6",
     elements: [
      {
-      type: "file",
+      type: "image",
       name: "question2",
-      title: "Diagramm"
-     }
+      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=24074100-7805-4083-ad2f-075d7139615f",
+      imageFit: "cover",
+      imageHeight: "auto",
+      imageWidth: "100%"
+     } 
     ]
    },
    {
@@ -326,7 +329,7 @@ const surveyJson = {
       ]
      }
     ]
-   },
+   },   //Diagramm 2
    {
     name: "page8",
     elements: [
@@ -340,11 +343,14 @@ const surveyJson = {
    {
     name: "page9",
     elements: [
-     {
-      type: "file",
-      name: "question16",
-      title: "Diagramm"
-     }
+      {
+        type: "image",
+        name: "question16",
+        imageLink: "https://api.surveyjs.io/private/Surveys/files?name=afd79b26-c5c9-429b-8b91-2fee35724bf3",
+        imageFit: "cover",
+        imageHeight: "auto",
+        imageWidth: "100%"
+      }
     ]
    },
    {
@@ -422,9 +428,801 @@ const surveyJson = {
       ]
      }
     ]
-   },
+   },   //Diagramm 3
    {
     name: "page11",
+    elements: [
+     {
+      type: "html",
+      name: "question15",
+      html: "<h6>Bereit für die nächste Aufgabe?</h6><br>\nMit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+     }
+    ]
+   },
+   {
+    name: "page12",
+    elements: [
+      {
+        type: "image",
+        name: "question16",
+        imageLink: "https://api.surveyjs.io/private/Surveys/files?name=4abd7f13-6f07-4a6d-8dd1-8b572cb2a8ba",
+        imageFit: "cover",
+        imageHeight: "auto",
+        imageWidth: "100%"
+      }
+    ]
+   },
+   {
+    name: "page13",
+    elements: [
+     {
+      type: "checkbox",
+      name: "question17",
+      title: "Mit welchen Begriffen lässt sich das Diagramm beschreiben?",
+      "choices": [
+       {
+        value: "Item 1",
+        text: "dick"
+       },
+       {
+        value: "Item 2",
+        text: "dünn"
+       },
+       {
+        value: "Item 3",
+        text: "symmetrisch"
+       },
+       {
+        value: "Item 4",
+        text: "asymmetrisch"
+       },
+       {
+        value: "Item 5",
+        text: "bunt"
+       },
+       {
+        value: "Item 6",
+        text: "unbunt"
+       },
+       {
+        value: "Item 7",
+        text: "komplex"
+       },
+       {
+        value: "Item 8",
+        text: "einfach"
+       },
+       {
+        value: "Item 9",
+        text: "eckig"
+       },
+       {
+        value: "Item 10",
+        text: "rund"
+       },
+       {
+        value: "Item 11",
+        text: "harmonisch"
+       },
+       {
+        value: "Item 12",
+        text: "chaotisch"
+       },
+       {
+        value: "Item 13",
+        text: "aktiv"
+       },
+       {
+        value: "Item 14",
+        text: "passiv"
+       },
+       {
+        value: "Item 15",
+        text: "klein"
+       },
+       {
+        value: "Item 16",
+        text: "groß"
+       }
+      ]
+     }
+    ]
+   },   //Diagramm 4
+   {
+    name: "page14",
+    elements: [
+     {
+      type: "html",
+      name: "question15",
+      html: "<h6>Bereit für die nächste Aufgabe?</h6><br>\nMit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+     }
+    ]
+   },
+   {
+    name: "page15",
+    elements: [
+      {
+        type: "image",
+        name: "question16",
+        imageLink: "https://api.surveyjs.io/private/Surveys/files?name=600e2056-a5bd-4079-87c5-08607c7e6b82",
+        imageFit: "cover",
+        imageHeight: "auto",
+        imageWidth: "100%"
+      }
+    ]
+   },
+   {
+    name: "page16",
+    elements: [
+     {
+      type: "checkbox",
+      name: "question17",
+      title: "Mit welchen Begriffen lässt sich das Diagramm beschreiben?",
+      "choices": [
+       {
+        value: "Item 1",
+        text: "dick"
+       },
+       {
+        value: "Item 2",
+        text: "dünn"
+       },
+       {
+        value: "Item 3",
+        text: "symmetrisch"
+       },
+       {
+        value: "Item 4",
+        text: "asymmetrisch"
+       },
+       {
+        value: "Item 5",
+        text: "bunt"
+       },
+       {
+        value: "Item 6",
+        text: "unbunt"
+       },
+       {
+        value: "Item 7",
+        text: "komplex"
+       },
+       {
+        value: "Item 8",
+        text: "einfach"
+       },
+       {
+        value: "Item 9",
+        text: "eckig"
+       },
+       {
+        value: "Item 10",
+        text: "rund"
+       },
+       {
+        value: "Item 11",
+        text: "harmonisch"
+       },
+       {
+        value: "Item 12",
+        text: "chaotisch"
+       },
+       {
+        value: "Item 13",
+        text: "aktiv"
+       },
+       {
+        value: "Item 14",
+        text: "passiv"
+       },
+       {
+        value: "Item 15",
+        text: "klein"
+       },
+       {
+        value: "Item 16",
+        text: "groß"
+       }
+      ]
+     }
+    ]
+   },   //Diagramm 5
+   {
+    name: "page17",
+    elements: [
+     {
+      type: "html",
+      name: "question15",
+      html: "<h6>Bereit für die nächste Aufgabe?</h6><br>\nMit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+     }
+    ]
+   },
+   {
+    name: "page18",
+    elements: [
+      {
+        type: "image",
+        name: "question16",
+        imageLink: "https://api.surveyjs.io/private/Surveys/files?name=69118f1c-986b-43f8-9ffe-3e3435d95ca8",
+        imageFit: "cover",
+        imageHeight: "auto",
+        imageWidth: "100%"
+      }
+    ]
+   },
+   {
+    name: "page19",
+    elements: [
+     {
+      type: "checkbox",
+      name: "question17",
+      title: "Mit welchen Begriffen lässt sich das Diagramm beschreiben?",
+      "choices": [
+       {
+        value: "Item 1",
+        text: "dick"
+       },
+       {
+        value: "Item 2",
+        text: "dünn"
+       },
+       {
+        value: "Item 3",
+        text: "symmetrisch"
+       },
+       {
+        value: "Item 4",
+        text: "asymmetrisch"
+       },
+       {
+        value: "Item 5",
+        text: "bunt"
+       },
+       {
+        value: "Item 6",
+        text: "unbunt"
+       },
+       {
+        value: "Item 7",
+        text: "komplex"
+       },
+       {
+        value: "Item 8",
+        text: "einfach"
+       },
+       {
+        value: "Item 9",
+        text: "eckig"
+       },
+       {
+        value: "Item 10",
+        text: "rund"
+       },
+       {
+        value: "Item 11",
+        text: "harmonisch"
+       },
+       {
+        value: "Item 12",
+        text: "chaotisch"
+       },
+       {
+        value: "Item 13",
+        text: "aktiv"
+       },
+       {
+        value: "Item 14",
+        text: "passiv"
+       },
+       {
+        value: "Item 15",
+        text: "klein"
+       },
+       {
+        value: "Item 16",
+        text: "groß"
+       }
+      ]
+     }
+    ]
+   },   //Diagramm 6
+   {
+    name: "page20",
+    elements: [
+     {
+      type: "html",
+      name: "question15",
+      html: "<h6>Bereit für die nächste Aufgabe?</h6><br>\nMit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+     }
+    ]
+   },
+   {
+    name: "page21",
+    elements: [
+      {
+        type: "image",
+        name: "question16",
+        imageLink: "https://api.surveyjs.io/private/Surveys/files?name=f5277ce0-fd27-43f4-a113-c9aa3a5ad08c",
+        imageFit: "cover",
+        imageHeight: "auto",
+        imageWidth: "100%"
+      }
+    ]
+   },
+   {
+    name: "page22",
+    elements: [
+     {
+      type: "checkbox",
+      name: "question17",
+      title: "Mit welchen Begriffen lässt sich das Diagramm beschreiben?",
+      "choices": [
+       {
+        value: "Item 1",
+        text: "dick"
+       },
+       {
+        value: "Item 2",
+        text: "dünn"
+       },
+       {
+        value: "Item 3",
+        text: "symmetrisch"
+       },
+       {
+        value: "Item 4",
+        text: "asymmetrisch"
+       },
+       {
+        value: "Item 5",
+        text: "bunt"
+       },
+       {
+        value: "Item 6",
+        text: "unbunt"
+       },
+       {
+        value: "Item 7",
+        text: "komplex"
+       },
+       {
+        value: "Item 8",
+        text: "einfach"
+       },
+       {
+        value: "Item 9",
+        text: "eckig"
+       },
+       {
+        value: "Item 10",
+        text: "rund"
+       },
+       {
+        value: "Item 11",
+        text: "harmonisch"
+       },
+       {
+        value: "Item 12",
+        text: "chaotisch"
+       },
+       {
+        value: "Item 13",
+        text: "aktiv"
+       },
+       {
+        value: "Item 14",
+        text: "passiv"
+       },
+       {
+        value: "Item 15",
+        text: "klein"
+       },
+       {
+        value: "Item 16",
+        text: "groß"
+       }
+      ]
+     }
+    ]
+   },   //Diagramm 7
+   {
+    name: "page23",
+    elements: [
+     {
+      type: "html",
+      name: "question15",
+      html: "<h6>Bereit für die nächste Aufgabe?</h6><br>\nMit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+     }
+    ]
+   },
+   {
+    name: "page24",
+    elements: [
+      {
+        type: "image",
+        name: "question16",
+        imageLink: "https://api.surveyjs.io/private/Surveys/files?name=a024b5d0-cec1-4273-94ed-07212be04a51",
+        imageFit: "cover",
+        imageHeight: "auto",
+        imageWidth: "100%"
+      }
+    ]
+   },
+   {
+    name: "page25",
+    elements: [
+     {
+      type: "checkbox",
+      name: "question17",
+      title: "Mit welchen Begriffen lässt sich das Diagramm beschreiben?",
+      "choices": [
+       {
+        value: "Item 1",
+        text: "dick"
+       },
+       {
+        value: "Item 2",
+        text: "dünn"
+       },
+       {
+        value: "Item 3",
+        text: "symmetrisch"
+       },
+       {
+        value: "Item 4",
+        text: "asymmetrisch"
+       },
+       {
+        value: "Item 5",
+        text: "bunt"
+       },
+       {
+        value: "Item 6",
+        text: "unbunt"
+       },
+       {
+        value: "Item 7",
+        text: "komplex"
+       },
+       {
+        value: "Item 8",
+        text: "einfach"
+       },
+       {
+        value: "Item 9",
+        text: "eckig"
+       },
+       {
+        value: "Item 10",
+        text: "rund"
+       },
+       {
+        value: "Item 11",
+        text: "harmonisch"
+       },
+       {
+        value: "Item 12",
+        text: "chaotisch"
+       },
+       {
+        value: "Item 13",
+        text: "aktiv"
+       },
+       {
+        value: "Item 14",
+        text: "passiv"
+       },
+       {
+        value: "Item 15",
+        text: "klein"
+       },
+       {
+        value: "Item 16",
+        text: "groß"
+       }
+      ]
+     }
+    ]
+   },   //Diagramm 8
+   {
+    name: "page26",
+    elements: [
+     {
+      type: "html",
+      name: "question15",
+      html: "<h6>Bereit für die nächste Aufgabe?</h6><br>\nMit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+     }
+    ]
+   },
+   {
+    name: "page27",
+    elements: [
+      {
+        type: "image",
+        name: "question16",
+        imageLink: "https://api.surveyjs.io/private/Surveys/files?name=8486188c-806d-41ab-98ae-1d72eacef7f7",
+        imageFit: "cover",
+        imageHeight: "auto",
+        imageWidth: "100%"
+      }
+    ]
+   },
+   {
+    name: "page28",
+    elements: [
+     {
+      type: "checkbox",
+      name: "question17",
+      title: "Mit welchen Begriffen lässt sich das Diagramm beschreiben?",
+      "choices": [
+       {
+        value: "Item 1",
+        text: "dick"
+       },
+       {
+        value: "Item 2",
+        text: "dünn"
+       },
+       {
+        value: "Item 3",
+        text: "symmetrisch"
+       },
+       {
+        value: "Item 4",
+        text: "asymmetrisch"
+       },
+       {
+        value: "Item 5",
+        text: "bunt"
+       },
+       {
+        value: "Item 6",
+        text: "unbunt"
+       },
+       {
+        value: "Item 7",
+        text: "komplex"
+       },
+       {
+        value: "Item 8",
+        text: "einfach"
+       },
+       {
+        value: "Item 9",
+        text: "eckig"
+       },
+       {
+        value: "Item 10",
+        text: "rund"
+       },
+       {
+        value: "Item 11",
+        text: "harmonisch"
+       },
+       {
+        value: "Item 12",
+        text: "chaotisch"
+       },
+       {
+        value: "Item 13",
+        text: "aktiv"
+       },
+       {
+        value: "Item 14",
+        text: "passiv"
+       },
+       {
+        value: "Item 15",
+        text: "klein"
+       },
+       {
+        value: "Item 16",
+        text: "groß"
+       }
+      ]
+     }
+    ]
+   },   //Diagramm 9
+   {
+    name: "page29",
+    elements: [
+     {
+      type: "html",
+      name: "question15",
+      html: "<h6>Bereit für die nächste Aufgabe?</h6><br>\nMit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+     }
+    ]
+   },
+   {
+    name: "page30",
+    elements: [
+      {
+        type: "image",
+        name: "question16",
+        imageLink: "https://api.surveyjs.io/private/Surveys/files?name=e97d2654-5c60-42df-a565-08bdb8978dad",
+        imageFit: "cover",
+        imageHeight: "auto",
+        imageWidth: "100%"
+      }
+    ]
+   },
+   {
+    name: "page31",
+    elements: [
+     {
+      type: "checkbox",
+      name: "question17",
+      title: "Mit welchen Begriffen lässt sich das Diagramm beschreiben?",
+      "choices": [
+       {
+        value: "Item 1",
+        text: "dick"
+       },
+       {
+        value: "Item 2",
+        text: "dünn"
+       },
+       {
+        value: "Item 3",
+        text: "symmetrisch"
+       },
+       {
+        value: "Item 4",
+        text: "asymmetrisch"
+       },
+       {
+        value: "Item 5",
+        text: "bunt"
+       },
+       {
+        value: "Item 6",
+        text: "unbunt"
+       },
+       {
+        value: "Item 7",
+        text: "komplex"
+       },
+       {
+        value: "Item 8",
+        text: "einfach"
+       },
+       {
+        value: "Item 9",
+        text: "eckig"
+       },
+       {
+        value: "Item 10",
+        text: "rund"
+       },
+       {
+        value: "Item 11",
+        text: "harmonisch"
+       },
+       {
+        value: "Item 12",
+        text: "chaotisch"
+       },
+       {
+        value: "Item 13",
+        text: "aktiv"
+       },
+       {
+        value: "Item 14",
+        text: "passiv"
+       },
+       {
+        value: "Item 15",
+        text: "klein"
+       },
+       {
+        value: "Item 16",
+        text: "groß"
+       }
+      ]
+     }
+    ]
+   },   //Diagramm 10
+   {
+    name: "page32",
+    elements: [
+     {
+      type: "html",
+      name: "question15",
+      html: "<h6>Bereit für die nächste Aufgabe?</h6><br>\nMit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+     }
+    ]
+   },
+   {
+    name: "page33",
+    elements: [
+      {
+        type: "image",
+        name: "question16",
+        imageLink: "https://api.surveyjs.io/private/Surveys/files?name=d028bc9d-4e05-4aaf-b1bc-9325bb00e10c",
+        imageFit: "cover",
+        imageHeight: "auto",
+        imageWidth: "100%"
+      }
+    ]
+   },
+   {
+    name: "page34",
+    elements: [
+     {
+      type: "checkbox",
+      name: "question17",
+      title: "Mit welchen Begriffen lässt sich das Diagramm beschreiben?",
+      "choices": [
+       {
+        value: "Item 1",
+        text: "dick"
+       },
+       {
+        value: "Item 2",
+        text: "dünn"
+       },
+       {
+        value: "Item 3",
+        text: "symmetrisch"
+       },
+       {
+        value: "Item 4",
+        text: "asymmetrisch"
+       },
+       {
+        value: "Item 5",
+        text: "bunt"
+       },
+       {
+        value: "Item 6",
+        text: "unbunt"
+       },
+       {
+        value: "Item 7",
+        text: "komplex"
+       },
+       {
+        value: "Item 8",
+        text: "einfach"
+       },
+       {
+        value: "Item 9",
+        text: "eckig"
+       },
+       {
+        value: "Item 10",
+        text: "rund"
+       },
+       {
+        value: "Item 11",
+        text: "harmonisch"
+       },
+       {
+        value: "Item 12",
+        text: "chaotisch"
+       },
+       {
+        value: "Item 13",
+        text: "aktiv"
+       },
+       {
+        value: "Item 14",
+        text: "passiv"
+       },
+       {
+        value: "Item 15",
+        text: "klein"
+       },
+       {
+        value: "Item 16",
+        text: "groß"
+       }
+      ]
+     }
+    ]
+   },   //Anfang Teil 2 der Studie
+   {
+    name: "page35",
     elements: [
      {
       type: "html",
@@ -432,14 +1230,647 @@ const surveyJson = {
       html: "<h6>Studienablauf - Teil 2</h6><br>\nNun werden Ihnen die Diagramme erneut gezeigt. <b>Bewerten</b> Sie diese bitte anhand der <b>vorgegebenen Kriterien</b>. Bei dieser Aufgabe gibt es <b>keine Zeitbeschränkung</b>."
      }
     ]
-   },
+   },   //Bewertung Diagramm 1
    {
-    name: "page12",
+    name: "page36",
     elements: [
      {
-      type: "file",
-      name: "question20",
-      title: "Diagramm"
+      type: "image",
+      name: "question16",
+      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=24074100-7805-4083-ad2f-075d7139615f",
+      imageFit: "cover",
+      imageHeight: "auto",
+      imageWidth: "100%"
+     },
+     {
+      type: "matrix",
+      name: "question19",
+      title: "Inwieweit stimmen Sie zu, dass sich das Diagramm mit folgenden Worten beschreiben lässt?",
+      "columns": [
+       {
+        value: "Column 1",
+        text: "1 - stimme überhaupt nicht zu"
+       },
+       {
+        value: "Column 2",
+        text: "2"
+       },
+       {
+        value: "Column 3",
+        text: "3"
+       },
+       {
+        value: "Column 4",
+        text: "4"
+       },
+       {
+        value: "Column 5",
+        text: "5"
+       },
+       {
+        value: "Column 6",
+        text: "6"
+       },
+       {
+        value: "Column 7",
+        text: "7 - stimme voll und ganz zu"
+       }
+      ],
+      "rows": [
+       {
+        value: "Row 1",
+        text: "erfreulich"
+       },
+       {
+        value: "Row 2",
+        text: "sympathisch"
+       },
+       {
+        value: "Row 3",
+        text: "angenehm"
+       },
+       {
+        value: "Row 4",
+        text: "nett"
+       },
+       {
+        value: "Row 5",
+        text: "ansprechend"
+       }
+      ]
+     }
+    ]
+   },   //Bewertung Diagramm 2
+   {
+    name: "page37",
+    elements: [
+     {
+      type: "image",
+      name: "question16",
+      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=afd79b26-c5c9-429b-8b91-2fee35724bf3",
+      imageFit: "cover",
+      imageHeight: "auto",
+      imageWidth: "100%"
+     },
+     {
+      type: "matrix",
+      name: "question19",
+      title: "Inwieweit stimmen Sie zu, dass sich das Diagramm mit folgenden Worten beschreiben lässt?",
+      "columns": [
+       {
+        value: "Column 1",
+        text: "1 - stimme überhaupt nicht zu"
+       },
+       {
+        value: "Column 2",
+        text: "2"
+       },
+       {
+        value: "Column 3",
+        text: "3"
+       },
+       {
+        value: "Column 4",
+        text: "4"
+       },
+       {
+        value: "Column 5",
+        text: "5"
+       },
+       {
+        value: "Column 6",
+        text: "6"
+       },
+       {
+        value: "Column 7",
+        text: "7 - stimme voll und ganz zu"
+       }
+      ],
+      "rows": [
+       {
+        value: "Row 1",
+        text: "erfreulich"
+       },
+       {
+        value: "Row 2",
+        text: "sympathisch"
+       },
+       {
+        value: "Row 3",
+        text: "angenehm"
+       },
+       {
+        value: "Row 4",
+        text: "nett"
+       },
+       {
+        value: "Row 5",
+        text: "ansprechend"
+       }
+      ]
+     }
+    ]
+   },   //Bewertung Diagramm 3
+   {
+    name: "page38",
+    elements: [
+     {
+      type: "image",
+      name: "question16",
+      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=4abd7f13-6f07-4a6d-8dd1-8b572cb2a8ba",
+      imageFit: "cover",
+      imageHeight: "auto",
+      imageWidth: "100%"
+     },
+     {
+      type: "matrix",
+      name: "question19",
+      title: "Inwieweit stimmen Sie zu, dass sich das Diagramm mit folgenden Worten beschreiben lässt?",
+      "columns": [
+       {
+        value: "Column 1",
+        text: "1 - stimme überhaupt nicht zu"
+       },
+       {
+        value: "Column 2",
+        text: "2"
+       },
+       {
+        value: "Column 3",
+        text: "3"
+       },
+       {
+        value: "Column 4",
+        text: "4"
+       },
+       {
+        value: "Column 5",
+        text: "5"
+       },
+       {
+        value: "Column 6",
+        text: "6"
+       },
+       {
+        value: "Column 7",
+        text: "7 - stimme voll und ganz zu"
+       }
+      ],
+      "rows": [
+       {
+        value: "Row 1",
+        text: "erfreulich"
+       },
+       {
+        value: "Row 2",
+        text: "sympathisch"
+       },
+       {
+        value: "Row 3",
+        text: "angenehm"
+       },
+       {
+        value: "Row 4",
+        text: "nett"
+       },
+       {
+        value: "Row 5",
+        text: "ansprechend"
+       }
+      ]
+     }
+    ]
+   },   //Bewertung Diagramm 4
+   {
+    name: "page38",
+    elements: [
+     {
+      type: "image",
+      name: "question16",
+      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=600e2056-a5bd-4079-87c5-08607c7e6b82",
+      imageFit: "cover",
+      imageHeight: "auto",
+      imageWidth: "100%"
+     },
+     {
+      type: "matrix",
+      name: "question19",
+      title: "Inwieweit stimmen Sie zu, dass sich das Diagramm mit folgenden Worten beschreiben lässt?",
+      "columns": [
+       {
+        value: "Column 1",
+        text: "1 - stimme überhaupt nicht zu"
+       },
+       {
+        value: "Column 2",
+        text: "2"
+       },
+       {
+        value: "Column 3",
+        text: "3"
+       },
+       {
+        value: "Column 4",
+        text: "4"
+       },
+       {
+        value: "Column 5",
+        text: "5"
+       },
+       {
+        value: "Column 6",
+        text: "6"
+       },
+       {
+        value: "Column 7",
+        text: "7 - stimme voll und ganz zu"
+       }
+      ],
+      "rows": [
+       {
+        value: "Row 1",
+        text: "erfreulich"
+       },
+       {
+        value: "Row 2",
+        text: "sympathisch"
+       },
+       {
+        value: "Row 3",
+        text: "angenehm"
+       },
+       {
+        value: "Row 4",
+        text: "nett"
+       },
+       {
+        value: "Row 5",
+        text: "ansprechend"
+       }
+      ]
+     }
+    ]
+   },   //Bewertung Diagramm 5
+   {
+    name: "page39",
+    elements: [
+     {
+      type: "image",
+      name: "question16",
+      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=69118f1c-986b-43f8-9ffe-3e3435d95ca8",
+      imageFit: "cover",
+      imageHeight: "auto",
+      imageWidth: "100%"
+     },
+     {
+      type: "matrix",
+      name: "question19",
+      title: "Inwieweit stimmen Sie zu, dass sich das Diagramm mit folgenden Worten beschreiben lässt?",
+      "columns": [
+       {
+        value: "Column 1",
+        text: "1 - stimme überhaupt nicht zu"
+       },
+       {
+        value: "Column 2",
+        text: "2"
+       },
+       {
+        value: "Column 3",
+        text: "3"
+       },
+       {
+        value: "Column 4",
+        text: "4"
+       },
+       {
+        value: "Column 5",
+        text: "5"
+       },
+       {
+        value: "Column 6",
+        text: "6"
+       },
+       {
+        value: "Column 7",
+        text: "7 - stimme voll und ganz zu"
+       }
+      ],
+      "rows": [
+       {
+        value: "Row 1",
+        text: "erfreulich"
+       },
+       {
+        value: "Row 2",
+        text: "sympathisch"
+       },
+       {
+        value: "Row 3",
+        text: "angenehm"
+       },
+       {
+        value: "Row 4",
+        text: "nett"
+       },
+       {
+        value: "Row 5",
+        text: "ansprechend"
+       }
+      ]
+     }
+    ]
+   },   //Bewertung Diagramm 6
+   {
+    name: "page40",
+    elements: [
+     {
+      type: "image",
+      name: "question16",
+      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=f5277ce0-fd27-43f4-a113-c9aa3a5ad08c",
+      imageFit: "cover",
+      imageHeight: "auto",
+      imageWidth: "100%"
+     },
+     {
+      type: "matrix",
+      name: "question19",
+      title: "Inwieweit stimmen Sie zu, dass sich das Diagramm mit folgenden Worten beschreiben lässt?",
+      "columns": [
+       {
+        value: "Column 1",
+        text: "1 - stimme überhaupt nicht zu"
+       },
+       {
+        value: "Column 2",
+        text: "2"
+       },
+       {
+        value: "Column 3",
+        text: "3"
+       },
+       {
+        value: "Column 4",
+        text: "4"
+       },
+       {
+        value: "Column 5",
+        text: "5"
+       },
+       {
+        value: "Column 6",
+        text: "6"
+       },
+       {
+        value: "Column 7",
+        text: "7 - stimme voll und ganz zu"
+       }
+      ],
+      "rows": [
+       {
+        value: "Row 1",
+        text: "erfreulich"
+       },
+       {
+        value: "Row 2",
+        text: "sympathisch"
+       },
+       {
+        value: "Row 3",
+        text: "angenehm"
+       },
+       {
+        value: "Row 4",
+        text: "nett"
+       },
+       {
+        value: "Row 5",
+        text: "ansprechend"
+       }
+      ]
+     }
+    ]
+   },   //Bewrtung Diagramm 7
+   {
+    name: "page41",
+    elements: [
+     {
+      type: "image",
+      name: "question16",
+      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=a024b5d0-cec1-4273-94ed-07212be04a51",
+      imageFit: "cover",
+      imageHeight: "auto",
+      imageWidth: "100%"
+     },
+     {
+      type: "matrix",
+      name: "question19",
+      title: "Inwieweit stimmen Sie zu, dass sich das Diagramm mit folgenden Worten beschreiben lässt?",
+      "columns": [
+       {
+        value: "Column 1",
+        text: "1 - stimme überhaupt nicht zu"
+       },
+       {
+        value: "Column 2",
+        text: "2"
+       },
+       {
+        value: "Column 3",
+        text: "3"
+       },
+       {
+        value: "Column 4",
+        text: "4"
+       },
+       {
+        value: "Column 5",
+        text: "5"
+       },
+       {
+        value: "Column 6",
+        text: "6"
+       },
+       {
+        value: "Column 7",
+        text: "7 - stimme voll und ganz zu"
+       }
+      ],
+      "rows": [
+       {
+        value: "Row 1",
+        text: "erfreulich"
+       },
+       {
+        value: "Row 2",
+        text: "sympathisch"
+       },
+       {
+        value: "Row 3",
+        text: "angenehm"
+       },
+       {
+        value: "Row 4",
+        text: "nett"
+       },
+       {
+        value: "Row 5",
+        text: "ansprechend"
+       }
+      ]
+     }
+    ]
+   },   //Bewertung Diagramm 8
+   {
+    name: "page42",
+    elements: [
+     {
+      type: "image",
+      name: "question16",
+      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=8486188c-806d-41ab-98ae-1d72eacef7f7",
+      imageFit: "cover",
+      imageHeight: "auto",
+      imageWidth: "100%"
+     },
+     {
+      type: "matrix",
+      name: "question19",
+      title: "Inwieweit stimmen Sie zu, dass sich das Diagramm mit folgenden Worten beschreiben lässt?",
+      "columns": [
+       {
+        value: "Column 1",
+        text: "1 - stimme überhaupt nicht zu"
+       },
+       {
+        value: "Column 2",
+        text: "2"
+       },
+       {
+        value: "Column 3",
+        text: "3"
+       },
+       {
+        value: "Column 4",
+        text: "4"
+       },
+       {
+        value: "Column 5",
+        text: "5"
+       },
+       {
+        value: "Column 6",
+        text: "6"
+       },
+       {
+        value: "Column 7",
+        text: "7 - stimme voll und ganz zu"
+       }
+      ],
+      "rows": [
+       {
+        value: "Row 1",
+        text: "erfreulich"
+       },
+       {
+        value: "Row 2",
+        text: "sympathisch"
+       },
+       {
+        value: "Row 3",
+        text: "angenehm"
+       },
+       {
+        value: "Row 4",
+        text: "nett"
+       },
+       {
+        value: "Row 5",
+        text: "ansprechend"
+       }
+      ]
+     }
+    ]
+   },   //Bewertung Diagramm 9
+   {
+    name: "page43",
+    elements: [
+     {
+      type: "image",
+      name: "question16",
+      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=e97d2654-5c60-42df-a565-08bdb8978dad",
+      imageFit: "cover",
+      imageHeight: "auto",
+      imageWidth: "100%"
+     },
+     {
+      type: "matrix",
+      name: "question19",
+      title: "Inwieweit stimmen Sie zu, dass sich das Diagramm mit folgenden Worten beschreiben lässt?",
+      "columns": [
+       {
+        value: "Column 1",
+        text: "1 - stimme überhaupt nicht zu"
+       },
+       {
+        value: "Column 2",
+        text: "2"
+       },
+       {
+        value: "Column 3",
+        text: "3"
+       },
+       {
+        value: "Column 4",
+        text: "4"
+       },
+       {
+        value: "Column 5",
+        text: "5"
+       },
+       {
+        value: "Column 6",
+        text: "6"
+       },
+       {
+        value: "Column 7",
+        text: "7 - stimme voll und ganz zu"
+       }
+      ],
+      "rows": [
+       {
+        value: "Row 1",
+        text: "erfreulich"
+       },
+       {
+        value: "Row 2",
+        text: "sympathisch"
+       },
+       {
+        value: "Row 3",
+        text: "angenehm"
+       },
+       {
+        value: "Row 4",
+        text: "nett"
+       },
+       {
+        value: "Row 5",
+        text: "ansprechend"
+       }
+      ]
+     }
+    ]
+   },   //Bewertung Diagramm 10
+   {
+    name: "page44",
+    elements: [
+     {
+      type: "image",
+      name: "question16",
+      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=d028bc9d-4e05-4aaf-b1bc-9325bb00e10c",
+      imageFit: "cover",
+      imageHeight: "auto",
+      imageWidth: "100%"
      },
      {
       type: "matrix",
@@ -501,7 +1932,7 @@ const surveyJson = {
     ]
    },
    {
-    name: "page13",
+    name: "page45",
     elements: [
      {
       type: "html",
