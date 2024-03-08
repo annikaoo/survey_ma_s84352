@@ -62,94 +62,94 @@ const surveyJson = {
    {
     name: "page3",
     elements: [
-     {
-      type: "html",
-      name: "question6",
-      html: "<h6>Demographische Daten</h6><br>\nBitte geben Sie die im Folgenden genannten demographischen Informationen an. Diese sind hilfreich, um die Umfrageergebnisse besser analysieren zu können.\n"
-     },
-     {
-      type: "text",
-      name: "question7",
-      title: "Alter",
-      hideNumber: true,
-      isRequired: true,
-      inputType: "number",
-      min: 1,
-      step: 1
-     },
-     {
-      type: "radiogroup",
-      name: "question8",
-      title: "Geschlecht",
-      hideNumber: true,
-      isRequired: true,
-      choices: [
-       {
-        value: "Item 1",
-        text: "männlich"
-       },
-       {
-        value: "Item 2",
-        text: "weiblich"
-       },
-       {
-        value: "Item 3",
-        text: "divers"
-       }
-      ]
-     },
-     {
-      type: "radiogroup",
-      name: "question9",
-      title: "Tätigkeit",
-      hideNumber: true,
-      isRequired: true,
-      choices: [
-       {
-        value: "Item 1",
-        text: "Student:in"
-       },
-       {
-        value: "Item 2",
-        text: "Auszubildende:r"
-       },
-       {
-        value: "Item 4",
-        text: "Schüler:in"
-       },
-       {
-        value: "Item 3",
-        text: "Berufstätig"
-       },
-       {
-        value: "Item 5",
-        text: "Arbeitssuchend"
-       }
-      ],
-      showOtherItem: true,
-      noneText: "Keine der oben genannten",
-      otherText: "Sonstige Tätigkeit:"
-     },
-     {
-      type: "matrix",
-      name: "question21",
-      title: "Wie hoch ist Ihr Interesse zum Thema Umwelt?",
-      hideNumber: true,
-      isRequired: true,
-      columns: [
-       "hohes Interesse",
-       "Interesse",
-       "neutral",
-       "kein Interesse",
-       "Desinteresse"
-      ],
-      rows: [
-       "Interessegrad"
-      ]
-     }
-    ]
-   },
-   {
+    {
+     type: "html",
+     name: "question6",
+     html: "<h6>Demographische Daten</h6><br>\nBitte geben Sie die im Folgenden genannten demographischen Informationen an. Diese sind hilfreich, um die Umfrageergebnisse besser analysieren zu können.\n"
+    },
+    {
+     type: "text",
+     name: "question7",
+     title: "Alter",
+     hideNumber: true,
+     isRequired: true,
+     inputType: "number",
+     min: 1,
+     step: 1
+    },
+    {
+     type: "radiogroup",
+     name: "question8",
+     title: "Geschlecht",
+     hideNumber: true,
+     isRequired: true,
+     choices: [
+      {
+       value: "Item 1",
+       text: "männlich"
+      },
+      {
+       value: "Item 2",
+       text: "weiblich"
+      },
+      {
+       value: "Item 3",
+       text: "divers"
+      }
+     ]
+    },
+    {
+     type: "radiogroup",
+     name: "question9",
+     title: "Tätigkeit",
+     hideNumber: true,
+     isRequired: true,
+     choices: [
+      {
+       value: "Item 1",
+       text: "Student:in"
+      },
+      {
+       value: "Item 2",
+       text: "Auszubildende:r"
+      },
+      {
+       value: "Item 4",
+       text: "Schüler:in"
+      },
+      {
+       value: "Item 3",
+       text: "Berufstätig"
+      },
+      {
+       value: "Item 5",
+       text: "Arbeitssuchend"
+      }
+     ],
+     showOtherItem: true,
+     noneText: "Keine der oben genannten",
+     otherText: "Sonstige Tätigkeit:"
+    },
+    {
+     type: "matrix",
+     name: "question21",
+     title: "Wie hoch ist Ihr Interesse zum Thema Umwelt?",
+     hideNumber: true,
+     isRequired: true,
+     columns: [
+      "hohes Interesse",
+      "Interesse",
+      "neutral",
+      "kein Interesse",
+      "Desinteresse"
+     ],
+     "rows": [
+      "Interessegrad"
+     ]
+    }
+   ],
+  },
+  {
     name: "page4",
     elements: [
      {
@@ -229,7 +229,8 @@ const surveyJson = {
        }
       ]
      }
-    ]
+    ],
+    //navigationButtonsVisibility: "hide"
    },
    {
     name: "page5",
