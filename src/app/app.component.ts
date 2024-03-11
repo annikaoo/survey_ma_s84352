@@ -158,76 +158,72 @@ const surveyJson = {
       html: "<h6>Studienablauf - Teil 1</h6><br>\nIm Folgenden werden Ihnen verschiedene <b>Diagramme und beschreibende Adjektive</b> gezeigt.<br>\nZunächst wird Ihnen<b> 3s</b> lang ein <b>Diagramm</b> gezeigt. Nach Ablauf der Zeit werden 16 Adjektive aufgelistet. Wählen Sie bitte innerhalb von <b>10s</b> die <b>Begriffe</b> aus, die das zuvor dargestellte Diagramm Ihrer Meinung nach am besten beschreiben.<br>\nDie Anzahl der gewählten Wörter spielt dabei keine Rolle - es gibt keine Mindest- oder Maximalanzahl auszuwählender Wörter."
      },
      {
-      type: "checkbox",
-      name: "question14",
-      title: "Folgende Begriffe werden zur Auswahl stehen:",
-      hideNumber: true,
-      "choices": [
-       {
-        value: "Item 1",
-        text: "dick"
-       },
-       {
-        value: "Item 2",
-        text: "dünn"
-       },
-       {
-        value: "Item 3",
-        text: "symmetrisch"
-       },
-       {
-        value: "Item 4",
-        text: "asymmetrisch"
-       },
-       {
-        value: "Item 5",
-        text: "bunt"
-       },
-       {
-        value: "Item 6",
-        text: "unbunt"
-       },
-       {
-        value: "Item 7",
-        text: "komplex"
-       },
-       {
-        value: "Item 8",
-        text: "einfach"
-       },
-       {
-        value: "Item 9",
-        text: "eckig"
-       },
-       {
-        value: "Item 10",
-        text: "rund"
-       },
-       {
-        value: "Item 11",
-        text: "harmonisch"
-       },
-       {
-        value: "Item 12",
-        text: "chaotisch"
-       },
-       {
-        value: "Item 13",
-        text: "aktiv"
-       },
-       {
-        value: "Item 14",
-        text: "passiv"
-       },
-       {
-        value: "Item 15",
-        text: "klein"
-       },
-       {
-        value: "Item 16",
-        text: "groß"
-       }
-      ]
+      type: "html",
+      name: "question10_2",
+      html: "<br><b>Folgende Begriffe werden zur Auswahl stehen:</b>"
+     },
+     {
+      type: "html",
+      name: "questionTest",
+      html: `
+      <div>
+      <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
+            <label for="frage11">dick</label>
+            <input type="checkbox" id="frage11" name="frage1" value="dick" />
+            <input type="checkbox" id="frage12" name="frage1" value="dünn" />
+            <label for="frage12">dünn</label>
+         </section>
+         
+         <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
+            <label for="frage21">symmetrisch</label>
+            <input type="checkbox" id="frage21" name="frage2" value="symmetrisch" />
+            <input type="checkbox" id="frage22" name="frage2" value="asymmetrisch" />
+            <label for="frage22">asymmetrisch</label>
+         </section>
+
+         <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+            <label for="frage21">bunt</label>
+            <input type="checkbox" id="frage21" name="frage2" value="bunt" />
+            <input type="checkbox" id="frage22" name="frage2" value="unbunt" />
+            <label for="frage22">unbunt</label>
+         </section>
+
+         <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
+            <label for="frage21">komplex</label>
+            <input type="checkbox" id="frage21" name="frage2" value="komplex" />
+            <input type="checkbox" id="frage22" name="frage2" value="einfach" />
+            <label for="frage22">einfach</label>
+         </section>
+
+         <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
+            <label for="frage21">eckig</label>
+            <input type="checkbox" id="frage21" name="frage2" value="eckig" />
+            <input type="checkbox" id="frage22" name="frage2" value="rund" />
+            <label for="frage22">rund</label>
+         </section>
+
+         <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
+            <label for="frage21">harmonisch</label>
+            <input type="checkbox" id="frage21" name="frage2" value="harmonisch" />
+            <input type="checkbox" id="frage22" name="frage2" value="chaotisch" />
+            <label for="frage22">chaotisch</label>
+         </section>
+
+         <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+            <label for="frage21">aktiv</label>
+            <input type="checkbox" id="frage21" name="frage2" value="aktiv" />
+            <input type="checkbox" id="frage22" name="frage2" value="passiv" />
+            <label for="frage22">passiv</label>
+         </section>
+
+         <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+            <label for="frage21">klein</label>
+            <input type="checkbox" id="frage21" name="frage2" value="klein" />
+            <input type="checkbox" id="frage22" name="frage2" value="groß" />
+            <label for="frage22">groß</label>
+         </section>
+      </div>
+        `
      }
     ],
     //navigationButtonsVisibility: "hide"
@@ -251,7 +247,7 @@ const surveyJson = {
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=24074100-7805-4083-ad2f-075d7139615f",
       imageFit: "cover",
       imageHeight: "auto",
-      imageWidth: "100%"
+      imageWidth: "70%"
      } 
     ]
    },
@@ -337,7 +333,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question15",
-      html: "<h6>Bereit für die nächste Aufgabe?</h6><br>\nMit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
      }
     ]
    },
@@ -350,7 +346,7 @@ const surveyJson = {
         imageLink: "https://api.surveyjs.io/private/Surveys/files?name=afd79b26-c5c9-429b-8b91-2fee35724bf3",
         imageFit: "cover",
         imageHeight: "auto",
-        imageWidth: "100%"
+        imageWidth: "60%"
       }
     ]
    },
@@ -436,7 +432,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question15",
-      html: "<h6>Bereit für die nächste Aufgabe?</h6><br>\nMit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
      }
     ]
    },
@@ -449,7 +445,7 @@ const surveyJson = {
         imageLink: "https://api.surveyjs.io/private/Surveys/files?name=4abd7f13-6f07-4a6d-8dd1-8b572cb2a8ba",
         imageFit: "cover",
         imageHeight: "auto",
-        imageWidth: "100%"
+        imageWidth: "70%"
       }
     ]
    },
@@ -535,7 +531,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question15",
-      html: "<h6>Bereit für die nächste Aufgabe?</h6><br>\nMit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
      }
     ]
    },
@@ -548,7 +544,7 @@ const surveyJson = {
         imageLink: "https://api.surveyjs.io/private/Surveys/files?name=600e2056-a5bd-4079-87c5-08607c7e6b82",
         imageFit: "cover",
         imageHeight: "auto",
-        imageWidth: "100%"
+        imageWidth: "70%"
       }
     ]
    },
@@ -634,7 +630,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question15",
-      html: "<h6>Bereit für die nächste Aufgabe?</h6><br>\nMit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
      }
     ]
    },
@@ -647,7 +643,7 @@ const surveyJson = {
         imageLink: "https://api.surveyjs.io/private/Surveys/files?name=69118f1c-986b-43f8-9ffe-3e3435d95ca8",
         imageFit: "cover",
         imageHeight: "auto",
-        imageWidth: "100%"
+        imageWidth: "70%"
       }
     ]
    },
@@ -733,7 +729,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question15",
-      html: "<h6>Bereit für die nächste Aufgabe?</h6><br>\nMit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
      }
     ]
    },
@@ -746,7 +742,7 @@ const surveyJson = {
         imageLink: "https://api.surveyjs.io/private/Surveys/files?name=f5277ce0-fd27-43f4-a113-c9aa3a5ad08c",
         imageFit: "cover",
         imageHeight: "auto",
-        imageWidth: "100%"
+        imageWidth: "70%"
       }
     ]
    },
@@ -832,7 +828,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question15",
-      html: "<h6>Bereit für die nächste Aufgabe?</h6><br>\nMit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
      }
     ]
    },
@@ -845,7 +841,7 @@ const surveyJson = {
         imageLink: "https://api.surveyjs.io/private/Surveys/files?name=a024b5d0-cec1-4273-94ed-07212be04a51",
         imageFit: "cover",
         imageHeight: "auto",
-        imageWidth: "100%"
+        imageWidth: "70%"
       }
     ]
    },
@@ -931,7 +927,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question15",
-      html: "<h6>Bereit für die nächste Aufgabe?</h6><br>\nMit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
      }
     ]
    },
@@ -944,7 +940,7 @@ const surveyJson = {
         imageLink: "https://api.surveyjs.io/private/Surveys/files?name=8486188c-806d-41ab-98ae-1d72eacef7f7",
         imageFit: "cover",
         imageHeight: "auto",
-        imageWidth: "100%"
+        imageWidth: "70%"
       }
     ]
    },
@@ -1030,7 +1026,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question15",
-      html: "<h6>Bereit für die nächste Aufgabe?</h6><br>\nMit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
      }
     ]
    },
@@ -1043,7 +1039,7 @@ const surveyJson = {
         imageLink: "https://api.surveyjs.io/private/Surveys/files?name=e97d2654-5c60-42df-a565-08bdb8978dad",
         imageFit: "cover",
         imageHeight: "auto",
-        imageWidth: "100%"
+        imageWidth: "70%"
       }
     ]
    },
@@ -1129,7 +1125,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question15",
-      html: "<h6>Bereit für die nächste Aufgabe?</h6><br>\nMit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
      }
     ]
    },
@@ -1142,7 +1138,7 @@ const surveyJson = {
         imageLink: "https://api.surveyjs.io/private/Surveys/files?name=d028bc9d-4e05-4aaf-b1bc-9325bb00e10c",
         imageFit: "cover",
         imageHeight: "auto",
-        imageWidth: "100%"
+        imageWidth: "70%"
       }
     ]
    },
@@ -1241,7 +1237,7 @@ const surveyJson = {
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=24074100-7805-4083-ad2f-075d7139615f",
       imageFit: "cover",
       imageHeight: "auto",
-      imageWidth: "100%"
+      imageWidth: "70%"
      },
      {
       type: "matrix",
@@ -1311,7 +1307,7 @@ const surveyJson = {
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=afd79b26-c5c9-429b-8b91-2fee35724bf3",
       imageFit: "cover",
       imageHeight: "auto",
-      imageWidth: "100%"
+      imageWidth: "60%"
      },
      {
       type: "matrix",
@@ -1381,7 +1377,7 @@ const surveyJson = {
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=4abd7f13-6f07-4a6d-8dd1-8b572cb2a8ba",
       imageFit: "cover",
       imageHeight: "auto",
-      imageWidth: "100%"
+      imageWidth: "70%"
      },
      {
       type: "matrix",
@@ -1451,7 +1447,7 @@ const surveyJson = {
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=600e2056-a5bd-4079-87c5-08607c7e6b82",
       imageFit: "cover",
       imageHeight: "auto",
-      imageWidth: "100%"
+      imageWidth: "70%"
      },
      {
       type: "matrix",
@@ -1521,7 +1517,7 @@ const surveyJson = {
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=69118f1c-986b-43f8-9ffe-3e3435d95ca8",
       imageFit: "cover",
       imageHeight: "auto",
-      imageWidth: "100%"
+      imageWidth: "70%"
      },
      {
       type: "matrix",
@@ -1591,7 +1587,7 @@ const surveyJson = {
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=f5277ce0-fd27-43f4-a113-c9aa3a5ad08c",
       imageFit: "cover",
       imageHeight: "auto",
-      imageWidth: "100%"
+      imageWidth: "70%"
      },
      {
       type: "matrix",
@@ -1661,7 +1657,7 @@ const surveyJson = {
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=a024b5d0-cec1-4273-94ed-07212be04a51",
       imageFit: "cover",
       imageHeight: "auto",
-      imageWidth: "100%"
+      imageWidth: "70%"
      },
      {
       type: "matrix",
@@ -1731,7 +1727,7 @@ const surveyJson = {
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=8486188c-806d-41ab-98ae-1d72eacef7f7",
       imageFit: "cover",
       imageHeight: "auto",
-      imageWidth: "100%"
+      imageWidth: "70%"
      },
      {
       type: "matrix",
@@ -1801,7 +1797,7 @@ const surveyJson = {
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=e97d2654-5c60-42df-a565-08bdb8978dad",
       imageFit: "cover",
       imageHeight: "auto",
-      imageWidth: "100%"
+      imageWidth: "70%"
      },
      {
       type: "matrix",
@@ -1871,7 +1867,7 @@ const surveyJson = {
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=d028bc9d-4e05-4aaf-b1bc-9325bb00e10c",
       imageFit: "cover",
       imageHeight: "auto",
-      imageWidth: "100%"
+      imageWidth: "70%"
      },
      {
       type: "matrix",
