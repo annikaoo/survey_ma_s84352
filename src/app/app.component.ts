@@ -244,18 +244,19 @@ const surveyJson = {
      {
       type: "image",
       name: "question2",
-      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=24074100-7805-4083-ad2f-075d7139615f",
+      imageLink: "../../assets/diagram1.png",
+      //imageLink: "https://api.surveyjs.io/private/Surveys/files?name=24074100-7805-4083-ad2f-075d7139615f",
       imageFit: "cover",
       imageHeight: "auto",
       imageWidth: "70%"
-     },
+     }/*,
      {
       type: "html",
       name: "timer",
       html: `<div class="timerclass" style="font-size: 20px; position: fixed;top: 60vh;left: 90vw;">
       Hallo
       </div>`
-     } 
+     } */
     ]
    },
    {
@@ -1973,16 +1974,17 @@ export class AppComponent implements OnInit {
     });
     this.surveyModel = survey;
     
-    survey.onCurrentPageChanged.add(function (sender, options) {
-      console.log(survey.currentPage.name);
-      if(survey.currentPage.name === 'page4' ) {
-        setTimeout(function () {
-          console.log("timer finish"),
-          survey.nextPage()
-      }, 3000);
+    //survey.onCurrentPageChanged.add(function (sender, options) {
+      //console.log(survey.currentPage.name);
+      //if(survey.currentPage.name === 'page4' ) {
+        //setTimeout(function () {
+          //console.log("timer finish"),
+          //survey.nextPage()
+      //}, 3000);
       
-      }
-    });
+      //}
+    //}
+    //);
   }
 
   /*pageChange(pageChange: SurveyModel, event: Survey.CurrentPageChangedEvent) {
