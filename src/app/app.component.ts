@@ -30,7 +30,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question4",
-      html: "<h6>Datenschutz- und Einwilligungserklärung</h6><br>\nDurch die Teilnahme an dieser Umfrage erklären Sie sich damit einverstanden, dass Ihre Daten gemäß dieser Datenschutz- und Einwilligungserklärung verwendet werden dürfen.<br>\n<br>1. Die Teilnahme ist freiwillig und Sie haben das Recht, Ihre Einwilligung jederzeit zu widerrufen.<br><br>\n2. Innerhalb der Umfrage werden keine Kontaktdaten oder Namen, aber allgemeine personenbezogene Daten (Alter, Geschlecht, Beschäftigungsstatus) abgefragt. Diese dienen zur weiterführenden Auswertung und Interpretation der Ergebnisse.<br><br>\n3. Alle Angaben werden selbstverständlich vertraulich behandelt und ausschließlich für interne Zwecke verwendet. Sie werden nur für den Zeitraum gespeichert, der zur Erfüllung dieser Zwecke erforderlich ist und im Anschluss auf sichere Weise vernichtet. <br><br>\nZur Ausübung Ihrer Rechte (Auskunft, Korrektur, Löschung, Widerruf, etc.) oder Fragen zur Umfrage können Sie mich unter s84352@htw-dresden.de erreichen."
+      html: "<h6>Datenschutz- und Einwilligungserklärung</h6><br>\nDurch die Teilnahme an dieser Umfrage erklären Sie sich damit einverstanden, dass Ihre Daten gemäß dieser Datenschutz- und Einwilligungserklärung verwendet werden dürfen.<br>\n<br>1. Die Teilnahme ist freiwillig und Sie haben das Recht, Ihre Einwilligung jederzeit zu widerrufen.<br><br>\n2. Die Teilnahme ist anonym. Es werden keine Kontaktdaten oder Namen, sondern lediglich allgemeine personenbezogene Daten (Alter, Geschlecht, Beschäftigungsstatus) abgefragt, welche nicht auf Sie zurückführbar sind. Diese dienen zur weiterführenden Auswertung und Interpretation der Ergebnisse.<br><br>\n3. Alle Angaben werden selbstverständlich vertraulich behandelt und ausschließlich für interne Zwecke verwendet. Sie werden nur für den Zeitraum gespeichert, der zur Erfüllung dieser Zwecke erforderlich ist und im Anschluss auf sichere Weise vernichtet. <br><br>\nZur Ausübung Ihrer Rechte (Auskunft, Korrektur, Löschung, Widerruf, etc.) oder Fragen zur Umfrage können Sie mich unter s84352@htw-dresden.de erreichen."
      },
      {
       type: "radiogroup",
@@ -155,7 +155,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question10",
-      html: "<h6>Studienablauf - Teil 1</h6><br>\nIm Folgenden werden Ihnen verschiedene <b>Diagramme und beschreibende Adjektive</b> gezeigt.<br>\nZunächst wird Ihnen<b> 3s</b> lang ein <b>Diagramm</b> gezeigt. Nach Ablauf der Zeit werden 16 Adjektive aufgelistet. Wählen Sie bitte innerhalb von <b>10s</b> die <b>Begriffe</b> aus, die das zuvor dargestellte Diagramm Ihrer Meinung nach am besten beschreiben.<br>\nDie Anzahl der gewählten Wörter spielt dabei keine Rolle - es gibt keine Mindest- oder Maximalanzahl auszuwählender Wörter."
+      html: "<h6>Studienablauf - Teil 1</h6><br>\nIm Folgenden werden Ihnen verschiedene <b>Diagramme und beschreibende Adjektive</b> gezeigt.<br>\nZunächst wird Ihnen<b> 3s</b> lang ein <b>Diagramm</b> gezeigt. Nach Ablauf der Zeit werden 16 Adjektive aufgelistet. Entscheiden Sie innerhalb von <b>10s</b> ganz intuitiv, welche <b>Begriffe</b>, das zuvor dargestellte Diagramm Ihrer Meinung nach am besten beschreiben.<br>\nEs gibt keine Mindest- oder Maximalanzahl auszuwählender Wörter, versuchen Sie jedoch bitte <b>mindestens ein Adjektiv</b> zu wählen."
      },
      {
       type: "html",
@@ -169,57 +169,57 @@ const surveyJson = {
       <div>
       <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
             <label for="frage11">dick</label>
-            <input type="checkbox" id="frage11" name="frage1" value="dick" />
-            <input type="checkbox" id="frage12" name="frage1" value="dünn" />
+            <input type="checkbox" id="f10_dick" name="f10_dick" value="dick" />
+            <input type="checkbox" id="f10_dünn" name="f10_dünn" value="dünn" />
             <label for="frage12">dünn</label>
          </section>
          
          <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
             <label for="frage21">symmetrisch</label>
-            <input type="checkbox" id="frage21" name="frage2" value="symmetrisch" />
-            <input type="checkbox" id="frage22" name="frage2" value="asymmetrisch" />
+            <input type="checkbox" id="f10_symm" name="f10_symm" value="symmetrisch" />
+            <input type="checkbox" id="f10_asymm" name="f10_asymm" value="asymmetrisch" />
             <label for="frage22">asymmetrisch</label>
          </section>
 
          <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
             <label for="frage21">bunt</label>
-            <input type="checkbox" id="frage21" name="frage2" value="bunt" />
-            <input type="checkbox" id="frage22" name="frage2" value="unbunt" />
+            <input type="checkbox" id="f10_bunt" name="f10_bunt" value="bunt" />
+            <input type="checkbox" id="f10_unbunt" name="f10_unbunt" value="unbunt" />
             <label for="frage22">unbunt</label>
          </section>
 
          <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
             <label for="frage21">komplex</label>
-            <input type="checkbox" id="frage21" name="frage2" value="komplex" />
-            <input type="checkbox" id="frage22" name="frage2" value="einfach" />
+            <input type="checkbox" id="f10_komplex" name="f10_komplex" value="komplex" />
+            <input type="checkbox" id="f10_einfach" name="f10_einfach" value="einfach" />
             <label for="frage22">einfach</label>
          </section>
 
          <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
             <label for="frage21">eckig</label>
-            <input type="checkbox" id="frage21" name="frage2" value="eckig" />
-            <input type="checkbox" id="frage22" name="frage2" value="rund" />
+            <input type="checkbox" id="f10_eckig" name="f10_eckig" value="eckig" />
+            <input type="checkbox" id="f10_rund" name="f10_rund" value="rund" />
             <label for="frage22">rund</label>
          </section>
 
          <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
             <label for="frage21">harmonisch</label>
-            <input type="checkbox" id="frage21" name="frage2" value="harmonisch" />
-            <input type="checkbox" id="frage22" name="frage2" value="chaotisch" />
+            <input type="checkbox" id="f10_harm" name="f10_harm" value="harmonisch" />
+            <input type="checkbox" id="f10_chaot" name="f10_chaot" value="chaotisch" />
             <label for="frage22">chaotisch</label>
          </section>
 
          <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
             <label for="frage21">aktiv</label>
-            <input type="checkbox" id="frage21" name="frage2" value="aktiv" />
-            <input type="checkbox" id="frage22" name="frage2" value="passiv" />
+            <input type="checkbox" id="f10_aktiv" name="f10_aktiv" value="aktiv" />
+            <input type="checkbox" id="f10_passiv" name="f10_passiv" value="passiv" />
             <label for="frage22">passiv</label>
          </section>
 
          <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
             <label for="frage21">klein</label>
-            <input type="checkbox" id="frage21" name="frage2" value="klein" />
-            <input type="checkbox" id="frage22" name="frage2" value="groß" />
+            <input type="checkbox" id="f10_klein" name="f10_klein" value="klein" />
+            <input type="checkbox" id="f10_groß" name="f10_groß" value="groß" />
             <label for="frage22">groß</label>
          </section>
       </div>
@@ -248,82 +248,86 @@ const surveyJson = {
       imageFit: "cover",
       imageHeight: "auto",
       imageWidth: "70%"
+     },
+     {
+      type: "html",
+      name: "timer",
+      html: `<div class="timerclass" style="font-size: 20px; position: fixed;top: 60vh;left: 90vw;">
+      Hallo
+      </div>`
      } 
     ]
    },
    {
     name: "page7",
     elements: [
-     {
-      type: "checkbox",
-      name: "question1",
-      title: "Mit welchen Begriffen lässt sich das Diagramm beschreiben?",
-      choices: [
-       {
-        value: "Item 1",
-        text: "dick"
-       },
-       {
-        value: "Item 2",
-        text: "dünn"
-       },
-       {
-        value: "Item 3",
-        text: "symmetrisch"
-       },
-       {
-        value: "Item 4",
-        text: "asymmetrisch"
-       },
-       {
-        value: "Item 5",
-        text: "bunt"
-       },
-       {
-        value: "Item 6",
-        text: "unbunt"
-       },
-       {
-        value: "Item 7",
-        text: "komplex"
-       },
-       {
-        value: "Item 8",
-        text: "einfach"
-       },
-       {
-        value: "Item 9",
-        text: "eckig"
-       },
-       {
-        value: "Item 10",
-        text: "rund"
-       },
-       {
-        value: "Item 11",
-        text: "harmonisch"
-       },
-       {
-        value: "Item 12",
-        text: "chaotisch"
-       },
-       {
-        value: "Item 13",
-        text: "aktiv"
-       },
-       {
-        value: "Item 14",
-        text: "passiv"
-       },
-       {
-        value: "Item 15",
-        text: "klein"
-       },
-       {
-        value: "Item 16",
-        text: "groß"
-       }
-      ]
+      {
+      type: "html",
+      name: "question_d1_1",
+      html: "<b>1. Mit welchen Begriffen lässt sich das Diagramm beschreiben?</b>"
+      },
+      {
+      type: "html",
+      name: "question_d1_2",
+      html: `
+      <div>
+      <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
+            <label for="frage11">dick</label>
+            <input type="checkbox" id="d1_dick" name="d1_dick" value="dick" />
+            <input type="checkbox" id="d1_dünn" name="d1_dünn" value="dünn" />
+            <label for="frage12">dünn</label>
+         </section>
+         
+         <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
+            <label for="frage21">symmetrisch</label>
+            <input type="checkbox" id="d1_symm" name="d1_symm" value="symmetrisch" />
+            <input type="checkbox" id="d1_asymm" name="d1_asymm" value="asymmetrisch" />
+            <label for="frage22">asymmetrisch</label>
+         </section>
+
+         <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+            <label for="frage21">bunt</label>
+            <input type="checkbox" id="d1_bunt" name="d1_bunt" value="bunt" />
+            <input type="checkbox" id="d1_unbunt" name="d1_unbunt" value="unbunt" />
+            <label for="frage22">unbunt</label>
+         </section>
+
+         <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
+            <label for="frage21">komplex</label>
+            <input type="checkbox" id="d1_komplex" name="d1_komplex" value="komplex" />
+            <input type="checkbox" id="d1_einfach" name="d1_einfach" value="einfach" />
+            <label for="frage22">einfach</label>
+         </section>
+
+         <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
+            <label for="frage21">eckig</label>
+            <input type="checkbox" id="d1_eckig" name="d1_eckig" value="eckig" />
+            <input type="checkbox" id="d1_rund" name="d1_rund" value="rund" />
+            <label for="frage22">rund</label>
+         </section>
+
+         <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
+            <label for="frage21">harmonisch</label>
+            <input type="checkbox" id="d1_harm" name="d1_harm" value="harmonisch" />
+            <input type="checkbox" id="d1_chaot" name="d1_chaot" value="chaotisch" />
+            <label for="frage22">chaotisch</label>
+         </section>
+
+         <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+            <label for="frage21">aktiv</label>
+            <input type="checkbox" id="d1_aktiv" name="d1_aktiv" value="aktiv" />
+            <input type="checkbox" id="d1_passiv" name="d1_passiv" value="passiv" />
+            <label for="frage22">passiv</label>
+         </section>
+
+         <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+            <label for="frage21">klein</label>
+            <input type="checkbox" id="d1_klein" name="d1_klein" value="klein" />
+            <input type="checkbox" id="d1_groß" name="d1_groß" value="groß" />
+            <label for="frage22">groß</label>
+         </section>
+      </div>
+        `
      }
     ]
    },   //Diagramm 2
@@ -353,77 +357,74 @@ const surveyJson = {
    {
     name: "page10",
     elements: [
-     {
-      type: "checkbox",
-      name: "question17",
-      title: "Mit welchen Begriffen lässt sich das Diagramm beschreiben?",
-      "choices": [
-       {
-        value: "Item 1",
-        text: "dick"
-       },
-       {
-        value: "Item 2",
-        text: "dünn"
-       },
-       {
-        value: "Item 3",
-        text: "symmetrisch"
-       },
-       {
-        value: "Item 4",
-        text: "asymmetrisch"
-       },
-       {
-        value: "Item 5",
-        text: "bunt"
-       },
-       {
-        value: "Item 6",
-        text: "unbunt"
-       },
-       {
-        value: "Item 7",
-        text: "komplex"
-       },
-       {
-        value: "Item 8",
-        text: "einfach"
-       },
-       {
-        value: "Item 9",
-        text: "eckig"
-       },
-       {
-        value: "Item 10",
-        text: "rund"
-       },
-       {
-        value: "Item 11",
-        text: "harmonisch"
-       },
-       {
-        value: "Item 12",
-        text: "chaotisch"
-       },
-       {
-        value: "Item 13",
-        text: "aktiv"
-       },
-       {
-        value: "Item 14",
-        text: "passiv"
-       },
-       {
-        value: "Item 15",
-        text: "klein"
-       },
-       {
-        value: "Item 16",
-        text: "groß"
+      {
+        type: "html",
+        name: "question_d2_1",
+        html: "<b>2. Mit welchen Begriffen lässt sich das Diagramm beschreiben?</b>"
+        },
+        {
+        type: "html",
+        name: "question_d2_2",
+        html: `
+        <div>
+        <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
+              <label for="frage11">dick</label>
+              <input type="checkbox" id="d2_dick" name="d2_dick" value="dick" />
+              <input type="checkbox" id="d2_dünn" name="d2_dünn" value="dünn" />
+              <label for="frage12">dünn</label>
+           </section>
+           
+           <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
+              <label for="frage21">symmetrisch</label>
+              <input type="checkbox" id="d2_symm" name="d2_symm" value="symmetrisch" />
+              <input type="checkbox" id="d2_asymm" name="d2_asymm" value="asymmetrisch" />
+              <label for="frage22">asymmetrisch</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">bunt</label>
+              <input type="checkbox" id="d2_bunt" name="d2_bunt" value="bunt" />
+              <input type="checkbox" id="d2_unbunt" name="d2_unbunt" value="unbunt" />
+              <label for="frage22">unbunt</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
+              <label for="frage21">komplex</label>
+              <input type="checkbox" id="d2_komplex" name="d2_komplex" value="komplex" />
+              <input type="checkbox" id="d2_einfach" name="d2_einfach" value="einfach" />
+              <label for="frage22">einfach</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
+              <label for="frage21">eckig</label>
+              <input type="checkbox" id="d2_eckig" name="d2_eckig" value="eckig" />
+              <input type="checkbox" id="d2_rund" name="d2_rund" value="rund" />
+              <label for="frage22">rund</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
+              <label for="frage21">harmonisch</label>
+              <input type="checkbox" id="d2_harm" name="d2_harm" value="harmonisch" />
+              <input type="checkbox" id="d2_chaot" name="d2_chaot" value="chaotisch" />
+              <label for="frage22">chaotisch</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">aktiv</label>
+              <input type="checkbox" id="d2_aktiv" name="d2_aktiv" value="aktiv" />
+              <input type="checkbox" id="d2_passiv" name="d2_passiv" value="passiv" />
+              <label for="frage22">passiv</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">klein</label>
+              <input type="checkbox" id="d2_klein" name="d2_klein" value="klein" />
+              <input type="checkbox" id="d2_groß" name="d2_groß" value="groß" />
+              <label for="frage22">groß</label>
+           </section>
+        </div>
+          `
        }
-      ]
-     }
     ]
    },   //Diagramm 3
    {
@@ -452,77 +453,74 @@ const surveyJson = {
    {
     name: "page13",
     elements: [
-     {
-      type: "checkbox",
-      name: "question17",
-      title: "Mit welchen Begriffen lässt sich das Diagramm beschreiben?",
-      "choices": [
-       {
-        value: "Item 1",
-        text: "dick"
-       },
-       {
-        value: "Item 2",
-        text: "dünn"
-       },
-       {
-        value: "Item 3",
-        text: "symmetrisch"
-       },
-       {
-        value: "Item 4",
-        text: "asymmetrisch"
-       },
-       {
-        value: "Item 5",
-        text: "bunt"
-       },
-       {
-        value: "Item 6",
-        text: "unbunt"
-       },
-       {
-        value: "Item 7",
-        text: "komplex"
-       },
-       {
-        value: "Item 8",
-        text: "einfach"
-       },
-       {
-        value: "Item 9",
-        text: "eckig"
-       },
-       {
-        value: "Item 10",
-        text: "rund"
-       },
-       {
-        value: "Item 11",
-        text: "harmonisch"
-       },
-       {
-        value: "Item 12",
-        text: "chaotisch"
-       },
-       {
-        value: "Item 13",
-        text: "aktiv"
-       },
-       {
-        value: "Item 14",
-        text: "passiv"
-       },
-       {
-        value: "Item 15",
-        text: "klein"
-       },
-       {
-        value: "Item 16",
-        text: "groß"
+      {
+        type: "html",
+        name: "question_d3_1",
+        html: "<b>3. Mit welchen Begriffen lässt sich das Diagramm beschreiben?</b>"
+        },
+        {
+        type: "html",
+        name: "question_d3_2",
+        html: `
+        <div>
+        <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
+              <label for="frage11">dick</label>
+              <input type="checkbox" id="d3_dick" name="d3_dick" value="dick" />
+              <input type="checkbox" id="d3_dünn" name="d3_dünn" value="dünn" />
+              <label for="frage12">dünn</label>
+           </section>
+           
+           <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
+              <label for="frage21">symmetrisch</label>
+              <input type="checkbox" id="d3_symm" name="d3_symm" value="symmetrisch" />
+              <input type="checkbox" id="d3_asymm" name="d3_asymm" value="asymmetrisch" />
+              <label for="frage22">asymmetrisch</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">bunt</label>
+              <input type="checkbox" id="d3_bunt" name="d3_bunt" value="bunt" />
+              <input type="checkbox" id="d3_unbunt" name="d3_unbunt" value="unbunt" />
+              <label for="frage22">unbunt</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
+              <label for="frage21">komplex</label>
+              <input type="checkbox" id="d3_komplex" name="d3_komplex" value="komplex" />
+              <input type="checkbox" id="d3_einfach" name="d3_einfach" value="einfach" />
+              <label for="frage22">einfach</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
+              <label for="frage21">eckig</label>
+              <input type="checkbox" id="d3_eckig" name="d3_eckig" value="eckig" />
+              <input type="checkbox" id="d3_rund" name="d3_rund" value="rund" />
+              <label for="frage22">rund</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
+              <label for="frage21">harmonisch</label>
+              <input type="checkbox" id="d3_harm" name="d3_harm" value="harmonisch" />
+              <input type="checkbox" id="d3_chaot" name="d3_chaot" value="chaotisch" />
+              <label for="frage22">chaotisch</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">aktiv</label>
+              <input type="checkbox" id="d3_aktiv" name="d3_aktiv" value="aktiv" />
+              <input type="checkbox" id="d3_passiv" name="d3_passiv" value="passiv" />
+              <label for="frage22">passiv</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">klein</label>
+              <input type="checkbox" id="d3_klein" name="d3_klein" value="klein" />
+              <input type="checkbox" id="d3_groß" name="d3_groß" value="groß" />
+              <label for="frage22">groß</label>
+           </section>
+        </div>
+          `
        }
-      ]
-     }
     ]
    },   //Diagramm 4
    {
@@ -551,77 +549,74 @@ const surveyJson = {
    {
     name: "page16",
     elements: [
-     {
-      type: "checkbox",
-      name: "question17",
-      title: "Mit welchen Begriffen lässt sich das Diagramm beschreiben?",
-      "choices": [
-       {
-        value: "Item 1",
-        text: "dick"
-       },
-       {
-        value: "Item 2",
-        text: "dünn"
-       },
-       {
-        value: "Item 3",
-        text: "symmetrisch"
-       },
-       {
-        value: "Item 4",
-        text: "asymmetrisch"
-       },
-       {
-        value: "Item 5",
-        text: "bunt"
-       },
-       {
-        value: "Item 6",
-        text: "unbunt"
-       },
-       {
-        value: "Item 7",
-        text: "komplex"
-       },
-       {
-        value: "Item 8",
-        text: "einfach"
-       },
-       {
-        value: "Item 9",
-        text: "eckig"
-       },
-       {
-        value: "Item 10",
-        text: "rund"
-       },
-       {
-        value: "Item 11",
-        text: "harmonisch"
-       },
-       {
-        value: "Item 12",
-        text: "chaotisch"
-       },
-       {
-        value: "Item 13",
-        text: "aktiv"
-       },
-       {
-        value: "Item 14",
-        text: "passiv"
-       },
-       {
-        value: "Item 15",
-        text: "klein"
-       },
-       {
-        value: "Item 16",
-        text: "groß"
+      {
+        type: "html",
+        name: "question_d4_1",
+        html: "<b>4. Mit welchen Begriffen lässt sich das Diagramm beschreiben?</b>"
+        },
+        {
+        type: "html",
+        name: "question_d4_2",
+        html: `
+        <div>
+        <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
+              <label for="frage11">dick</label>
+              <input type="checkbox" id="d4_dick" name="d4_dick" value="dick" />
+              <input type="checkbox" id="d4_dünn" name="d4_dünn" value="dünn" />
+              <label for="frage12">dünn</label>
+           </section>
+           
+           <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
+              <label for="frage21">symmetrisch</label>
+              <input type="checkbox" id="d4_symm" name="d4_symm" value="symmetrisch" />
+              <input type="checkbox" id="d4_asymm" name="d4_asymm" value="asymmetrisch" />
+              <label for="frage22">asymmetrisch</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">bunt</label>
+              <input type="checkbox" id="d4_bunt" name="d4_bunt" value="bunt" />
+              <input type="checkbox" id="d4_unbunt" name="d4_unbunt" value="unbunt" />
+              <label for="frage22">unbunt</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
+              <label for="frage21">komplex</label>
+              <input type="checkbox" id="d4_komplex" name="d4_komplex" value="komplex" />
+              <input type="checkbox" id="d4_einfach" name="d4_einfach" value="einfach" />
+              <label for="frage22">einfach</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
+              <label for="frage21">eckig</label>
+              <input type="checkbox" id="d4_eckig" name="d4_eckig" value="eckig" />
+              <input type="checkbox" id="d4_rund" name="d4_rund" value="rund" />
+              <label for="frage22">rund</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
+              <label for="frage21">harmonisch</label>
+              <input type="checkbox" id="d4_harm" name="d4_harm" value="harmonisch" />
+              <input type="checkbox" id="d4_chaot" name="d4_chaot" value="chaotisch" />
+              <label for="frage22">chaotisch</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">aktiv</label>
+              <input type="checkbox" id="d4_aktiv" name="d4_aktiv" value="aktiv" />
+              <input type="checkbox" id="d4_passiv" name="d4_passiv" value="passiv" />
+              <label for="frage22">passiv</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">klein</label>
+              <input type="checkbox" id="d4_klein" name="d4_klein" value="klein" />
+              <input type="checkbox" id="d4_groß" name="d4_groß" value="groß" />
+              <label for="frage22">groß</label>
+           </section>
+        </div>
+          `
        }
-      ]
-     }
     ]
    },   //Diagramm 5
    {
@@ -650,77 +645,74 @@ const surveyJson = {
    {
     name: "page19",
     elements: [
-     {
-      type: "checkbox",
-      name: "question17",
-      title: "Mit welchen Begriffen lässt sich das Diagramm beschreiben?",
-      "choices": [
-       {
-        value: "Item 1",
-        text: "dick"
-       },
-       {
-        value: "Item 2",
-        text: "dünn"
-       },
-       {
-        value: "Item 3",
-        text: "symmetrisch"
-       },
-       {
-        value: "Item 4",
-        text: "asymmetrisch"
-       },
-       {
-        value: "Item 5",
-        text: "bunt"
-       },
-       {
-        value: "Item 6",
-        text: "unbunt"
-       },
-       {
-        value: "Item 7",
-        text: "komplex"
-       },
-       {
-        value: "Item 8",
-        text: "einfach"
-       },
-       {
-        value: "Item 9",
-        text: "eckig"
-       },
-       {
-        value: "Item 10",
-        text: "rund"
-       },
-       {
-        value: "Item 11",
-        text: "harmonisch"
-       },
-       {
-        value: "Item 12",
-        text: "chaotisch"
-       },
-       {
-        value: "Item 13",
-        text: "aktiv"
-       },
-       {
-        value: "Item 14",
-        text: "passiv"
-       },
-       {
-        value: "Item 15",
-        text: "klein"
-       },
-       {
-        value: "Item 16",
-        text: "groß"
+      {
+        type: "html",
+        name: "question_d5_1",
+        html: "<b>5. Mit welchen Begriffen lässt sich das Diagramm beschreiben?</b>"
+        },
+        {
+        type: "html",
+        name: "question_d5_2",
+        html: `
+        <div>
+        <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
+              <label for="frage11">dick</label>
+              <input type="checkbox" id="d5_dick" name="d5_dick" value="dick" />
+              <input type="checkbox" id="d5_dünn" name="d5_dünn" value="dünn" />
+              <label for="frage12">dünn</label>
+           </section>
+           
+           <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
+              <label for="frage21">symmetrisch</label>
+              <input type="checkbox" id="d5_symm" name="d5_symm" value="symmetrisch" />
+              <input type="checkbox" id="d5_asymm" name="d5_asymm" value="asymmetrisch" />
+              <label for="frage22">asymmetrisch</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">bunt</label>
+              <input type="checkbox" id="d5_bunt" name="d5_bunt" value="bunt" />
+              <input type="checkbox" id="d5_unbunt" name="d5_unbunt" value="unbunt" />
+              <label for="frage22">unbunt</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
+              <label for="frage21">komplex</label>
+              <input type="checkbox" id="d5_komplex" name="d5_komplex" value="komplex" />
+              <input type="checkbox" id="d5_einfach" name="d5_einfach" value="einfach" />
+              <label for="frage22">einfach</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
+              <label for="frage21">eckig</label>
+              <input type="checkbox" id="d5_eckig" name="d5_eckig" value="eckig" />
+              <input type="checkbox" id="d5_rund" name="d5_rund" value="rund" />
+              <label for="frage22">rund</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
+              <label for="frage21">harmonisch</label>
+              <input type="checkbox" id="d5_harm" name="d5_harm" value="harmonisch" />
+              <input type="checkbox" id="d5_chaot" name="d5_chaot" value="chaotisch" />
+              <label for="frage22">chaotisch</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">aktiv</label>
+              <input type="checkbox" id="d5_aktiv" name="d5_aktiv" value="aktiv" />
+              <input type="checkbox" id="d5_passiv" name="d5_passiv" value="passiv" />
+              <label for="frage22">passiv</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">klein</label>
+              <input type="checkbox" id="d5_klein" name="d5_klein" value="klein" />
+              <input type="checkbox" id="d5_groß" name="d5_groß" value="groß" />
+              <label for="frage22">groß</label>
+           </section>
+        </div>
+          `
        }
-      ]
-     }
     ]
    },   //Diagramm 6
    {
@@ -749,77 +741,74 @@ const surveyJson = {
    {
     name: "page22",
     elements: [
-     {
-      type: "checkbox",
-      name: "question17",
-      title: "Mit welchen Begriffen lässt sich das Diagramm beschreiben?",
-      "choices": [
-       {
-        value: "Item 1",
-        text: "dick"
-       },
-       {
-        value: "Item 2",
-        text: "dünn"
-       },
-       {
-        value: "Item 3",
-        text: "symmetrisch"
-       },
-       {
-        value: "Item 4",
-        text: "asymmetrisch"
-       },
-       {
-        value: "Item 5",
-        text: "bunt"
-       },
-       {
-        value: "Item 6",
-        text: "unbunt"
-       },
-       {
-        value: "Item 7",
-        text: "komplex"
-       },
-       {
-        value: "Item 8",
-        text: "einfach"
-       },
-       {
-        value: "Item 9",
-        text: "eckig"
-       },
-       {
-        value: "Item 10",
-        text: "rund"
-       },
-       {
-        value: "Item 11",
-        text: "harmonisch"
-       },
-       {
-        value: "Item 12",
-        text: "chaotisch"
-       },
-       {
-        value: "Item 13",
-        text: "aktiv"
-       },
-       {
-        value: "Item 14",
-        text: "passiv"
-       },
-       {
-        value: "Item 15",
-        text: "klein"
-       },
-       {
-        value: "Item 16",
-        text: "groß"
+      {
+        type: "html",
+        name: "question_d6_1",
+        html: "<b>6. Mit welchen Begriffen lässt sich das Diagramm beschreiben?</b>"
+        },
+        {
+        type: "html",
+        name: "question_d6_2",
+        html: `
+        <div>
+        <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
+              <label for="frage11">dick</label>
+              <input type="checkbox" id="d6_dick" name="d6_dick" value="dick" />
+              <input type="checkbox" id="d6_dünn" name="d6_dünn" value="dünn" />
+              <label for="frage12">dünn</label>
+           </section>
+           
+           <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
+              <label for="frage21">symmetrisch</label>
+              <input type="checkbox" id="d6_symm" name="d6_symm" value="symmetrisch" />
+              <input type="checkbox" id="d6_asymm" name="d6_asymm" value="asymmetrisch" />
+              <label for="frage22">asymmetrisch</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">bunt</label>
+              <input type="checkbox" id="d6_bunt" name="d6_bunt" value="bunt" />
+              <input type="checkbox" id="d6_unbunt" name="d6_unbunt" value="unbunt" />
+              <label for="frage22">unbunt</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
+              <label for="frage21">komplex</label>
+              <input type="checkbox" id="d6_komplex" name="d6_komplex" value="komplex" />
+              <input type="checkbox" id="d6_einfach" name="d6_einfach" value="einfach" />
+              <label for="frage22">einfach</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
+              <label for="frage21">eckig</label>
+              <input type="checkbox" id="d6_eckig" name="d6_eckig" value="eckig" />
+              <input type="checkbox" id="d6_rund" name="d6_rund" value="rund" />
+              <label for="frage22">rund</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
+              <label for="frage21">harmonisch</label>
+              <input type="checkbox" id="d6_harm" name="d6_harm" value="harmonisch" />
+              <input type="checkbox" id="d6_chaot" name="d6_chaot" value="chaotisch" />
+              <label for="frage22">chaotisch</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">aktiv</label>
+              <input type="checkbox" id="d6_aktiv" name="d6_aktiv" value="aktiv" />
+              <input type="checkbox" id="d6_passiv" name="d6_passiv" value="passiv" />
+              <label for="frage22">passiv</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">klein</label>
+              <input type="checkbox" id="d6_klein" name="d6_klein" value="klein" />
+              <input type="checkbox" id="d6_groß" name="d6_groß" value="groß" />
+              <label for="frage22">groß</label>
+           </section>
+        </div>
+          `
        }
-      ]
-     }
     ]
    },   //Diagramm 7
    {
@@ -848,77 +837,74 @@ const surveyJson = {
    {
     name: "page25",
     elements: [
-     {
-      type: "checkbox",
-      name: "question17",
-      title: "Mit welchen Begriffen lässt sich das Diagramm beschreiben?",
-      "choices": [
-       {
-        value: "Item 1",
-        text: "dick"
-       },
-       {
-        value: "Item 2",
-        text: "dünn"
-       },
-       {
-        value: "Item 3",
-        text: "symmetrisch"
-       },
-       {
-        value: "Item 4",
-        text: "asymmetrisch"
-       },
-       {
-        value: "Item 5",
-        text: "bunt"
-       },
-       {
-        value: "Item 6",
-        text: "unbunt"
-       },
-       {
-        value: "Item 7",
-        text: "komplex"
-       },
-       {
-        value: "Item 8",
-        text: "einfach"
-       },
-       {
-        value: "Item 9",
-        text: "eckig"
-       },
-       {
-        value: "Item 10",
-        text: "rund"
-       },
-       {
-        value: "Item 11",
-        text: "harmonisch"
-       },
-       {
-        value: "Item 12",
-        text: "chaotisch"
-       },
-       {
-        value: "Item 13",
-        text: "aktiv"
-       },
-       {
-        value: "Item 14",
-        text: "passiv"
-       },
-       {
-        value: "Item 15",
-        text: "klein"
-       },
-       {
-        value: "Item 16",
-        text: "groß"
+      {
+        type: "html",
+        name: "question_d7_1",
+        html: "<b>7. Mit welchen Begriffen lässt sich das Diagramm beschreiben?</b>"
+        },
+        {
+        type: "html",
+        name: "question_d7_2",
+        html: `
+        <div>
+        <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
+              <label for="frage11">dick</label>
+              <input type="checkbox" id="d7_dick" name="d7_dick" value="dick" />
+              <input type="checkbox" id="d7_dünn" name="d7_dünn" value="dünn" />
+              <label for="frage12">dünn</label>
+           </section>
+           
+           <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
+              <label for="frage21">symmetrisch</label>
+              <input type="checkbox" id="d7_symm" name="d7_symm" value="symmetrisch" />
+              <input type="checkbox" id="d7_asymm" name="d7_asymm" value="asymmetrisch" />
+              <label for="frage22">asymmetrisch</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">bunt</label>
+              <input type="checkbox" id="d7_bunt" name="d7_bunt" value="bunt" />
+              <input type="checkbox" id="d7_unbunt" name="d7_unbunt" value="unbunt" />
+              <label for="frage22">unbunt</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
+              <label for="frage21">komplex</label>
+              <input type="checkbox" id="d7_komplex" name="d7_komplex" value="komplex" />
+              <input type="checkbox" id="d7_einfach" name="d7_einfach" value="einfach" />
+              <label for="frage22">einfach</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
+              <label for="frage21">eckig</label>
+              <input type="checkbox" id="d7_eckig" name="d7_eckig" value="eckig" />
+              <input type="checkbox" id="d7_rund" name="d7_rund" value="rund" />
+              <label for="frage22">rund</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
+              <label for="frage21">harmonisch</label>
+              <input type="checkbox" id="d7_harm" name="d7_harm" value="harmonisch" />
+              <input type="checkbox" id="d7_chaot" name="d7_chaot" value="chaotisch" />
+              <label for="frage22">chaotisch</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">aktiv</label>
+              <input type="checkbox" id="d7_aktiv" name="d7_aktiv" value="aktiv" />
+              <input type="checkbox" id="d7_passiv" name="d7_passiv" value="passiv" />
+              <label for="frage22">passiv</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">klein</label>
+              <input type="checkbox" id="d7_klein" name="d7_klein" value="klein" />
+              <input type="checkbox" id="d7_groß" name="d7_groß" value="groß" />
+              <label for="frage22">groß</label>
+           </section>
+        </div>
+          `
        }
-      ]
-     }
     ]
    },   //Diagramm 8
    {
@@ -947,77 +933,74 @@ const surveyJson = {
    {
     name: "page28",
     elements: [
-     {
-      type: "checkbox",
-      name: "question17",
-      title: "Mit welchen Begriffen lässt sich das Diagramm beschreiben?",
-      "choices": [
-       {
-        value: "Item 1",
-        text: "dick"
-       },
-       {
-        value: "Item 2",
-        text: "dünn"
-       },
-       {
-        value: "Item 3",
-        text: "symmetrisch"
-       },
-       {
-        value: "Item 4",
-        text: "asymmetrisch"
-       },
-       {
-        value: "Item 5",
-        text: "bunt"
-       },
-       {
-        value: "Item 6",
-        text: "unbunt"
-       },
-       {
-        value: "Item 7",
-        text: "komplex"
-       },
-       {
-        value: "Item 8",
-        text: "einfach"
-       },
-       {
-        value: "Item 9",
-        text: "eckig"
-       },
-       {
-        value: "Item 10",
-        text: "rund"
-       },
-       {
-        value: "Item 11",
-        text: "harmonisch"
-       },
-       {
-        value: "Item 12",
-        text: "chaotisch"
-       },
-       {
-        value: "Item 13",
-        text: "aktiv"
-       },
-       {
-        value: "Item 14",
-        text: "passiv"
-       },
-       {
-        value: "Item 15",
-        text: "klein"
-       },
-       {
-        value: "Item 16",
-        text: "groß"
+      {
+        type: "html",
+        name: "question_d8_1",
+        html: "<b>8. Mit welchen Begriffen lässt sich das Diagramm beschreiben?</b>"
+        },
+        {
+        type: "html",
+        name: "question_d8_2",
+        html: `
+        <div>
+        <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
+              <label for="frage11">dick</label>
+              <input type="checkbox" id="d8_dick" name="d8_dick" value="dick" />
+              <input type="checkbox" id="d8_dünn" name="d8_dünn" value="dünn" />
+              <label for="frage12">dünn</label>
+           </section>
+           
+           <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
+              <label for="frage21">symmetrisch</label>
+              <input type="checkbox" id="d8_symm" name="d8_symm" value="symmetrisch" />
+              <input type="checkbox" id="d8_asymm" name="d8_asymm" value="asymmetrisch" />
+              <label for="frage22">asymmetrisch</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">bunt</label>
+              <input type="checkbox" id="d8_bunt" name="d8_bunt" value="bunt" />
+              <input type="checkbox" id="d8_unbunt" name="d8_unbunt" value="unbunt" />
+              <label for="frage22">unbunt</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
+              <label for="frage21">komplex</label>
+              <input type="checkbox" id="d8_komplex" name="d8_komplex" value="komplex" />
+              <input type="checkbox" id="d8_einfach" name="d8_einfach" value="einfach" />
+              <label for="frage22">einfach</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
+              <label for="frage21">eckig</label>
+              <input type="checkbox" id="d8_eckig" name="d8_eckig" value="eckig" />
+              <input type="checkbox" id="d8_rund" name="d8_rund" value="rund" />
+              <label for="frage22">rund</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
+              <label for="frage21">harmonisch</label>
+              <input type="checkbox" id="d8_harm" name="d8_harm" value="harmonisch" />
+              <input type="checkbox" id="d8_chaot" name="d8_chaot" value="chaotisch" />
+              <label for="frage22">chaotisch</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">aktiv</label>
+              <input type="checkbox" id="d8_aktiv" name="d8_aktiv" value="aktiv" />
+              <input type="checkbox" id="d8_passiv" name="d8_passiv" value="passiv" />
+              <label for="frage22">passiv</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">klein</label>
+              <input type="checkbox" id="d8_klein" name="d8_klein" value="klein" />
+              <input type="checkbox" id="d8_groß" name="d8_groß" value="groß" />
+              <label for="frage22">groß</label>
+           </section>
+        </div>
+          `
        }
-      ]
-     }
     ]
    },   //Diagramm 9
    {
@@ -1046,77 +1029,74 @@ const surveyJson = {
    {
     name: "page31",
     elements: [
-     {
-      type: "checkbox",
-      name: "question17",
-      title: "Mit welchen Begriffen lässt sich das Diagramm beschreiben?",
-      "choices": [
-       {
-        value: "Item 1",
-        text: "dick"
-       },
-       {
-        value: "Item 2",
-        text: "dünn"
-       },
-       {
-        value: "Item 3",
-        text: "symmetrisch"
-       },
-       {
-        value: "Item 4",
-        text: "asymmetrisch"
-       },
-       {
-        value: "Item 5",
-        text: "bunt"
-       },
-       {
-        value: "Item 6",
-        text: "unbunt"
-       },
-       {
-        value: "Item 7",
-        text: "komplex"
-       },
-       {
-        value: "Item 8",
-        text: "einfach"
-       },
-       {
-        value: "Item 9",
-        text: "eckig"
-       },
-       {
-        value: "Item 10",
-        text: "rund"
-       },
-       {
-        value: "Item 11",
-        text: "harmonisch"
-       },
-       {
-        value: "Item 12",
-        text: "chaotisch"
-       },
-       {
-        value: "Item 13",
-        text: "aktiv"
-       },
-       {
-        value: "Item 14",
-        text: "passiv"
-       },
-       {
-        value: "Item 15",
-        text: "klein"
-       },
-       {
-        value: "Item 16",
-        text: "groß"
+      {
+        type: "html",
+        name: "question_d9_1",
+        html: "<b>9. Mit welchen Begriffen lässt sich das Diagramm beschreiben?</b>"
+        },
+        {
+        type: "html",
+        name: "question_d9_2",
+        html: `
+        <div>
+        <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
+              <label for="frage11">dick</label>
+              <input type="checkbox" id="d9_dick" name="d9_dick" value="dick" />
+              <input type="checkbox" id="d9_dünn" name="d9_dünn" value="dünn" />
+              <label for="frage12">dünn</label>
+           </section>
+           
+           <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
+              <label for="frage21">symmetrisch</label>
+              <input type="checkbox" id="d9_symm" name="d9_symm" value="symmetrisch" />
+              <input type="checkbox" id="d9_asymm" name="d9_asymm" value="asymmetrisch" />
+              <label for="frage22">asymmetrisch</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">bunt</label>
+              <input type="checkbox" id="d9_bunt" name="d9_bunt" value="bunt" />
+              <input type="checkbox" id="d9_unbunt" name="d9_unbunt" value="unbunt" />
+              <label for="frage22">unbunt</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
+              <label for="frage21">komplex</label>
+              <input type="checkbox" id="d9_komplex" name="d9_komplex" value="komplex" />
+              <input type="checkbox" id="d9_einfach" name="d9_einfach" value="einfach" />
+              <label for="frage22">einfach</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
+              <label for="frage21">eckig</label>
+              <input type="checkbox" id="d9_eckig" name="d9_eckig" value="eckig" />
+              <input type="checkbox" id="d9_rund" name="d9_rund" value="rund" />
+              <label for="frage22">rund</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
+              <label for="frage21">harmonisch</label>
+              <input type="checkbox" id="d9_harm" name="d9_harm" value="harmonisch" />
+              <input type="checkbox" id="d9_chaot" name="d9_chaot" value="chaotisch" />
+              <label for="frage22">chaotisch</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">aktiv</label>
+              <input type="checkbox" id="d9_aktiv" name="d9_aktiv" value="aktiv" />
+              <input type="checkbox" id="d9_passiv" name="d9_passiv" value="passiv" />
+              <label for="frage22">passiv</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">klein</label>
+              <input type="checkbox" id="d9_klein" name="d9_klein" value="klein" />
+              <input type="checkbox" id="d9_groß" name="d9_groß" value="groß" />
+              <label for="frage22">groß</label>
+           </section>
+        </div>
+          `
        }
-      ]
-     }
     ]
    },   //Diagramm 10
    {
@@ -1145,77 +1125,74 @@ const surveyJson = {
    {
     name: "page34",
     elements: [
-     {
-      type: "checkbox",
-      name: "question17",
-      title: "Mit welchen Begriffen lässt sich das Diagramm beschreiben?",
-      "choices": [
-       {
-        value: "Item 1",
-        text: "dick"
-       },
-       {
-        value: "Item 2",
-        text: "dünn"
-       },
-       {
-        value: "Item 3",
-        text: "symmetrisch"
-       },
-       {
-        value: "Item 4",
-        text: "asymmetrisch"
-       },
-       {
-        value: "Item 5",
-        text: "bunt"
-       },
-       {
-        value: "Item 6",
-        text: "unbunt"
-       },
-       {
-        value: "Item 7",
-        text: "komplex"
-       },
-       {
-        value: "Item 8",
-        text: "einfach"
-       },
-       {
-        value: "Item 9",
-        text: "eckig"
-       },
-       {
-        value: "Item 10",
-        text: "rund"
-       },
-       {
-        value: "Item 11",
-        text: "harmonisch"
-       },
-       {
-        value: "Item 12",
-        text: "chaotisch"
-       },
-       {
-        value: "Item 13",
-        text: "aktiv"
-       },
-       {
-        value: "Item 14",
-        text: "passiv"
-       },
-       {
-        value: "Item 15",
-        text: "klein"
-       },
-       {
-        value: "Item 16",
-        text: "groß"
+      {
+        type: "html",
+        name: "question_d10_1",
+        html: "<b>10. Mit welchen Begriffen lässt sich das Diagramm beschreiben?</b>"
+        },
+        {
+        type: "html",
+        name: "question_d10_2",
+        html: `
+        <div>
+        <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
+              <label for="frage11">dick</label>
+              <input type="checkbox" id="d10_dick" name="d10_dick" value="dick" />
+              <input type="checkbox" id="d10_dünn" name="d10_dünn" value="dünn" />
+              <label for="frage12">dünn</label>
+           </section>
+           
+           <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
+              <label for="frage21">symmetrisch</label>
+              <input type="checkbox" id="d10_symm" name="d10_symm" value="symmetrisch" />
+              <input type="checkbox" id="d10_asymm" name="d10_asymm" value="asymmetrisch" />
+              <label for="frage22">asymmetrisch</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">bunt</label>
+              <input type="checkbox" id="d10_bunt" name="d10_bunt" value="bunt" />
+              <input type="checkbox" id="d10_unbunt" name="d10_unbunt" value="unbunt" />
+              <label for="frage22">unbunt</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
+              <label for="frage21">komplex</label>
+              <input type="checkbox" id="d10_komplex" name="d10_komplex" value="komplex" />
+              <input type="checkbox" id="d10_einfach" name="d10_einfach" value="einfach" />
+              <label for="frage22">einfach</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
+              <label for="frage21">eckig</label>
+              <input type="checkbox" id="d10_eckig" name="d10_eckig" value="eckig" />
+              <input type="checkbox" id="d10_rund" name="d10_rund" value="rund" />
+              <label for="frage22">rund</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
+              <label for="frage21">harmonisch</label>
+              <input type="checkbox" id="d10_harm" name="d10_harm" value="harmonisch" />
+              <input type="checkbox" id="d10_chaot" name="d10_chaot" value="chaotisch" />
+              <label for="frage22">chaotisch</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">aktiv</label>
+              <input type="checkbox" id="d10_aktiv" name="d10_aktiv" value="aktiv" />
+              <input type="checkbox" id="d10_passiv" name="d10_passiv" value="passiv" />
+              <label for="frage22">passiv</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">klein</label>
+              <input type="checkbox" id="d10_klein" name="d10_klein" value="klein" />
+              <input type="checkbox" id="d10_groß" name="d10_groß" value="groß" />
+              <label for="frage22">groß</label>
+           </section>
+        </div>
+          `
        }
-      ]
-     }
     ]
    },   //Anfang Teil 2 der Studie
    {
@@ -1233,7 +1210,7 @@ const surveyJson = {
     elements: [
      {
       type: "image",
-      name: "question16",
+      name: "question19",
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=24074100-7805-4083-ad2f-075d7139615f",
       imageFit: "cover",
       imageHeight: "auto",
@@ -1241,8 +1218,10 @@ const surveyJson = {
      },
      {
       type: "matrix",
-      name: "question19",
+      name: "question20",
       title: "Inwieweit stimmen Sie zu, dass sich das Diagramm mit folgenden Worten beschreiben lässt?",
+      isRequired: true,
+      requiredErrorText: "Wählen Sie bitte für jede Eigenschaft einen Wert.",
       "columns": [
        {
         value: "Column 1",
@@ -1294,7 +1273,8 @@ const surveyJson = {
         value: "Row 5",
         text: "ansprechend"
        }
-      ]
+      ],
+      isAllRowRequired: true
      }
     ]
    },   //Bewertung Diagramm 2
@@ -1303,7 +1283,7 @@ const surveyJson = {
     elements: [
      {
       type: "image",
-      name: "question16",
+      name: "question21",
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=afd79b26-c5c9-429b-8b91-2fee35724bf3",
       imageFit: "cover",
       imageHeight: "auto",
@@ -1311,8 +1291,10 @@ const surveyJson = {
      },
      {
       type: "matrix",
-      name: "question19",
+      name: "question22",
       title: "Inwieweit stimmen Sie zu, dass sich das Diagramm mit folgenden Worten beschreiben lässt?",
+      isRequired: true,
+      requiredErrorText: "Wählen Sie bitte für jede Eigenschaft einen Wert.",
       "columns": [
        {
         value: "Column 1",
@@ -1364,7 +1346,8 @@ const surveyJson = {
         value: "Row 5",
         text: "ansprechend"
        }
-      ]
+      ],
+      isAllRowRequired: true
      }
     ]
    },   //Bewertung Diagramm 3
@@ -1373,7 +1356,7 @@ const surveyJson = {
     elements: [
      {
       type: "image",
-      name: "question16",
+      name: "question23",
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=4abd7f13-6f07-4a6d-8dd1-8b572cb2a8ba",
       imageFit: "cover",
       imageHeight: "auto",
@@ -1381,8 +1364,10 @@ const surveyJson = {
      },
      {
       type: "matrix",
-      name: "question19",
+      name: "question24",
       title: "Inwieweit stimmen Sie zu, dass sich das Diagramm mit folgenden Worten beschreiben lässt?",
+      isRequired: true,
+      requiredErrorText: "Wählen Sie bitte für jede Eigenschaft einen Wert.",
       "columns": [
        {
         value: "Column 1",
@@ -1434,7 +1419,8 @@ const surveyJson = {
         value: "Row 5",
         text: "ansprechend"
        }
-      ]
+      ],
+      isAllRowRequired: true
      }
     ]
    },   //Bewertung Diagramm 4
@@ -1443,7 +1429,7 @@ const surveyJson = {
     elements: [
      {
       type: "image",
-      name: "question16",
+      name: "question25",
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=600e2056-a5bd-4079-87c5-08607c7e6b82",
       imageFit: "cover",
       imageHeight: "auto",
@@ -1451,8 +1437,10 @@ const surveyJson = {
      },
      {
       type: "matrix",
-      name: "question19",
+      name: "question26",
       title: "Inwieweit stimmen Sie zu, dass sich das Diagramm mit folgenden Worten beschreiben lässt?",
+      isRequired: true,
+      requiredErrorText: "Wählen Sie bitte für jede Eigenschaft einen Wert.",
       "columns": [
        {
         value: "Column 1",
@@ -1504,7 +1492,8 @@ const surveyJson = {
         value: "Row 5",
         text: "ansprechend"
        }
-      ]
+      ],
+      isAllRowRequired: true
      }
     ]
    },   //Bewertung Diagramm 5
@@ -1513,7 +1502,7 @@ const surveyJson = {
     elements: [
      {
       type: "image",
-      name: "question16",
+      name: "question27",
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=69118f1c-986b-43f8-9ffe-3e3435d95ca8",
       imageFit: "cover",
       imageHeight: "auto",
@@ -1521,8 +1510,10 @@ const surveyJson = {
      },
      {
       type: "matrix",
-      name: "question19",
+      name: "question28",
       title: "Inwieweit stimmen Sie zu, dass sich das Diagramm mit folgenden Worten beschreiben lässt?",
+      isRequired: true,
+      requiredErrorText: "Wählen Sie bitte für jede Eigenschaft einen Wert.",
       "columns": [
        {
         value: "Column 1",
@@ -1574,7 +1565,8 @@ const surveyJson = {
         value: "Row 5",
         text: "ansprechend"
        }
-      ]
+      ],
+      isAllRowRequired: true
      }
     ]
    },   //Bewertung Diagramm 6
@@ -1583,7 +1575,7 @@ const surveyJson = {
     elements: [
      {
       type: "image",
-      name: "question16",
+      name: "question29",
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=f5277ce0-fd27-43f4-a113-c9aa3a5ad08c",
       imageFit: "cover",
       imageHeight: "auto",
@@ -1591,8 +1583,10 @@ const surveyJson = {
      },
      {
       type: "matrix",
-      name: "question19",
+      name: "question30",
       title: "Inwieweit stimmen Sie zu, dass sich das Diagramm mit folgenden Worten beschreiben lässt?",
+      isRequired: true,
+      requiredErrorText: "Wählen Sie bitte für jede Eigenschaft einen Wert.",
       "columns": [
        {
         value: "Column 1",
@@ -1644,7 +1638,8 @@ const surveyJson = {
         value: "Row 5",
         text: "ansprechend"
        }
-      ]
+      ],
+      isAllRowRequired: true
      }
     ]
    },   //Bewrtung Diagramm 7
@@ -1653,7 +1648,7 @@ const surveyJson = {
     elements: [
      {
       type: "image",
-      name: "question16",
+      name: "question31",
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=a024b5d0-cec1-4273-94ed-07212be04a51",
       imageFit: "cover",
       imageHeight: "auto",
@@ -1661,8 +1656,10 @@ const surveyJson = {
      },
      {
       type: "matrix",
-      name: "question19",
+      name: "question32",
       title: "Inwieweit stimmen Sie zu, dass sich das Diagramm mit folgenden Worten beschreiben lässt?",
+      isRequired: true,
+      requiredErrorText: "Wählen Sie bitte für jede Eigenschaft einen Wert.",
       "columns": [
        {
         value: "Column 1",
@@ -1714,7 +1711,8 @@ const surveyJson = {
         value: "Row 5",
         text: "ansprechend"
        }
-      ]
+      ],
+      isAllRowRequired: true
      }
     ]
    },   //Bewertung Diagramm 8
@@ -1723,7 +1721,7 @@ const surveyJson = {
     elements: [
      {
       type: "image",
-      name: "question16",
+      name: "question33",
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=8486188c-806d-41ab-98ae-1d72eacef7f7",
       imageFit: "cover",
       imageHeight: "auto",
@@ -1731,8 +1729,10 @@ const surveyJson = {
      },
      {
       type: "matrix",
-      name: "question19",
+      name: "question34",
       title: "Inwieweit stimmen Sie zu, dass sich das Diagramm mit folgenden Worten beschreiben lässt?",
+      isRequired: true,
+      requiredErrorText: "Wählen Sie bitte für jede Eigenschaft einen Wert.",
       "columns": [
        {
         value: "Column 1",
@@ -1784,7 +1784,8 @@ const surveyJson = {
         value: "Row 5",
         text: "ansprechend"
        }
-      ]
+      ],
+      isAllRowRequired: true
      }
     ]
    },   //Bewertung Diagramm 9
@@ -1793,7 +1794,7 @@ const surveyJson = {
     elements: [
      {
       type: "image",
-      name: "question16",
+      name: "question35",
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=e97d2654-5c60-42df-a565-08bdb8978dad",
       imageFit: "cover",
       imageHeight: "auto",
@@ -1801,8 +1802,10 @@ const surveyJson = {
      },
      {
       type: "matrix",
-      name: "question19",
+      name: "question36",
       title: "Inwieweit stimmen Sie zu, dass sich das Diagramm mit folgenden Worten beschreiben lässt?",
+      isRequired: true,
+      requiredErrorText: "Wählen Sie bitte für jede Eigenschaft einen Wert.",
       "columns": [
        {
         value: "Column 1",
@@ -1854,7 +1857,8 @@ const surveyJson = {
         value: "Row 5",
         text: "ansprechend"
        }
-      ]
+      ],
+      isAllRowRequired: true
      }
     ]
    },   //Bewertung Diagramm 10
@@ -1863,7 +1867,7 @@ const surveyJson = {
     elements: [
      {
       type: "image",
-      name: "question16",
+      name: "question37",
       imageLink: "https://api.surveyjs.io/private/Surveys/files?name=d028bc9d-4e05-4aaf-b1bc-9325bb00e10c",
       imageFit: "cover",
       imageHeight: "auto",
@@ -1871,8 +1875,9 @@ const surveyJson = {
      },
      {
       type: "matrix",
-      name: "question19",
+      name: "question38",
       title: "Inwieweit stimmen Sie zu, dass sich das Diagramm mit folgenden Worten beschreiben lässt?",
+      isRequired: true,
       "columns": [
        {
         value: "Column 1",
@@ -1924,7 +1929,8 @@ const surveyJson = {
         value: "Row 5",
         text: "ansprechend"
        }
-      ]
+      ],
+      isAllRowRequired: true
      }
     ]
    },
@@ -1933,7 +1939,7 @@ const surveyJson = {
     elements: [
      {
       type: "html",
-      name: "question12",
+      name: "question39",
       html: "<h6>Vielen Dank für Ihre Teilnahme!</h6><br>\nHerzlichen Dank, dass Sie sich die Zeit genommen haben, an dieser Studie teilzunehmen.<br>\nBei weiteren Fragen oder Anmerkungen, zögern Sie nicht, mich unter folgender E-Mailadresse zu kontaktieren:<br>\ns84352@htw-dresden.de"
      }
     ]
@@ -1966,10 +1972,38 @@ export class AppComponent implements OnInit {
       console.log(JSON.stringify(sender.data, null, 3));
     });
     this.surveyModel = survey;
+    
+    survey.onCurrentPageChanged.add(function (sender, options) {
+      console.log(survey.currentPage.name);
+      if(survey.currentPage.name === 'page4' ) {
+        setTimeout(function () {
+          console.log("timer finish"),
+          survey.nextPage()
+      }, 3000);
+      
+      }
+    });
   }
 
-  pageChange(pageChange: SurveyModel) {
-    
+  /*pageChange(pageChange: SurveyModel, event: Survey.CurrentPageChangedEvent) {
+    //setTimeout(pageChange.doComplete(), 3000);
+    setTimeout(nextPage(), 3000);
+    Survey.nextPage();
+
   }
+
+  survey.onCurrentPageChanging.add(function (_, options)) {
+    setTimeout(survey.onCurrentPageChanging = options.newCurrentPage);
+  }
+  surveyJson.startTimer(3000);*/
+  
 }
+
+/*surveyJson.onCurrentPageChanged.add((sender, options)) => {
+  
+  }
+
+function nextPage(): () => void {
+  throw new Error('Function not implemented.');
+}*/
 

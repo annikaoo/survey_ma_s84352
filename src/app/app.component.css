@@ -2,3 +2,10 @@ section {
     display: block;
     margin-bottom: 230px; /* optional: Abstand zwischen den Abschnitten */
   }
+
+.timerclass {
+  font-size: 20px;
+  position: fixed;
+  top: 60vh;
+  left: 90vw;
+}
