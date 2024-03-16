@@ -241,7 +241,12 @@ const surveyJson = {
    {
     name: "page6",
     elements: [
-     {
+      {
+         type: "html",
+         name: "question_img1",
+         html: `<img src="../../assets/diagram1.png">`
+      },
+     /*{
       type: "image",
       name: "question2",
       imageLink: "../../assets/diagram1.png",
@@ -249,14 +254,14 @@ const surveyJson = {
       imageFit: "cover",
       imageHeight: "auto",
       imageWidth: "70%"
-     }/*,
+     },*/
      {
       type: "html",
       name: "timer",
       html: `<div class="timerclass" style="font-size: 20px; position: fixed;top: 60vh;left: 90vw;">
       Hallo
       </div>`
-     } */
+     } 
     ]
    },
    {
@@ -346,12 +351,9 @@ const surveyJson = {
     name: "page9",
     elements: [
       {
-        type: "image",
-        name: "question16",
-        imageLink: "https://api.surveyjs.io/private/Surveys/files?name=afd79b26-c5c9-429b-8b91-2fee35724bf3",
-        imageFit: "cover",
-        imageHeight: "auto",
-        imageWidth: "60%"
+         type: "html",
+         name: "question_img2",
+         html: `<img src="../../assets/diagram2.png">`
       }
     ]
    },
@@ -442,12 +444,9 @@ const surveyJson = {
     name: "page12",
     elements: [
       {
-        type: "image",
-        name: "question16",
-        imageLink: "https://api.surveyjs.io/private/Surveys/files?name=4abd7f13-6f07-4a6d-8dd1-8b572cb2a8ba",
-        imageFit: "cover",
-        imageHeight: "auto",
-        imageWidth: "70%"
+         type: "html",
+         name: "question_img3",
+         html: `<img src="../../assets/diagram3.png">`
       }
     ]
    },
@@ -538,12 +537,9 @@ const surveyJson = {
     name: "page15",
     elements: [
       {
-        type: "image",
-        name: "question16",
-        imageLink: "https://api.surveyjs.io/private/Surveys/files?name=600e2056-a5bd-4079-87c5-08607c7e6b82",
-        imageFit: "cover",
-        imageHeight: "auto",
-        imageWidth: "70%"
+         type: "html",
+         name: "question_img4",
+         html: `<img src="../../assets/diagram4.png">`
       }
     ]
    },
@@ -634,12 +630,9 @@ const surveyJson = {
     name: "page18",
     elements: [
       {
-        type: "image",
-        name: "question16",
-        imageLink: "https://api.surveyjs.io/private/Surveys/files?name=69118f1c-986b-43f8-9ffe-3e3435d95ca8",
-        imageFit: "cover",
-        imageHeight: "auto",
-        imageWidth: "70%"
+         type: "html",
+         name: "question_img5",
+         html: `<img src="../../assets/diagram5.png">`
       }
     ]
    },
@@ -730,12 +723,9 @@ const surveyJson = {
     name: "page21",
     elements: [
       {
-        type: "image",
-        name: "question16",
-        imageLink: "https://api.surveyjs.io/private/Surveys/files?name=f5277ce0-fd27-43f4-a113-c9aa3a5ad08c",
-        imageFit: "cover",
-        imageHeight: "auto",
-        imageWidth: "70%"
+         type: "html",
+         name: "question_img6",
+         html: `<img src="../../assets/diagram6.png">`
       }
     ]
    },
@@ -826,12 +816,9 @@ const surveyJson = {
     name: "page24",
     elements: [
       {
-        type: "image",
-        name: "question16",
-        imageLink: "https://api.surveyjs.io/private/Surveys/files?name=a024b5d0-cec1-4273-94ed-07212be04a51",
-        imageFit: "cover",
-        imageHeight: "auto",
-        imageWidth: "70%"
+         type: "html",
+         name: "question_img7",
+         html: `<img src="../../assets/diagram7.png">`
       }
     ]
    },
@@ -922,12 +909,9 @@ const surveyJson = {
     name: "page27",
     elements: [
       {
-        type: "image",
-        name: "question16",
-        imageLink: "https://api.surveyjs.io/private/Surveys/files?name=8486188c-806d-41ab-98ae-1d72eacef7f7",
-        imageFit: "cover",
-        imageHeight: "auto",
-        imageWidth: "70%"
+         type: "html",
+         name: "question_img8",
+         html: `<img src="../../assets/diagram8.png">`
       }
     ]
    },
@@ -1018,12 +1002,9 @@ const surveyJson = {
     name: "page30",
     elements: [
       {
-        type: "image",
-        name: "question16",
-        imageLink: "https://api.surveyjs.io/private/Surveys/files?name=e97d2654-5c60-42df-a565-08bdb8978dad",
-        imageFit: "cover",
-        imageHeight: "auto",
-        imageWidth: "70%"
+         type: "html",
+         name: "question_img9",
+         html: `<img src="../../assets/diagram9.png">`
       }
     ]
    },
@@ -1114,12 +1095,9 @@ const surveyJson = {
     name: "page33",
     elements: [
       {
-        type: "image",
-        name: "question16",
-        imageLink: "https://api.surveyjs.io/private/Surveys/files?name=d028bc9d-4e05-4aaf-b1bc-9325bb00e10c",
-        imageFit: "cover",
-        imageHeight: "auto",
-        imageWidth: "70%"
+         type: "html",
+         name: "question_img10",
+         html: `<img src="../../assets/diagram10.png">`
       }
     ]
    },
@@ -1206,17 +1184,15 @@ const surveyJson = {
      }
     ]
    },   //Bewertung Diagramm 1
+
    {
     name: "page36",
     elements: [
-     {
-      type: "image",
-      name: "question19",
-      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=24074100-7805-4083-ad2f-075d7139615f",
-      imageFit: "cover",
-      imageHeight: "auto",
-      imageWidth: "70%"
-     },
+      {
+         type: "html",
+         name: "question_img1_2",
+         html: `<img src="../../assets/diagram1.png">`
+      },
      {
       type: "matrix",
       name: "question20",
@@ -1282,14 +1258,11 @@ const surveyJson = {
    {
     name: "page37",
     elements: [
-     {
-      type: "image",
-      name: "question21",
-      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=afd79b26-c5c9-429b-8b91-2fee35724bf3",
-      imageFit: "cover",
-      imageHeight: "auto",
-      imageWidth: "60%"
-     },
+      {
+         type: "html",
+         name: "question_img2_2",
+         html: `<img src="../../assets/diagram2.png">`
+      },
      {
       type: "matrix",
       name: "question22",
@@ -1355,14 +1328,11 @@ const surveyJson = {
    {
     name: "page38",
     elements: [
-     {
-      type: "image",
-      name: "question23",
-      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=4abd7f13-6f07-4a6d-8dd1-8b572cb2a8ba",
-      imageFit: "cover",
-      imageHeight: "auto",
-      imageWidth: "70%"
-     },
+      {
+         type: "html",
+         name: "question_img3_2",
+         html: `<img src="../../assets/diagram3.png">`
+      },
      {
       type: "matrix",
       name: "question24",
@@ -1428,14 +1398,11 @@ const surveyJson = {
    {
     name: "page38",
     elements: [
-     {
-      type: "image",
-      name: "question25",
-      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=600e2056-a5bd-4079-87c5-08607c7e6b82",
-      imageFit: "cover",
-      imageHeight: "auto",
-      imageWidth: "70%"
-     },
+      {
+         type: "html",
+         name: "question_img4_2",
+         html: `<img src="../../assets/diagram4.png">`
+      },
      {
       type: "matrix",
       name: "question26",
@@ -1501,14 +1468,11 @@ const surveyJson = {
    {
     name: "page39",
     elements: [
-     {
-      type: "image",
-      name: "question27",
-      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=69118f1c-986b-43f8-9ffe-3e3435d95ca8",
-      imageFit: "cover",
-      imageHeight: "auto",
-      imageWidth: "70%"
-     },
+      {
+         type: "html",
+         name: "question_img5_2",
+         html: `<img src="../../assets/diagram5.png">`
+      },
      {
       type: "matrix",
       name: "question28",
@@ -1574,14 +1538,11 @@ const surveyJson = {
    {
     name: "page40",
     elements: [
-     {
-      type: "image",
-      name: "question29",
-      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=f5277ce0-fd27-43f4-a113-c9aa3a5ad08c",
-      imageFit: "cover",
-      imageHeight: "auto",
-      imageWidth: "70%"
-     },
+      {
+         type: "html",
+         name: "question_img6_2",
+         html: `<img src="../../assets/diagram6.png">`
+      },
      {
       type: "matrix",
       name: "question30",
@@ -1647,14 +1608,11 @@ const surveyJson = {
    {
     name: "page41",
     elements: [
-     {
-      type: "image",
-      name: "question31",
-      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=a024b5d0-cec1-4273-94ed-07212be04a51",
-      imageFit: "cover",
-      imageHeight: "auto",
-      imageWidth: "70%"
-     },
+      {
+         type: "html",
+         name: "question_img7_2",
+         html: `<img src="../../assets/diagram7.png">`
+      },
      {
       type: "matrix",
       name: "question32",
@@ -1720,14 +1678,11 @@ const surveyJson = {
    {
     name: "page42",
     elements: [
-     {
-      type: "image",
-      name: "question33",
-      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=8486188c-806d-41ab-98ae-1d72eacef7f7",
-      imageFit: "cover",
-      imageHeight: "auto",
-      imageWidth: "70%"
-     },
+      {
+         type: "html",
+         name: "question_img8_2",
+         html: `<img src="../../assets/diagram8.png">`
+      },
      {
       type: "matrix",
       name: "question34",
@@ -1793,14 +1748,11 @@ const surveyJson = {
    {
     name: "page43",
     elements: [
-     {
-      type: "image",
-      name: "question35",
-      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=e97d2654-5c60-42df-a565-08bdb8978dad",
-      imageFit: "cover",
-      imageHeight: "auto",
-      imageWidth: "70%"
-     },
+      {
+         type: "html",
+         name: "question_img9_2",
+         html: `<img src="../../assets/diagram9.png">`
+      },
      {
       type: "matrix",
       name: "question36",
@@ -1866,14 +1818,11 @@ const surveyJson = {
    {
     name: "page44",
     elements: [
-     {
-      type: "image",
-      name: "question37",
-      imageLink: "https://api.surveyjs.io/private/Surveys/files?name=d028bc9d-4e05-4aaf-b1bc-9325bb00e10c",
-      imageFit: "cover",
-      imageHeight: "auto",
-      imageWidth: "70%"
-     },
+      {
+         type: "html",
+         name: "question_img10_2",
+         html: `<img src="../../assets/diagram10.png">`
+      },
      {
       type: "matrix",
       name: "question38",
@@ -1974,17 +1923,16 @@ export class AppComponent implements OnInit {
     });
     this.surveyModel = survey;
     
-    //survey.onCurrentPageChanged.add(function (sender, options) {
-      //console.log(survey.currentPage.name);
-      //if(survey.currentPage.name === 'page4' ) {
-        //setTimeout(function () {
-          //console.log("timer finish"),
-          //survey.nextPage()
-      //}, 3000);
+    survey.onCurrentPageChanged.add(function (sender, options) {
+      console.log(survey.currentPage.name);
+      if(survey.currentPage.name === 'page4' ) {
+        setTimeout(function () {
+          console.log("timer finish"),
+          survey.nextPage()
+      }, 3000);
       
-      //}
-    //}
-    //);
+      }
+    });
   }
 
   /*pageChange(pageChange: SurveyModel, event: Survey.CurrentPageChangedEvent) {
