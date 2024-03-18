@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef  } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Model, SurveyModel } from "survey-core";
 import * as Survey from 'survey-core';
@@ -244,7 +244,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img1",
-         html: `<img src="../../assets/diagram1.png">`
+         html: `<img class="img1" src="../../assets/diagram1.png">`
       },
      /*{
       type: "image",
@@ -258,8 +258,8 @@ const surveyJson = {
      {
       type: "html",
       name: "timer",
-      html: `<div class="timerclass" style="font-size: 20px; position: fixed;top: 60vh;left: 90vw;">
-      Hallo
+      html: `<div id="timerText" class="timerclass" style="font-size: 20px; position: fixed;top: 60vh;left: 90vw;">
+         {{timerText}}
       </div>`
      } 
     ]
@@ -353,7 +353,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img2",
-         html: `<img src="../../assets/diagram2.png">`
+         html: `<img class="img2" src="../../assets/diagram2.png">`
       }
     ]
    },
@@ -446,7 +446,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img3",
-         html: `<img src="../../assets/diagram3.png">`
+         html: `<img class="img3" src="../../assets/diagram3.png">`
       }
     ]
    },
@@ -539,7 +539,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img4",
-         html: `<img src="../../assets/diagram4.png">`
+         html: `<img class="img4" src="../../assets/diagram4.png">`
       }
     ]
    },
@@ -632,7 +632,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img5",
-         html: `<img src="../../assets/diagram5.png">`
+         html: `<img class="img5" src="../../assets/diagram5.png">`
       }
     ]
    },
@@ -725,7 +725,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img6",
-         html: `<img src="../../assets/diagram6.png">`
+         html: `<img class="img6" src="../../assets/diagram6.png">`
       }
     ]
    },
@@ -818,7 +818,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img7",
-         html: `<img src="../../assets/diagram7.png">`
+         html: `<img class="img7" src="../../assets/diagram7.png">`
       }
     ]
    },
@@ -911,7 +911,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img8",
-         html: `<img src="../../assets/diagram8.png">`
+         html: `<img class="img8" src="../../assets/diagram8.png">`
       }
     ]
    },
@@ -1004,7 +1004,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img9",
-         html: `<img src="../../assets/diagram9.png">`
+         html: `<img class="img9" src="../../assets/diagram9.png">`
       }
     ]
    },
@@ -1097,7 +1097,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img10",
-         html: `<img src="../../assets/diagram10.png">`
+         html: `<img class="img10" src="../../assets/diagram10.png">`
       }
     ]
    },
@@ -1914,6 +1914,9 @@ const surveyJson = {
 export class AppComponent implements OnInit {
   surveyModel: Model | undefined;
   title = 'survey_ma_s84352';
+  timerText: string = "3";
+
+  //constructor(private cdr: ChangeDetectorRef) {} 
 
   ngOnInit(): void {
     const survey = new Model(surveyJson);
@@ -1923,16 +1926,28 @@ export class AppComponent implements OnInit {
     });
     this.surveyModel = survey;
     
-    survey.onCurrentPageChanged.add(function (sender, options) {
+    /*survey.onCurrentPageChanged.add( (sender, options) => {
       console.log(survey.currentPage.name);
-      if(survey.currentPage.name === 'page4' ) {
-        setTimeout(function () {
+      if(survey.currentPage.name === 'page6' ) {
+        let secondsLeft = 3;
+        const timerInterval = setInterval(() => {
+         secondsLeft--;
+         if(secondsLeft<=0) {
+            clearInterval(timerInterval);
+            console.log("timer finish");
+            survey.nextPage();
+         } else {
+            this.timerText = `${secondsLeft}`;
+            //this.cdr.detectChanges();
+         }
+        }, 1000);
+         setTimeout(function () {
           console.log("timer finish"),
           survey.nextPage()
       }, 3000);
       
       }
-    });
+    });*/
   }
 
   /*pageChange(pageChange: SurveyModel, event: Survey.CurrentPageChangedEvent) {
