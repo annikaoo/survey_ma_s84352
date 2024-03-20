@@ -2,27 +2,3 @@ section {
     display: block;
     margin-bottom: 230px; /* optional: Abstand zwischen den Abschnitten */
   }
-
-.timerclass {
-  font-size: 20px;
-  position: fixed;
-  top: 60vh;
-  left: 90vw;
-}
-
-.img1 {
-  max-width: 100%;
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  .img1 {
-    max-width: 70%;
-  }
-}
-
-@media (max-width: 460px) {
-  .img1 {
-    max-width: 100%;
-  }
-}

@@ -255,13 +255,13 @@ const surveyJson = {
       imageHeight: "auto",
       imageWidth: "70%"
      },*/
-     {
+     /*{
       type: "html",
       name: "timer",
-      html: `<div id="timerText" class="timerclass" style="font-size: 20px; position: fixed;top: 60vh;left: 90vw;">
+      html: `<div id="timerText" class="timerclass">
          {{timerText}}
       </div>`
-     } 
+     } */
     ]
    },
    {
@@ -1926,7 +1926,7 @@ export class AppComponent implements OnInit {
     });
     this.surveyModel = survey;
     
-    /*survey.onCurrentPageChanged.add( (sender, options) => {
+    survey.onCurrentPageChanged.add( (sender, options) => {
       console.log(survey.currentPage.name);
       if(survey.currentPage.name === 'page6' ) {
         let secondsLeft = 3;
@@ -1941,13 +1941,13 @@ export class AppComponent implements OnInit {
             //this.cdr.detectChanges();
          }
         }, 1000);
-         setTimeout(function () {
+         /*setTimeout(function () {
           console.log("timer finish"),
           survey.nextPage()
-      }, 3000);
+      }, 3000);*/
       
       }
-    });*/
+    });
   }
 
   /*pageChange(pageChange: SurveyModel, event: Survey.CurrentPageChangedEvent) {

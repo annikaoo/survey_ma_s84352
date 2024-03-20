@@ -1,34 +1,13 @@
 {
+    "teilnehmerID": "1",
+    "timestamp": "31.03.2024 12:00:00",
     "diagramOrder1": "0123456789",
     "diagramOrder2": "0123456789",
+    "event": "1",
+    "task": "1",
     "Datenschutzerkärung": true,
-    "Alter": 1,
-    "Geschlecht": "Geschlecht",
-    "Tätigkeit": "Tätigkeit",
-    "InteresseUmwelt": "Interesse",
-    "bearbeitungszeit": "0:01",
-    "TimeStamp": "31.03.2024",
-
-    
-    "T1_D1": ["d1_eckig", null, null, null, null, null, null, null, null, null],
-    "T1_D2": ["d2_eckig", null, null, null, null, null, null, null, null, null],
-    "T1_D3": ["d3_eckig", null, null, null, null, null, null, null, null, null],
-    "T1_D4": ["d4_eckig", null, null, null, null, null, null, null, null, null],
-    "T1_D5": ["d5_eckig", null, null, null, null, null, null, null, null, null],
-    "T1_D6": ["d6_eckig", null, null, null, null, null, null, null, null, null],
-    "T1_D7": ["d7_eckig", null, null, null, null, null, null, null, null, null],
-    "T1_D8": ["d8_eckig", null, null, null, null, null, null, null, null, null],
-    "T1_D9": ["d9_eckig", null, null, null, null, null, null, null, null, null],
-    "T1_D10": ["d10_eckig", null, null, null, null, null, null, null, null, null],
-    
-    "T2_D1": [1, 1, 1, 1, 1],
-    "T2_D2": [1, 1, 1, 1, 1],
-    "T2_D3": [1, 1, 1, 1, 1],
-    "T2_D4": [1, 1, 1, 1, 1],
-    "T2_D5": [1, 1, 1, 1, 1],
-    "T2_D6": [1, 1, 1, 1, 1],
-    "T2_D7": [1, 1, 1, 1, 1],
-    "T2_D8": [1, 1, 1, 1, 1],
-    "T2_D9": [1, 1, 1, 1, 1],
-    "T2_D10": [1, 1, 1, 1, 1]
+    "Alter": null,
+    "Geschlecht": null,
+    "Tätigkeit": null,
+    "InteresseUmwelt": null
 }
