@@ -11,12 +11,12 @@
   }
   
   @media (max-width: 768px) {
-    .img1 {
-      max-width: 70%;
+    .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10 {
+      max-width: 100%;
     }
   }
   
-  @media (max-width: 460px) {
+  @media (max-width: 1000px) {
     .img1 {
       max-width: 100%;
     }

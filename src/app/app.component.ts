@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef  } from '@angular/core';
+import { Component, OnInit, AfterViewInit  } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Model, SurveyModel } from "survey-core";
 import * as Survey from 'survey-core';
@@ -8,6 +8,9 @@ import { SurveyModule } from 'survey-angular-ui';
 //import { themeJson } from "./theme";
 import "./app.component.css";
 import "survey-core/defaultV2.min.css";
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+
 
 const surveyJson = {
   title: "Begriffsverständnis in der Informationsvisualisierung",
@@ -1191,7 +1194,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img1_2",
-         html: `<img src="../../assets/diagram1.png">`
+         html: `<img class="img1" src="../../assets/diagram1.png">`
       },
      {
       type: "matrix",
@@ -1261,7 +1264,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img2_2",
-         html: `<img src="../../assets/diagram2.png">`
+         html: `<img class="img2" src="../../assets/diagram2.png">`
       },
      {
       type: "matrix",
@@ -1331,7 +1334,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img3_2",
-         html: `<img src="../../assets/diagram3.png">`
+         html: `<img class="img3" src="../../assets/diagram3.png">`
       },
      {
       type: "matrix",
@@ -1401,7 +1404,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img4_2",
-         html: `<img src="../../assets/diagram4.png">`
+         html: `<img class="img4" src="../../assets/diagram4.png">`
       },
      {
       type: "matrix",
@@ -1471,7 +1474,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img5_2",
-         html: `<img src="../../assets/diagram5.png">`
+         html: `<img class="img5" src="../../assets/diagram5.png">`
       },
      {
       type: "matrix",
@@ -1541,7 +1544,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img6_2",
-         html: `<img src="../../assets/diagram6.png">`
+         html: `<img class="img6" src="../../assets/diagram6.png">`
       },
      {
       type: "matrix",
@@ -1611,7 +1614,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img7_2",
-         html: `<img src="../../assets/diagram7.png">`
+         html: `<img class="img7" src="../../assets/diagram7.png">`
       },
      {
       type: "matrix",
@@ -1681,7 +1684,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img8_2",
-         html: `<img src="../../assets/diagram8.png">`
+         html: `<img class="img8" src="../../assets/diagram8.png">`
       },
      {
       type: "matrix",
@@ -1751,7 +1754,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img9_2",
-         html: `<img src="../../assets/diagram9.png">`
+         html: `<img class="img9" src="../../assets/diagram9.png">`
       },
      {
       type: "matrix",
@@ -1821,7 +1824,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img10_2",
-         html: `<img src="../../assets/diagram10.png">`
+         html: `<img class="img10" src="../../assets/diagram10.png">`
       },
      {
       type: "matrix",
@@ -1896,7 +1899,7 @@ const surveyJson = {
    }
   ],
   showProgressBar: "bottom",
-  firstPageIsStarted: true,
+  firstPageIsStarted: true, 
   //maxTimeToFinish: 25,
   //maxTimeToFinishPage: 10,
   //showTimerPanel: "top"
@@ -1906,17 +1909,20 @@ const surveyJson = {
   selector: 'app-root',
   //selector: "component-survey",
   standalone: true,
-  imports: [RouterOutlet, SurveyModule],
+  imports: [RouterOutlet, SurveyModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
-})
+}
+)
 
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
   surveyModel: Model | undefined;
   title = 'survey_ma_s84352';
   timerText: string = "3";
 
   //constructor(private cdr: ChangeDetectorRef) {} 
+
+   showTimer: boolean = false;
 
   ngOnInit(): void {
     const survey = new Model(surveyJson);
@@ -1928,27 +1934,84 @@ export class AppComponent implements OnInit {
     
     survey.onCurrentPageChanged.add( (sender, options) => {
       console.log(survey.currentPage.name);
-      if(survey.currentPage.name === 'page6' ) {
-        let secondsLeft = 3;
-        const timerInterval = setInterval(() => {
-         secondsLeft--;
-         if(secondsLeft<=0) {
-            clearInterval(timerInterval);
-            console.log("timer finish");
+
+      /*if((survey.currentPage.name === 'page6') || (survey.currentPage.name === 'page9')) {
+         if (this.runTimer(3)) {
             survey.nextPage();
-         } else {
-            this.timerText = `${secondsLeft}`;
-            //this.cdr.detectChanges();
          }
-        }, 1000);
-         /*setTimeout(function () {
-          console.log("timer finish"),
-          survey.nextPage()
-      }, 3000);*/
-      
+      }*/
+      if((survey.currentPage.name === 'page6') || (survey.currentPage.name === 'page9')) {
+            this.runTimer(3, () => {   
+            survey.nextPage();
+         });
+      }
+      else if ((survey.currentPage.name === 'page7') || (survey.currentPage.name === 'page10')) {
+         this.runTimer(10, () => {
+            survey.nextPage();
+         });
+      }
+      /*else if ((survey.currentPage.name === 'page7') || (survey.currentPage.name === 'page10')) {
+         this.timerText = "10";
+         this.showTimer = true;
+         let secondsLeft = 10;
+         const timerInterval = setInterval(() => {
+            secondsLeft--;
+            if(secondsLeft<=0) {
+               clearInterval(timerInterval);
+               console.log("timer finish");
+               survey.nextPage();
+            } else {
+               this.timerText = `${secondsLeft}`;
+            }
+           }, 1000);
+      }*/
+      else {
+         this.showTimer = false;
       }
     });
   }
+  
+  runTimer(secondsLeft: number, callback: () => void): void {
+   this.timerText = secondsLeft.toString();
+   this.showTimer = true;
+   
+   const timerInterval = setInterval(() => {
+       secondsLeft--;
+       if (secondsLeft <= 0) {
+           clearInterval(timerInterval);
+           console.log("timer finish");
+           callback(); // Hier wird die nächste Seite aufgerufen, wenn die Zeit abgelaufen ist
+       } else {
+           this.timerText = `${secondsLeft}`;
+       }
+   }, 1000);
+}
+
+  /*runTimer(secondsLeft: number): boolean {
+   this.timerText = secondsLeft.toString();
+   this.showTimer = true;
+   let finished = false;
+   const timerInterval = setInterval(() => {
+      secondsLeft--;
+      if(secondsLeft<=0) {
+         clearInterval(timerInterval);
+         console.log("timer finish");
+         finished = true;
+      } else {
+         this.timerText = `${secondsLeft}`;
+         finished = false;
+      }
+     }, 1000);
+   return finished;
+  }*/
+
+  ngAfterViewInit(): void {
+     
+  }
+
+  /*runTimer() {
+
+  }*/
 
   /*pageChange(pageChange: SurveyModel, event: Survey.CurrentPageChangedEvent) {
     //setTimeout(pageChange.doComplete(), 3000);

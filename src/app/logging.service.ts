@@ -17,8 +17,8 @@ export class LoggingService {
     this.endTime = new Date().getTime();  //End time
 
     const bearbeitungszeit = this.endTime - this.startTime;
-    const timeStamp = this.datumZeit;
-    console.log("Datum:", timeStamp);
+    const timestamp = this.datumZeit;
+    console.log("Datum:", timestamp);
 
     const storage: any = {};
 
@@ -28,7 +28,7 @@ export class LoggingService {
       diagramOrder1: localStorage.getItem('diagramOrder1'),
       diagramOrder2: localStorage.getItem('diagramOrder2'),
       bearbeitungszeit :  this.millisToMinutesAndSeconds(bearbeitungszeit),
-      TimeStamp: this.datumZeit,
+      timestamp: this.datumZeit,
 
 
     };
