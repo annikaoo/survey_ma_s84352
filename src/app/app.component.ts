@@ -10,6 +10,8 @@ import "./app.component.css";
 import "survey-core/defaultV2.min.css";
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { PercentageProgressBarComponent } from "./progressbar-percentage.component";
+
 
 
 const surveyJson = {
@@ -17,6 +19,8 @@ const surveyJson = {
   description: "\n",
   logo: "https://api.surveyjs.io/private/Surveys/files?name=eec41128-7c5c-40c7-bd6a-47ef1be0ba73",
   logoPosition: "right",
+  progressTitle: "",
+  progressBarType: "pages",
   pages: [
    { name: "page1",
     elements: [
@@ -172,57 +176,57 @@ const surveyJson = {
       <div>
       <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
             <label for="frage11">dick</label>
-            <input type="checkbox" id="f10_dick" name="f10_dick" value="dick" />
-            <input type="checkbox" id="f10_dünn" name="f10_dünn" value="dünn" />
+            <input type="checkbox" id="f10_dick" name="f10_dick" value="dick" disabled="disabled"/>
+            <input type="checkbox" id="f10_dünn" name="f10_dünn" value="dünn" disabled="disabled/>
             <label for="frage12">dünn</label>
          </section>
          
          <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
             <label for="frage21">symmetrisch</label>
-            <input type="checkbox" id="f10_symm" name="f10_symm" value="symmetrisch" />
-            <input type="checkbox" id="f10_asymm" name="f10_asymm" value="asymmetrisch" />
+            <input type="checkbox" id="f10_symm" name="f10_symm" value="symmetrisch" disabled="disabled"/>
+            <input type="checkbox" id="f10_asymm" name="f10_asymm" value="asymmetrisch" disabled="disabled"/>
             <label for="frage22">asymmetrisch</label>
          </section>
 
          <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
             <label for="frage21">bunt</label>
-            <input type="checkbox" id="f10_bunt" name="f10_bunt" value="bunt" />
-            <input type="checkbox" id="f10_unbunt" name="f10_unbunt" value="unbunt" />
+            <input type="checkbox" id="f10_bunt" name="f10_bunt" value="bunt" disabled="disabled"/>
+            <input type="checkbox" id="f10_unbunt" name="f10_unbunt" value="unbunt" disabled="disabled"/>
             <label for="frage22">unbunt</label>
          </section>
 
          <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
             <label for="frage21">komplex</label>
-            <input type="checkbox" id="f10_komplex" name="f10_komplex" value="komplex" />
-            <input type="checkbox" id="f10_einfach" name="f10_einfach" value="einfach" />
+            <input type="checkbox" id="f10_komplex" name="f10_komplex" value="komplex" disabled="disabled"/>
+            <input type="checkbox" id="f10_einfach" name="f10_einfach" value="einfach" disabled="disabled"/>
             <label for="frage22">einfach</label>
          </section>
 
          <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
             <label for="frage21">eckig</label>
-            <input type="checkbox" id="f10_eckig" name="f10_eckig" value="eckig" />
-            <input type="checkbox" id="f10_rund" name="f10_rund" value="rund" />
+            <input type="checkbox" id="f10_eckig" name="f10_eckig" value="eckig" disabled="disabled"/>
+            <input type="checkbox" id="f10_rund" name="f10_rund" value="rund" disabled="disabled"/>
             <label for="frage22">rund</label>
          </section>
 
          <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
             <label for="frage21">harmonisch</label>
-            <input type="checkbox" id="f10_harm" name="f10_harm" value="harmonisch" />
-            <input type="checkbox" id="f10_chaot" name="f10_chaot" value="chaotisch" />
+            <input type="checkbox" id="f10_harm" name="f10_harm" value="harmonisch" disabled="disabled"/>
+            <input type="checkbox" id="f10_chaot" name="f10_chaot" value="chaotisch" disabled="disabled"/>
             <label for="frage22">chaotisch</label>
          </section>
 
          <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
             <label for="frage21">aktiv</label>
-            <input type="checkbox" id="f10_aktiv" name="f10_aktiv" value="aktiv" />
-            <input type="checkbox" id="f10_passiv" name="f10_passiv" value="passiv" />
+            <input type="checkbox" id="f10_aktiv" name="f10_aktiv" value="aktiv" disabled="disabled"/>
+            <input type="checkbox" id="f10_passiv" name="f10_passiv" value="passiv" disabled="disabled"/>
             <label for="frage22">passiv</label>
          </section>
 
          <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
             <label for="frage21">klein</label>
-            <input type="checkbox" id="f10_klein" name="f10_klein" value="klein" />
-            <input type="checkbox" id="f10_groß" name="f10_groß" value="groß" />
+            <input type="checkbox" id="f10_klein" name="f10_klein" value="klein" disabled="disabled"/>
+            <input type="checkbox" id="f10_groß" name="f10_groß" value="groß" disabled="disabled"/>
             <label for="frage22">groß</label>
          </section>
       </div>
@@ -1898,7 +1902,6 @@ const surveyJson = {
     ]
    }
   ],
-  showProgressBar: "bottom",
   firstPageIsStarted: true, 
   //maxTimeToFinish: 25,
   //maxTimeToFinishPage: 10,
@@ -1919,13 +1922,22 @@ export class AppComponent implements OnInit, AfterViewInit {
   surveyModel: Model | undefined;
   title = 'survey_ma_s84352';
   timerText: string = "3";
+  static declaration = [PercentageProgressBarComponent];
 
   //constructor(private cdr: ChangeDetectorRef) {} 
 
    showTimer: boolean = false;
 
   ngOnInit(): void {
-    const survey = new Model(surveyJson);
+   const survey = new Model(surveyJson);
+
+    survey.addLayoutElement({
+      id: "progressbar-percentage",
+      component: "sv-progressbar-percentage",
+      container: "contentBottom",
+      data: survey
+  });
+
     //survey.applyTheme(themeJson);
     survey.onComplete.add((sender, options) => {
       console.log(JSON.stringify(sender.data, null, 3));
