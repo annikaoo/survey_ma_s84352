@@ -1,8 +1,26 @@
 .timerclass {
-    font-size: 20px;
+    font-size: 40px;
     position: fixed;
-    top: 60vh;
+    color: white;
+    text-align: center; /* Zentrieren des Textes */
+    line-height: 100px; /* Vertikale Ausrichtung des Textes */
+  }
+
+ .timer-container {
+    position: fixed;
+    top: 25vh;
     left: 90vw;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: #20b494;
+    border: 2px solid #20b494;
+    border-radius: 50%;
+    box-shadow: 
+    inset 0 0 0 2px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 .img1 {

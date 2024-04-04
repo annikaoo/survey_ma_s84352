@@ -11,7 +11,8 @@ import "survey-core/defaultV2.min.css";
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { PercentageProgressBarComponent } from "./progressbar-percentage.component";
-
+import { HostListener } from '@angular/core';
+import { last } from 'rxjs';
 
 
 const surveyJson = {
@@ -251,7 +252,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img1",
-         html: `<img class="img1" src="../../assets/diagram1.png">`
+         html: `<img id="img1" class="part1" src="../../assets/diagram1.png">`
       },
      /*{
       type: "image",
@@ -360,7 +361,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img2",
-         html: `<img class="img2" src="../../assets/diagram2.png">`
+         html: `<img class="part1" src="../../assets/diagram2.png">`
       }
     ]
    },
@@ -1104,7 +1105,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img10",
-         html: `<img class="img10" src="../../assets/diagram10.png">`
+         html: `<img class="part1" src="../../assets/diagram10.png">`
       }
     ]
    },
@@ -1268,7 +1269,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img2_2",
-         html: `<img class="img2" src="../../assets/diagram2.png">`
+         html: `<img class="part1" src="../../assets/diagram2.png">`
       },
      {
       type: "matrix",
@@ -1338,7 +1339,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img3_2",
-         html: `<img class="img3" src="../../assets/diagram3.png">`
+         html: `<img class="part1" src="../../assets/diagram3.png">`
       },
      {
       type: "matrix",
@@ -1408,7 +1409,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img4_2",
-         html: `<img class="img4" src="../../assets/diagram4.png">`
+         html: `<img class="part1" src="../../assets/diagram4.png">`
       },
      {
       type: "matrix",
@@ -1478,7 +1479,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img5_2",
-         html: `<img class="img5" src="../../assets/diagram5.png">`
+         html: `<img class="part1" src="../../assets/diagram5.png">`
       },
      {
       type: "matrix",
@@ -1548,7 +1549,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img6_2",
-         html: `<img class="img6" src="../../assets/diagram6.png">`
+         html: `<img class="part1" src="../../assets/diagram6.png">`
       },
      {
       type: "matrix",
@@ -1618,7 +1619,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img7_2",
-         html: `<img class="img7" src="../../assets/diagram7.png">`
+         html: `<img class="part1" src="../../assets/diagram7.png">`
       },
      {
       type: "matrix",
@@ -1688,7 +1689,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img8_2",
-         html: `<img class="img8" src="../../assets/diagram8.png">`
+         html: `<img class="part1" src="../../assets/diagram8.png">`
       },
      {
       type: "matrix",
@@ -1758,7 +1759,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img9_2",
-         html: `<img class="img9" src="../../assets/diagram9.png">`
+         html: `<img class="part1" src="../../assets/diagram9.png">`
       },
      {
       type: "matrix",
@@ -1828,7 +1829,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img10_2",
-         html: `<img class="img10" src="../../assets/diagram10.png">`
+         html: `<img class="part1" src="../../assets/diagram10.png">`
       },
      {
       type: "matrix",
@@ -1908,6 +1909,61 @@ const surveyJson = {
   //showTimerPanel: "top"
  }
 
+ function updateStringComponents(_: any, options: any) {
+   //var randomizedPaths = this.randomizeDiagrams(this.filePaths);
+   const filePaths: string[] = [
+      "../../assets/diagram1.png",
+      "../../assets/diagram2.png",
+      "../../assets/diagram3.png",
+      "../../assets/diagram4.png",
+      "../../assets/diagram5.png",
+      "../../assets/diagram6.png",   
+      "../../assets/diagram7.png",
+      "../../assets/diagram8.png",
+      "../../assets/diagram9.png",
+      "../../assets/diagram10.png"
+      ];
+
+   var storedArray: string[];
+   
+   if (localStorage.getItem("filePaths") === null) {
+      var currentIndex = filePaths.length;
+      var temp: string;
+      var randomIndex: number;
+
+      while (0 !== currentIndex) {
+         randomIndex = Math.floor(Math.random() * currentIndex);
+         currentIndex--;
+
+         temp = filePaths[currentIndex];
+         filePaths[currentIndex] = filePaths[randomIndex];
+         filePaths[randomIndex] = temp;
+      }
+      localStorage.setItem("filePaths", JSON.stringify(filePaths));
+      storedArray = filePaths;
+    }
+    else {
+      storedArray = JSON.parse(localStorage.getItem("filePaths") || '{}');
+    }
+   options.htmlElement.querySelectorAll('.part1').forEach(function(el: any) {
+       console.log(el.src);
+       //var currPage = el.src.substring(20);
+       var currPage; //= currPage.substring(-4);
+
+       const pathArray = el.src.split("/");
+       const lastIndex = pathArray.length-1;
+       currPage = pathArray[lastIndex].substring(7);
+       currPage = currPage.split(".") [0];
+
+       el.src = storedArray[currPage-1];
+       console.log(currPage);
+
+       //el.src = filePaths[0];
+       //var paths: string[] = this.randomizedPaths;
+       //console.log(JSON.stringify(storedArray, null, 1));
+   });
+ }
+   
 @Component({
   selector: 'app-root',
   //selector: "component-survey",
@@ -1938,6 +1994,12 @@ export class AppComponent implements OnInit, AfterViewInit {
       data: survey
   });
 
+  if(survey.state == "starting") {
+   console.log("starting");
+   localStorage.removeItem("filePaths");  //Logging: wird erste diagramOrder geloggt, dann Cache geleert oder passt das vom Timing her?
+  }
+  survey.onAfterRenderQuestion.add(updateStringComponents); //hier Timer starten?
+
     //survey.applyTheme(themeJson);
     survey.onComplete.add((sender, options) => {
       console.log(JSON.stringify(sender.data, null, 3));
@@ -1947,11 +2009,14 @@ export class AppComponent implements OnInit, AfterViewInit {
     survey.onCurrentPageChanged.add( (sender, options) => {
       console.log(survey.currentPage.name);
 
-      /*if((survey.currentPage.name === 'page6') || (survey.currentPage.name === 'page9')) {
-         if (this.runTimer(3)) {
-            survey.nextPage();
-         }
-      }*/
+      console.log(survey.currentPage.name.substring(4));
+      var pageNumber = survey.currentPage.name.substring(4);
+      var diagramNumber: number;
+      console.log(document.getElementById("img1"));
+      if(pageNumber>=6 && pageNumber<=33 && pageNumber%3==0){   //andere Berechnung für Part 2
+         diagramNumber = (pageNumber-6)/3;
+         console.log(document.getElementById("img1"));
+      }
       if((survey.currentPage.name === 'page6') || (survey.currentPage.name === 'page9')) {
             this.runTimer(3, () => {   
             survey.nextPage();
@@ -1962,27 +2027,30 @@ export class AppComponent implements OnInit, AfterViewInit {
             survey.nextPage();
          });
       }
-      /*else if ((survey.currentPage.name === 'page7') || (survey.currentPage.name === 'page10')) {
-         this.timerText = "10";
-         this.showTimer = true;
-         let secondsLeft = 10;
-         const timerInterval = setInterval(() => {
-            secondsLeft--;
-            if(secondsLeft<=0) {
-               clearInterval(timerInterval);
-               console.log("timer finish");
-               survey.nextPage();
-            } else {
-               this.timerText = `${secondsLeft}`;
-            }
-           }, 1000);
-      }*/
       else {
          this.showTimer = false;
       }
     });
   }
   
+  
+  randomizeDiagrams(filePaths: string[]): string[] {
+   var currentIndex = filePaths.length;
+   var temp: string;
+   var randomIndex: number;
+
+   while (0 !== currentIndex) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      temp = filePaths[currentIndex];
+      filePaths[currentIndex] = filePaths[randomIndex];
+      filePaths[randomIndex] = temp;
+   }
+   
+   return filePaths;
+  }
+
   runTimer(secondsLeft: number, callback: () => void): void {
    this.timerText = secondsLeft.toString();
    this.showTimer = true;
@@ -1999,51 +2067,8 @@ export class AppComponent implements OnInit, AfterViewInit {
    }, 1000);
 }
 
-  /*runTimer(secondsLeft: number): boolean {
-   this.timerText = secondsLeft.toString();
-   this.showTimer = true;
-   let finished = false;
-   const timerInterval = setInterval(() => {
-      secondsLeft--;
-      if(secondsLeft<=0) {
-         clearInterval(timerInterval);
-         console.log("timer finish");
-         finished = true;
-      } else {
-         this.timerText = `${secondsLeft}`;
-         finished = false;
-      }
-     }, 1000);
-   return finished;
-  }*/
-
   ngAfterViewInit(): void {
-     
+   
   }
-
-  /*runTimer() {
-
-  }*/
-
-  /*pageChange(pageChange: SurveyModel, event: Survey.CurrentPageChangedEvent) {
-    //setTimeout(pageChange.doComplete(), 3000);
-    setTimeout(nextPage(), 3000);
-    Survey.nextPage();
-
-  }
-
-  survey.onCurrentPageChanging.add(function (_, options)) {
-    setTimeout(survey.onCurrentPageChanging = options.newCurrentPage);
-  }
-  surveyJson.startTimer(3000);*/
-  
 }
-
-/*surveyJson.onCurrentPageChanged.add((sender, options)) => {
-  
-  }
-
-function nextPage(): () => void {
-  throw new Error('Function not implemented.');
-}*/
 
