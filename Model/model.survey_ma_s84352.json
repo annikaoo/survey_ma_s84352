@@ -1,8 +1,7 @@
 {
     "teilnehmerID": "1",
     "timestamp": "31.03.2024 12:00:00",
-    "diagramOrder1": "0123456789",
-    "diagramOrder2": "0123456789",
+    "filePaths": "0123456789",
     "event": "1",
     "task": "1",
     "Datenschutzerkärung": true,

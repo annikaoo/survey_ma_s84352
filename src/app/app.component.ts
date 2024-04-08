@@ -12,8 +12,10 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { PercentageProgressBarComponent } from "./progressbar-percentage.component";
 import { HostListener } from '@angular/core';
-import { last } from 'rxjs';
+import { elementAt, last } from 'rxjs';
+import { LoggingService } from './logging.service';
 
+var service : LoggingService | null = null;
 
 const surveyJson = {
   title: "Begriffsverständnis in der Informationsvisualisierung",
@@ -287,57 +289,57 @@ const surveyJson = {
       <div>
       <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
             <label for="frage11">dick</label>
-            <input type="checkbox" id="d1_dick" name="d1_dick" value="dick" />
-            <input type="checkbox" id="d1_dünn" name="d1_dünn" value="dünn" />
+            <input type="checkbox" class="cb" id="d1_dick" name="d1_dick" value="dick" '/>
+            <input type="checkbox" class="cb" id="d1_dünn" name="d1_dünn" value="dünn" '/>
             <label for="frage12">dünn</label>
          </section>
          
          <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
             <label for="frage21">symmetrisch</label>
-            <input type="checkbox" id="d1_symm" name="d1_symm" value="symmetrisch" />
-            <input type="checkbox" id="d1_asymm" name="d1_asymm" value="asymmetrisch" />
+            <input type="checkbox" class="cb" id="d1_symm" name="d1_symm" value="symmetrisch" />
+            <input type="checkbox" class="cb" id="d1_asymm" name="d1_asymm" value="asymmetrisch" />
             <label for="frage22">asymmetrisch</label>
          </section>
 
          <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
             <label for="frage21">bunt</label>
-            <input type="checkbox" id="d1_bunt" name="d1_bunt" value="bunt" />
-            <input type="checkbox" id="d1_unbunt" name="d1_unbunt" value="unbunt" />
+            <input type="checkbox" class="cb" id="d1_bunt" name="d1_bunt" value="bunt" />
+            <input type="checkbox" class="cb" id="d1_unbunt" name="d1_unbunt" value="unbunt" />
             <label for="frage22">unbunt</label>
          </section>
 
          <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
             <label for="frage21">komplex</label>
-            <input type="checkbox" id="d1_komplex" name="d1_komplex" value="komplex" />
-            <input type="checkbox" id="d1_einfach" name="d1_einfach" value="einfach" />
+            <input type="checkbox" class="cb" id="d1_komplex" name="d1_komplex" value="komplex" />
+            <input type="checkbox" class="cb" id="d1_einfach" name="d1_einfach" value="einfach" />
             <label for="frage22">einfach</label>
          </section>
 
          <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
             <label for="frage21">eckig</label>
-            <input type="checkbox" id="d1_eckig" name="d1_eckig" value="eckig" />
-            <input type="checkbox" id="d1_rund" name="d1_rund" value="rund" />
+            <input type="checkbox" class="cb" id="d1_eckig" name="d1_eckig" value="eckig" />
+            <input type="checkbox" class="cb" id="d1_rund" name="d1_rund" value="rund" />
             <label for="frage22">rund</label>
          </section>
 
          <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
             <label for="frage21">harmonisch</label>
-            <input type="checkbox" id="d1_harm" name="d1_harm" value="harmonisch" />
-            <input type="checkbox" id="d1_chaot" name="d1_chaot" value="chaotisch" />
+            <input type="checkbox" class="cb" id="d1_harm" name="d1_harm" value="harmonisch" />
+            <input type="checkbox" class="cb" id="d1_chaot" name="d1_chaot" value="chaotisch" />
             <label for="frage22">chaotisch</label>
          </section>
 
          <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
             <label for="frage21">aktiv</label>
-            <input type="checkbox" id="d1_aktiv" name="d1_aktiv" value="aktiv" />
-            <input type="checkbox" id="d1_passiv" name="d1_passiv" value="passiv" />
+            <input type="checkbox" class="cb" id="d1_aktiv" name="d1_aktiv" value="aktiv" />
+            <input type="checkbox" class="cb" id="d1_passiv" name="d1_passiv" value="passiv" />
             <label for="frage22">passiv</label>
          </section>
 
          <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
             <label for="frage21">klein</label>
-            <input type="checkbox" id="d1_klein" name="d1_klein" value="klein" />
-            <input type="checkbox" id="d1_groß" name="d1_groß" value="groß" />
+            <input type="checkbox" class="cb" id="d1_klein" name="d1_klein" value="klein" />
+            <input type="checkbox" class="cb" id="d1_groß" name="d1_groß" value="groß" />
             <label for="frage22">groß</label>
          </section>
       </div>
@@ -380,57 +382,57 @@ const surveyJson = {
         <div>
         <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">aktiv</label>
-              <input type="checkbox" id="d2_aktiv" name="d2_aktiv" value="aktiv" />
-              <input type="checkbox" id="d2_passiv" name="d2_passiv" value="passiv" />
+              <input type="checkbox" class="cb" id="d2_aktiv" name="d2_aktiv" value="aktiv" />
+              <input type="checkbox" class="cb" id="d2_passiv" name="d2_passiv" value="passiv" />
               <label for="frage22">passiv</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
               <label for="frage21">komplex</label>
-              <input type="checkbox" id="d2_komplex" name="d2_komplex" value="komplex" />
-              <input type="checkbox" id="d2_einfach" name="d2_einfach" value="einfach" />
+              <input type="checkbox" class="cb" id="d2_komplex" name="d2_komplex" value="komplex" />
+              <input type="checkbox" class="cb" id="d2_einfach" name="d2_einfach" value="einfach" />
               <label for="frage22">einfach</label>
            </section>
   
            <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
               <label for="frage21">eckig</label>
-              <input type="checkbox" id="d2_eckig" name="d2_eckig" value="eckig" />
-              <input type="checkbox" id="d2_rund" name="d2_rund" value="rund" />
+              <input type="checkbox" class="cb" id="d2_eckig" name="d2_eckig" value="eckig" />
+              <input type="checkbox" class="cb" id="d2_rund" name="d2_rund" value="rund" />
               <label for="frage22">rund</label>
            </section>
   
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">klein</label>
-              <input type="checkbox" id="d2_klein" name="d2_klein" value="klein" />
-              <input type="checkbox" id="d2_groß" name="d2_groß" value="groß" />
+              <input type="checkbox" class="cb" id="d2_klein" name="d2_klein" value="klein" />
+              <input type="checkbox" class="cb" id="d2_groß" name="d2_groß" value="groß" />
               <label for="frage22">groß</label>
            </section>
 
            <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
               <label for="frage11">dick</label>
-              <input type="checkbox" id="d2_dick" name="d2_dick" value="dick" />
-              <input type="checkbox" id="d2_dünn" name="d2_dünn" value="dünn" />
+              <input type="checkbox" class="cb" id="d2_dick" name="d2_dick" value="dick" />
+              <input type="checkbox" class="cb" id="d2_dünn" name="d2_dünn" value="dünn" />
               <label for="frage12">dünn</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
               <label for="frage21">harmonisch</label>
-              <input type="checkbox" id="d2_harm" name="d2_harm" value="harmonisch" />
-              <input type="checkbox" id="d2_chaot" name="d2_chaot" value="chaotisch" />
+              <input type="checkbox" class="cb" id="d2_harm" name="d2_harm" value="harmonisch" />
+              <input type="checkbox" class="cb" id="d2_chaot" name="d2_chaot" value="chaotisch" />
               <label for="frage22">chaotisch</label>
            </section>
   
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">bunt</label>
-              <input type="checkbox" id="d2_bunt" name="d2_bunt" value="bunt" />
-              <input type="checkbox" id="d2_unbunt" name="d2_unbunt" value="unbunt" />
+              <input type="checkbox" class="cb" id="d2_bunt" name="d2_bunt" value="bunt" />
+              <input type="checkbox" class="cb" id="d2_unbunt" name="d2_unbunt" value="unbunt" />
               <label for="frage22">unbunt</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
               <label for="frage21">symmetrisch</label>
-              <input type="checkbox" id="d2_symm" name="d2_symm" value="symmetrisch" />
-              <input type="checkbox" id="d2_asymm" name="d2_asymm" value="asymmetrisch" />
+              <input type="checkbox" class="cb" id="d2_symm" name="d2_symm" value="symmetrisch" />
+              <input type="checkbox" class="cb" id="d2_asymm" name="d2_asymm" value="asymmetrisch" />
               <label for="frage22">asymmetrisch</label>
            </section>
         </div>
@@ -473,57 +475,57 @@ const surveyJson = {
         <div>
         <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
               <label for="frage21">harmonisch</label>
-              <input type="checkbox" id="d3_harm" name="d3_harm" value="harmonisch" />
-              <input type="checkbox" id="d3_chaot" name="d3_chaot" value="chaotisch" />
+              <input type="checkbox" class="cb" id="d3_harm" name="d3_harm" value="harmonisch" />
+              <input type="checkbox" class="cb" id="d3_chaot" name="d3_chaot" value="chaotisch" />
               <label for="frage22">chaotisch</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
               <label for="frage21">eckig</label>
-              <input type="checkbox" id="d3_eckig" name="d3_eckig" value="eckig" />
-              <input type="checkbox" id="d3_rund" name="d3_rund" value="rund" />
+              <input type="checkbox" class="cb" id="d3_eckig" name="d3_eckig" value="eckig" />
+              <input type="checkbox" class="cb" id="d3_rund" name="d3_rund" value="rund" />
               <label for="frage22">rund</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">aktiv</label>
-              <input type="checkbox" id="d3_aktiv" name="d3_aktiv" value="aktiv" />
-              <input type="checkbox" id="d3_passiv" name="d3_passiv" value="passiv" />
+              <input type="checkbox" class="cb" id="d3_aktiv" name="d3_aktiv" value="aktiv" />
+              <input type="checkbox" class="cb" id="d3_passiv" name="d3_passiv" value="passiv" />
               <label for="frage22">passiv</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">klein</label>
-              <input type="checkbox" id="d3_klein" name="d3_klein" value="klein" />
-              <input type="checkbox" id="d3_groß" name="d3_groß" value="groß" />
+              <input type="checkbox" class="cb" id="d3_klein" name="d3_klein" value="klein" />
+              <input type="checkbox" class="cb" id="d3_groß" name="d3_groß" value="groß" />
               <label for="frage22">groß</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
               <label for="frage21">komplex</label>
-              <input type="checkbox" id="d3_komplex" name="d3_komplex" value="komplex" />
-              <input type="checkbox" id="d3_einfach" name="d3_einfach" value="einfach" />
+              <input type="checkbox" class="cb" id="d3_komplex" name="d3_komplex" value="komplex" />
+              <input type="checkbox" class="cb" id="d3_einfach" name="d3_einfach" value="einfach" />
               <label for="frage22">einfach</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">bunt</label>
-              <input type="checkbox" id="d3_bunt" name="d3_bunt" value="bunt" />
-              <input type="checkbox" id="d3_unbunt" name="d3_unbunt" value="unbunt" />
+              <input type="checkbox" class="cb" id="d3_bunt" name="d3_bunt" value="bunt" />
+              <input type="checkbox" class="cb" id="d3_unbunt" name="d3_unbunt" value="unbunt" />
               <label for="frage22">unbunt</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
               <label for="frage21">symmetrisch</label>
-              <input type="checkbox" id="d3_symm" name="d3_symm" value="symmetrisch" />
-              <input type="checkbox" id="d3_asymm" name="d3_asymm" value="asymmetrisch" />
+              <input type="checkbox" class="cb" id="d3_symm" name="d3_symm" value="symmetrisch" />
+              <input type="checkbox" class="cb" id="d3_asymm" name="d3_asymm" value="asymmetrisch" />
               <label for="frage22">asymmetrisch</label>
            </section>
   
            <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
               <label for="frage11">dick</label>
-              <input type="checkbox" id="d3_dick" name="d3_dick" value="dick" />
-              <input type="checkbox" id="d3_dünn" name="d3_dünn" value="dünn" />
+              <input type="checkbox" class="cb" id="d3_dick" name="d3_dick" value="dick" />
+              <input type="checkbox" class="cb" id="d3_dünn" name="d3_dünn" value="dünn" />
               <label for="frage12">dünn</label>
            </section>
         </div>
@@ -566,57 +568,57 @@ const surveyJson = {
         <div>
         <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
               <label for="frage21">harmonisch</label>
-              <input type="checkbox" id="d4_harm" name="d4_harm" value="harmonisch" />
-              <input type="checkbox" id="d4_chaot" name="d4_chaot" value="chaotisch" />
+              <input type="checkbox" class="cb" id="d4_harm" name="d4_harm" value="harmonisch" />
+              <input type="checkbox" class="cb" id="d4_chaot" name="d4_chaot" value="chaotisch" />
               <label for="frage22">chaotisch</label>
            </section>
 
         <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
               <label for="frage11">dick</label>
-              <input type="checkbox" id="d4_dick" name="d4_dick" value="dick" />
-              <input type="checkbox" id="d4_dünn" name="d4_dünn" value="dünn" />
+              <input type="checkbox" class="cb" id="d4_dick" name="d4_dick" value="dick" />
+              <input type="checkbox" class="cb" id="d4_dünn" name="d4_dünn" value="dünn" />
               <label for="frage12">dünn</label>
            </section>
            
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">bunt</label>
-              <input type="checkbox" id="d4_bunt" name="d4_bunt" value="bunt" />
-              <input type="checkbox" id="d4_unbunt" name="d4_unbunt" value="unbunt" />
+              <input type="checkbox" class="cb" id="d4_bunt" name="d4_bunt" value="bunt" />
+              <input type="checkbox" class="cb" id="d4_unbunt" name="d4_unbunt" value="unbunt" />
               <label for="frage22">unbunt</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">klein</label>
-              <input type="checkbox" id="d4_klein" name="d4_klein" value="klein" />
-              <input type="checkbox" id="d4_groß" name="d4_groß" value="groß" />
+              <input type="checkbox" class="cb" id="d4_klein" name="d4_klein" value="klein" />
+              <input type="checkbox" class="cb" id="d4_groß" name="d4_groß" value="groß" />
               <label for="frage22">groß</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
               <label for="frage21">eckig</label>
-              <input type="checkbox" id="d4_eckig" name="d4_eckig" value="eckig" />
-              <input type="checkbox" id="d4_rund" name="d4_rund" value="rund" />
+              <input type="checkbox" class="cb" id="d4_eckig" name="d4_eckig" value="eckig" />
+              <input type="checkbox" class="cb" id="d4_rund" name="d4_rund" value="rund" />
               <label for="frage22">rund</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">aktiv</label>
-              <input type="checkbox" id="d4_aktiv" name="d4_aktiv" value="aktiv" />
-              <input type="checkbox" id="d4_passiv" name="d4_passiv" value="passiv" />
+              <input type="checkbox" class="cb" id="d4_aktiv" name="d4_aktiv" value="aktiv" />
+              <input type="checkbox" class="cb" id="d4_passiv" name="d4_passiv" value="passiv" />
               <label for="frage22">passiv</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
               <label for="frage21">symmetrisch</label>
-              <input type="checkbox" id="d4_symm" name="d4_symm" value="symmetrisch" />
-              <input type="checkbox" id="d4_asymm" name="d4_asymm" value="asymmetrisch" />
+              <input type="checkbox" class="cb" id="d4_symm" name="d4_symm" value="symmetrisch" />
+              <input type="checkbox" class="cb" id="d4_asymm" name="d4_asymm" value="asymmetrisch" />
               <label for="frage22">asymmetrisch</label>
            </section>
   
            <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
               <label for="frage21">komplex</label>
-              <input type="checkbox" id="d4_komplex" name="d4_komplex" value="komplex" />
-              <input type="checkbox" id="d4_einfach" name="d4_einfach" value="einfach" />
+              <input type="checkbox" class="cb" id="d4_komplex" name="d4_komplex" value="komplex" />
+              <input type="checkbox" class="cb" id="d4_einfach" name="d4_einfach" value="einfach" />
               <label for="frage22">einfach</label>
            </section>
         </div>
@@ -659,57 +661,57 @@ const surveyJson = {
         <div>
         <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">klein</label>
-              <input type="checkbox" id="d5_klein" name="d5_klein" value="klein" />
-              <input type="checkbox" id="d5_groß" name="d5_groß" value="groß" />
+              <input type="checkbox" class="cb" id="d5_klein" name="d5_klein" value="klein" />
+              <input type="checkbox" class="cb" id="d5_groß" name="d5_groß" value="groß" />
               <label for="frage22">groß</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">bunt</label>
-              <input type="checkbox" id="d5_bunt" name="d5_bunt" value="bunt" />
-              <input type="checkbox" id="d5_unbunt" name="d5_unbunt" value="unbunt" />
+              <input type="checkbox" class="cb" id="d5_bunt" name="d5_bunt" value="bunt" />
+              <input type="checkbox" class="cb" id="d5_unbunt" name="d5_unbunt" value="unbunt" />
               <label for="frage22">unbunt</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
               <label for="frage21">symmetrisch</label>
-              <input type="checkbox" id="d5_symm" name="d5_symm" value="symmetrisch" />
-              <input type="checkbox" id="d5_asymm" name="d5_asymm" value="asymmetrisch" />
+              <input type="checkbox" class="cb" id="d5_symm" name="d5_symm" value="symmetrisch" />
+              <input type="checkbox" class="cb" id="d5_asymm" name="d5_asymm" value="asymmetrisch" />
               <label for="frage22">asymmetrisch</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
               <label for="frage21">harmonisch</label>
-              <input type="checkbox" id="d5_harm" name="d5_harm" value="harmonisch" />
-              <input type="checkbox" id="d5_chaot" name="d5_chaot" value="chaotisch" />
+              <input type="checkbox" class="cb" id="d5_harm" name="d5_harm" value="harmonisch" />
+              <input type="checkbox" class="cb" id="d5_chaot" name="d5_chaot" value="chaotisch" />
               <label for="frage22">chaotisch</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">aktiv</label>
-              <input type="checkbox" id="d5_aktiv" name="d5_aktiv" value="aktiv" />
-              <input type="checkbox" id="d5_passiv" name="d5_passiv" value="passiv" />
+              <input type="checkbox" class="cb" id="d5_aktiv" name="d5_aktiv" value="aktiv" />
+              <input type="checkbox" class="cb" id="d5_passiv" name="d5_passiv" value="passiv" />
               <label for="frage22">passiv</label>
            </section>
 
         <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
               <label for="frage11">dick</label>
-              <input type="checkbox" id="d5_dick" name="d5_dick" value="dick" />
-              <input type="checkbox" id="d5_dünn" name="d5_dünn" value="dünn" />
+              <input type="checkbox" class="cb" id="d5_dick" name="d5_dick" value="dick" />
+              <input type="checkbox" class="cb" id="d5_dünn" name="d5_dünn" value="dünn" />
               <label for="frage12">dünn</label>
            </section>
            
            <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
               <label for="frage21">eckig</label>
-              <input type="checkbox" id="d5_eckig" name="d5_eckig" value="eckig" />
-              <input type="checkbox" id="d5_rund" name="d5_rund" value="rund" />
+              <input type="checkbox" class="cb" id="d5_eckig" name="d5_eckig" value="eckig" />
+              <input type="checkbox" class="cb" id="d5_rund" name="d5_rund" value="rund" />
               <label for="frage22">rund</label>
            </section>
   
            <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
               <label for="frage21">komplex</label>
-              <input type="checkbox" id="d5_komplex" name="d5_komplex" value="komplex" />
-              <input type="checkbox" id="d5_einfach" name="d5_einfach" value="einfach" />
+              <input type="checkbox" class="cb" id="d5_komplex" name="d5_komplex" value="komplex" />
+              <input type="checkbox" class="cb" id="d5_einfach" name="d5_einfach" value="einfach" />
               <label for="frage22">einfach</label>
            </section>
         </div>
@@ -752,57 +754,57 @@ const surveyJson = {
         <div>
         <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
               <label for="frage21">symmetrisch</label>
-              <input type="checkbox" id="d6_symm" name="d6_symm" value="symmetrisch" />
-              <input type="checkbox" id="d6_asymm" name="d6_asymm" value="asymmetrisch" />
+              <input type="checkbox" class="cb" id="d6_symm" name="d6_symm" value="symmetrisch" />
+              <input type="checkbox" class="cb" id="d6_asymm" name="d6_asymm" value="asymmetrisch" />
               <label for="frage22">asymmetrisch</label>
            </section>
            
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">aktiv</label>
-              <input type="checkbox" id="d6_aktiv" name="d6_aktiv" value="aktiv" />
-              <input type="checkbox" id="d6_passiv" name="d6_passiv" value="passiv" />
+              <input type="checkbox" class="cb" id="d6_aktiv" name="d6_aktiv" value="aktiv" />
+              <input type="checkbox" class="cb" id="d6_passiv" name="d6_passiv" value="passiv" />
               <label for="frage22">passiv</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
               <label for="frage21">eckig</label>
-              <input type="checkbox" id="d6_eckig" name="d6_eckig" value="eckig" />
-              <input type="checkbox" id="d6_rund" name="d6_rund" value="rund" />
+              <input type="checkbox" class="cb" id="d6_eckig" name="d6_eckig" value="eckig" />
+              <input type="checkbox" class="cb" id="d6_rund" name="d6_rund" value="rund" />
               <label for="frage22">rund</label>
            </section>
 
            <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
               <label for="frage11">dick</label>
-              <input type="checkbox" id="d6_dick" name="d6_dick" value="dick" />
-              <input type="checkbox" id="d6_dünn" name="d6_dünn" value="dünn" />
+              <input type="checkbox" class="cb" id="d6_dick" name="d6_dick" value="dick" />
+              <input type="checkbox" class="cb" id="d6_dünn" name="d6_dünn" value="dünn" />
               <label for="frage12">dünn</label>
            </section>
            
            <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
               <label for="frage21">harmonisch</label>
-              <input type="checkbox" id="d6_harm" name="d6_harm" value="harmonisch" />
-              <input type="checkbox" id="d6_chaot" name="d6_chaot" value="chaotisch" />
+              <input type="checkbox" class="cb" id="d6_harm" name="d6_harm" value="harmonisch" />
+              <input type="checkbox" class="cb" id="d6_chaot" name="d6_chaot" value="chaotisch" />
               <label for="frage22">chaotisch</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">bunt</label>
-              <input type="checkbox" id="d6_bunt" name="d6_bunt" value="bunt" />
-              <input type="checkbox" id="d6_unbunt" name="d6_unbunt" value="unbunt" />
+              <input type="checkbox" class="cb" id="d6_bunt" name="d6_bunt" value="bunt" />
+              <input type="checkbox" class="cb" id="d6_unbunt" name="d6_unbunt" value="unbunt" />
               <label for="frage22">unbunt</label>
            </section>
   
            <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
               <label for="frage21">komplex</label>
-              <input type="checkbox" id="d6_komplex" name="d6_komplex" value="komplex" />
-              <input type="checkbox" id="d6_einfach" name="d6_einfach" value="einfach" />
+              <input type="checkbox" class="cb" id="d6_komplex" name="d6_komplex" value="komplex" />
+              <input type="checkbox" class="cb" id="d6_einfach" name="d6_einfach" value="einfach" />
               <label for="frage22">einfach</label>
            </section>
   
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">klein</label>
-              <input type="checkbox" id="d6_klein" name="d6_klein" value="klein" />
-              <input type="checkbox" id="d6_groß" name="d6_groß" value="groß" />
+              <input type="checkbox" class="cb" id="d6_klein" name="d6_klein" value="klein" />
+              <input type="checkbox" class="cb" id="d6_groß" name="d6_groß" value="groß" />
               <label for="frage22">groß</label>
            </section>
         </div>
@@ -845,57 +847,57 @@ const surveyJson = {
         <div>
         <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">aktiv</label>
-              <input type="checkbox" id="d7_aktiv" name="d7_aktiv" value="aktiv" />
-              <input type="checkbox" id="d7_passiv" name="d7_passiv" value="passiv" />
+              <input type="checkbox" class="cb" id="d7_aktiv" name="d7_aktiv" value="aktiv" />
+              <input type="checkbox" class="cb" id="d7_passiv" name="d7_passiv" value="passiv" />
               <label for="frage22">passiv</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
               <label for="frage21">eckig</label>
-              <input type="checkbox" id="d7_eckig" name="d7_eckig" value="eckig" />
-              <input type="checkbox" id="d7_rund" name="d7_rund" value="rund" />
+              <input type="checkbox" class="cb" id="d7_eckig" name="d7_eckig" value="eckig" />
+              <input type="checkbox" class="cb" id="d7_rund" name="d7_rund" value="rund" />
               <label for="frage22">rund</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
               <label for="frage21">harmonisch</label>
-              <input type="checkbox" id="d7_harm" name="d7_harm" value="harmonisch" />
-              <input type="checkbox" id="d7_chaot" name="d7_chaot" value="chaotisch" />
+              <input type="checkbox" class="cb" id="d7_harm" name="d7_harm" value="harmonisch" />
+              <input type="checkbox" class="cb" id="d7_chaot" name="d7_chaot" value="chaotisch" />
               <label for="frage22">chaotisch</label>
            </section>
   
            <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
               <label for="frage21">komplex</label>
-              <input type="checkbox" id="d7_komplex" name="d7_komplex" value="komplex" />
-              <input type="checkbox" id="d7_einfach" name="d7_einfach" value="einfach" />
+              <input type="checkbox" class="cb" id="d7_komplex" name="d7_komplex" value="komplex" />
+              <input type="checkbox" class="cb" id="d7_einfach" name="d7_einfach" value="einfach" />
               <label for="frage22">einfach</label>
            </section>
 
             <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
               <label for="frage11">dick</label>
-              <input type="checkbox" id="d7_dick" name="d7_dick" value="dick" />
-              <input type="checkbox" id="d7_dünn" name="d7_dünn" value="dünn" />
+              <input type="checkbox" class="cb" id="d7_dick" name="d7_dick" value="dick" />
+              <input type="checkbox" class="cb" id="d7_dünn" name="d7_dünn" value="dünn" />
               <label for="frage12">dünn</label>
            </section>
            
            <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
               <label for="frage21">symmetrisch</label>
-              <input type="checkbox" id="d7_symm" name="d7_symm" value="symmetrisch" />
-              <input type="checkbox" id="d7_asymm" name="d7_asymm" value="asymmetrisch" />
+              <input type="checkbox" class="cb" id="d7_symm" name="d7_symm" value="symmetrisch" />
+              <input type="checkbox" class="cb" id="d7_asymm" name="d7_asymm" value="asymmetrisch" />
               <label for="frage22">asymmetrisch</label>
            </section>
   
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">bunt</label>
-              <input type="checkbox" id="d7_bunt" name="d7_bunt" value="bunt" />
-              <input type="checkbox" id="d7_unbunt" name="d7_unbunt" value="unbunt" />
+              <input type="checkbox" class="cb" id="d7_bunt" name="d7_bunt" value="bunt" />
+              <input type="checkbox" class="cb" id="d7_unbunt" name="d7_unbunt" value="unbunt" />
               <label for="frage22">unbunt</label>
            </section>
   
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">klein</label>
-              <input type="checkbox" id="d7_klein" name="d7_klein" value="klein" />
-              <input type="checkbox" id="d7_groß" name="d7_groß" value="groß" />
+              <input type="checkbox" class="cb" id="d7_klein" name="d7_klein" value="klein" />
+              <input type="checkbox" class="cb" id="d7_groß" name="d7_groß" value="groß" />
               <label for="frage22">groß</label>
            </section>
         </div>
@@ -938,57 +940,57 @@ const surveyJson = {
         <div>
         <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
               <label for="frage21">komplex</label>
-              <input type="checkbox" id="d8_komplex" name="d8_komplex" value="komplex" />
-              <input type="checkbox" id="d8_einfach" name="d8_einfach" value="einfach" />
+              <input type="checkbox" class="cb" id="d8_komplex" name="d8_komplex" value="komplex" />
+              <input type="checkbox" class="cb" id="d8_einfach" name="d8_einfach" value="einfach" />
               <label for="frage22">einfach</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
               <label for="frage21">harmonisch</label>
-              <input type="checkbox" id="d8_harm" name="d8_harm" value="harmonisch" />
-              <input type="checkbox" id="d8_chaot" name="d8_chaot" value="chaotisch" />
+              <input type="checkbox" class="cb" id="d8_harm" name="d8_harm" value="harmonisch" />
+              <input type="checkbox" class="cb" id="d8_chaot" name="d8_chaot" value="chaotisch" />
               <label for="frage22">chaotisch</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">klein</label>
-              <input type="checkbox" id="d8_klein" name="d8_klein" value="klein" />
-              <input type="checkbox" id="d8_groß" name="d8_groß" value="groß" />
+              <input type="checkbox" class="cb" id="d8_klein" name="d8_klein" value="klein" />
+              <input type="checkbox" class="cb" id="d8_groß" name="d8_groß" value="groß" />
               <label for="frage22">groß</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">aktiv</label>
-              <input type="checkbox" id="d8_aktiv" name="d8_aktiv" value="aktiv" />
-              <input type="checkbox" id="d8_passiv" name="d8_passiv" value="passiv" />
+              <input type="checkbox" class="cb" id="d8_aktiv" name="d8_aktiv" value="aktiv" />
+              <input type="checkbox" class="cb" id="d8_passiv" name="d8_passiv" value="passiv" />
               <label for="frage22">passiv</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">bunt</label>
-              <input type="checkbox" id="d8_bunt" name="d8_bunt" value="bunt" />
-              <input type="checkbox" id="d8_unbunt" name="d8_unbunt" value="unbunt" />
+              <input type="checkbox" class="cb" id="d8_bunt" name="d8_bunt" value="bunt" />
+              <input type="checkbox" class="cb" id="d8_unbunt" name="d8_unbunt" value="unbunt" />
               <label for="frage22">unbunt</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
               <label for="frage21">symmetrisch</label>
-              <input type="checkbox" id="d8_symm" name="d8_symm" value="symmetrisch" />
-              <input type="checkbox" id="d8_asymm" name="d8_asymm" value="asymmetrisch" />
+              <input type="checkbox" class="cb" id="d8_symm" name="d8_symm" value="symmetrisch" />
+              <input type="checkbox" class="cb" id="d8_asymm" name="d8_asymm" value="asymmetrisch" />
               <label for="frage22">asymmetrisch</label>
            </section>
 
         <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
               <label for="frage11">dick</label>
-              <input type="checkbox" id="d8_dick" name="d8_dick" value="dick" />
-              <input type="checkbox" id="d8_dünn" name="d8_dünn" value="dünn" />
+              <input type="checkbox" class="cb" id="d8_dick" name="d8_dick" value="dick" />
+              <input type="checkbox" class="cb" id="d8_dünn" name="d8_dünn" value="dünn" />
               <label for="frage12">dünn</label>
            </section>
            
            <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
               <label for="frage21">eckig</label>
-              <input type="checkbox" id="d8_eckig" name="d8_eckig" value="eckig" />
-              <input type="checkbox" id="d8_rund" name="d8_rund" value="rund" />
+              <input type="checkbox" class="cb" id="d8_eckig" name="d8_eckig" value="eckig" />
+              <input type="checkbox" class="cb" id="d8_rund" name="d8_rund" value="rund" />
               <label for="frage22">rund</label>
            </section>
         </div>
@@ -1031,57 +1033,57 @@ const surveyJson = {
         <div>
         <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">aktiv</label>
-              <input type="checkbox" id="d9_aktiv" name="d9_aktiv" value="aktiv" />
-              <input type="checkbox" id="d9_passiv" name="d9_passiv" value="passiv" />
+              <input type="checkbox" class="cb" id="d9_aktiv" name="d9_aktiv" value="aktiv" />
+              <input type="checkbox" class="cb" id="d9_passiv" name="d9_passiv" value="passiv" />
               <label for="frage22">passiv</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
               <label for="frage21">komplex</label>
-              <input type="checkbox" id="d9_komplex" name="d9_komplex" value="komplex" />
-              <input type="checkbox" id="d9_einfach" name="d9_einfach" value="einfach" />
+              <input type="checkbox" class="cb" id="d9_komplex" name="d9_komplex" value="komplex" />
+              <input type="checkbox" class="cb" id="d9_einfach" name="d9_einfach" value="einfach" />
               <label for="frage22">einfach</label>
            </section>
 
         <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
               <label for="frage11">dick</label>
-              <input type="checkbox" id="d9_dick" name="d9_dick" value="dick" />
-              <input type="checkbox" id="d9_dünn" name="d9_dünn" value="dünn" />
+              <input type="checkbox" class="cb" id="d9_dick" name="d9_dick" value="dick" />
+              <input type="checkbox" class="cb" id="d9_dünn" name="d9_dünn" value="dünn" />
               <label for="frage12">dünn</label>
            </section>
            
            <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
               <label for="frage21">eckig</label>
-              <input type="checkbox" id="d9_eckig" name="d9_eckig" value="eckig" />
-              <input type="checkbox" id="d9_rund" name="d9_rund" value="rund" />
+              <input type="checkbox" class="cb" id="d9_eckig" name="d9_eckig" value="eckig" />
+              <input type="checkbox" class="cb" id="d9_rund" name="d9_rund" value="rund" />
               <label for="frage22">rund</label>
            </section>
          
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">bunt</label>
-              <input type="checkbox" id="d9_bunt" name="d9_bunt" value="bunt" />
-              <input type="checkbox" id="d9_unbunt" name="d9_unbunt" value="unbunt" />
+              <input type="checkbox" class="cb" id="d9_bunt" name="d9_bunt" value="bunt" />
+              <input type="checkbox" class="cb" id="d9_unbunt" name="d9_unbunt" value="unbunt" />
               <label for="frage22">unbunt</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
               <label for="frage21">symmetrisch</label>
-              <input type="checkbox" id="d9_symm" name="d9_symm" value="symmetrisch" />
-              <input type="checkbox" id="d9_asymm" name="d9_asymm" value="asymmetrisch" />
+              <input type="checkbox" class="cb" id="d9_symm" name="d9_symm" value="symmetrisch" />
+              <input type="checkbox" class="cb" id="d9_asymm" name="d9_asymm" value="asymmetrisch" />
               <label for="frage22">asymmetrisch</label>
            </section>
   
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">klein</label>
-              <input type="checkbox" id="d9_klein" name="d9_klein" value="klein" />
-              <input type="checkbox" id="d9_groß" name="d9_groß" value="groß" />
+              <input type="checkbox" class="cb" id="d9_klein" name="d9_klein" value="klein" />
+              <input type="checkbox" class="cb" id="d9_groß" name="d9_groß" value="groß" />
               <label for="frage22">groß</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
               <label for="frage21">harmonisch</label>
-              <input type="checkbox" id="d9_harm" name="d9_harm" value="harmonisch" />
-              <input type="checkbox" id="d9_chaot" name="d9_chaot" value="chaotisch" />
+              <input type="checkbox" class="cb" id="d9_harm" name="d9_harm" value="harmonisch" />
+              <input type="checkbox" class="cb" id="d9_chaot" name="d9_chaot" value="chaotisch" />
               <label for="frage22">chaotisch</label>
            </section>
         </div>
@@ -1124,57 +1126,57 @@ const surveyJson = {
         <div>
         <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
               <label for="frage21">eckig</label>
-              <input type="checkbox" id="d10_eckig" name="d10_eckig" value="eckig" />
-              <input type="checkbox" id="d10_rund" name="d10_rund" value="rund" />
+              <input type="checkbox" class="cb" id="d10_eckig" name="d10_eckig" value="eckig" />
+              <input type="checkbox" class="cb" id="d10_rund" name="d10_rund" value="rund" />
               <label for="frage22">rund</label>
            </section>
 
         <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
               <label for="frage11">dick</label>
-              <input type="checkbox" id="d10_dick" name="d10_dick" value="dick" />
-              <input type="checkbox" id="d10_dünn" name="d10_dünn" value="dünn" />
+              <input type="checkbox" class="cb" id="d10_dick" name="d10_dick" value="dick" />
+              <input type="checkbox" class="cb" id="d10_dünn" name="d10_dünn" value="dünn" />
               <label for="frage12">dünn</label>
            </section>
            
            <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
               <label for="frage21">komplex</label>
-              <input type="checkbox" id="d10_komplex" name="d10_komplex" value="komplex" />
-              <input type="checkbox" id="d10_einfach" name="d10_einfach" value="einfach" />
+              <input type="checkbox" class="cb" id="d10_komplex" name="d10_komplex" value="komplex" />
+              <input type="checkbox" class="cb" id="d10_einfach" name="d10_einfach" value="einfach" />
               <label for="frage22">einfach</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
               <label for="frage21">harmonisch</label>
-              <input type="checkbox" id="d10_harm" name="d10_harm" value="harmonisch" />
-              <input type="checkbox" id="d10_chaot" name="d10_chaot" value="chaotisch" />
+              <input type="checkbox" class="cb" id="d10_harm" name="d10_harm" value="harmonisch" />
+              <input type="checkbox" class="cb" id="d10_chaot" name="d10_chaot" value="chaotisch" />
               <label for="frage22">chaotisch</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
               <label for="frage21">symmetrisch</label>
-              <input type="checkbox" id="d10_symm" name="d10_symm" value="symmetrisch" />
-              <input type="checkbox" id="d10_asymm" name="d10_asymm" value="asymmetrisch" />
+              <input type="checkbox" class="cb" id="d10_symm" name="d10_symm" value="symmetrisch" />
+              <input type="checkbox" class="cb" id="d10_asymm" name="d10_asymm" value="asymmetrisch" />
               <label for="frage22">asymmetrisch</label>
            </section>
   
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">klein</label>
-              <input type="checkbox" id="d10_klein" name="d10_klein" value="klein" />
-              <input type="checkbox" id="d10_groß" name="d10_groß" value="groß" />
+              <input type="checkbox" class="cb" id="d10_klein" name="d10_klein" value="klein" />
+              <input type="checkbox" class="cb" id="d10_groß" name="d10_groß" value="groß" />
               <label for="frage22">groß</label>
            </section>
         
         <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">aktiv</label>
-              <input type="checkbox" id="d10_aktiv" name="d10_aktiv" value="aktiv" />
-              <input type="checkbox" id="d10_passiv" name="d10_passiv" value="passiv" />
+              <input type="checkbox" class="cb" id="d10_aktiv" name="d10_aktiv" value="aktiv" />
+              <input type="checkbox" class="cb" id="d10_passiv" name="d10_passiv" value="passiv" />
               <label for="frage22">passiv</label>
            </section>
 
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">bunt</label>
-              <input type="checkbox" id="d10_bunt" name="d10_bunt" value="bunt" />
-              <input type="checkbox" id="d10_unbunt" name="d10_unbunt" value="unbunt" />
+              <input type="checkbox" class="cb" id="d10_bunt" name="d10_bunt" value="bunt" />
+              <input type="checkbox" class="cb" id="d10_unbunt" name="d10_unbunt" value="unbunt" />
               <label for="frage22">unbunt</label>
            </section>
            </div>
@@ -1910,8 +1912,17 @@ const surveyJson = {
  }
 
  function updateStringComponents(_: any, options: any) {
-   //var randomizedPaths = this.randomizeDiagrams(this.filePaths);
-   const filePaths: string[] = [
+   var element = document.getElementsByClassName("cb"); 
+      var elementList = Array.prototype.slice.call(element);
+      elementList.forEach(function(box){
+         
+         box.addEventListener("click", function() {
+            console.log("klick " + box.value);
+            service?.sendData({})
+         })
+      })
+      
+      const filePaths: string[] = [
       "../../assets/diagram1.png",
       "../../assets/diagram2.png",
       "../../assets/diagram3.png",
@@ -1925,6 +1936,7 @@ const surveyJson = {
       ];
 
    var storedArray: string[];
+   
    
    if (localStorage.getItem("filePaths") === null) {  //wenn noch kein randomisiertes Array gespeichert, dann neues erstellen
       var currentIndex = filePaths.length;
@@ -1962,8 +1974,10 @@ const surveyJson = {
        //var paths: string[] = this.randomizedPaths;
        //console.log(JSON.stringify(storedArray, null, 1));
    });
- }
+
    
+ }
+
 @Component({
   selector: 'app-root',
   //selector: "component-survey",
@@ -1981,6 +1995,10 @@ export class AppComponent implements OnInit, AfterViewInit {
   static declaration = [PercentageProgressBarComponent];
 
    showTimer: boolean = false;
+
+   constructor(public loggingService: LoggingService) {
+      service = loggingService;
+   }
 
   ngOnInit(): void {
    const survey = new Model(surveyJson);
@@ -2033,6 +2051,11 @@ export class AppComponent implements OnInit, AfterViewInit {
     });
   }
   
+  handleClick(cb:any) {
+   console.log(cb.value);
+   
+  }
+
   //Diagramme randomisieren nach Fisher Yates-Algorithmus
   //Array mit Dateipfaden übergeben
   randomizeDiagrams(filePaths: string[]): string[] {

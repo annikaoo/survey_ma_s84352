@@ -1,9 +1,10 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { SurveyModule } from "survey-angular-ui";
-
 import { AppComponent } from "./app.component";
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { LoggingService } from "./logging.service";
+import { HttpClient } from "@angular/common/http";
 
 
 @NgModule ({
@@ -14,10 +15,8 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
         BrowserModule,
         SurveyModule
     ],
-    providers:[],
-    bootstrap:[
-        
-    ]
+    providers:[LoggingService, HttpClient],
+    bootstrap:[]
 })
 
 export class AppModule {

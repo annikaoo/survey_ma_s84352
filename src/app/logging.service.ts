@@ -25,7 +25,7 @@ export class LoggingService {
     const test = {
       ...data,
       ...storage,
-      diagramOrder1: localStorage.getItem('filePaths'),
+      filePaths: localStorage.getItem('filePaths'),
       //diagramOrder2: localStorage.getItem('diagramOrder2'),
       bearbeitungszeit :  this.millisToMinutesAndSeconds(bearbeitungszeit),
       timestamp: this.datumZeit,
@@ -40,8 +40,8 @@ export class LoggingService {
     console.log('data:', data );
     console.log('test:', test);
     /*const url = isDevMode()
-      ? 'http://localhost:3000/log/chrissy-ma'  //eigene URL?
-      : 'http://itv21.informatik.htw-dresden.de:3000/log/chrissy-ma';
+      ? 'http://localhost:3000/log/chrissy-ma'  //eigene URL? ohne Binde-/Unterstriche - model.annikap1 ...
+      : 'http://itv21.informatik.htw-dresden.de:3000/log/chrissy-ma'; //chrissy-ma ersetzen durch annikap1
     this.http
       .post(url, test , { headers: headers }) // +test
       .pipe(take(1))
