@@ -39,3 +39,37 @@
       max-width: 100%;
     }
   }
+
+  @media (max-width: 768px) {
+    .sd-container-modern__title sd-title {
+      padding: 0px;
+
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sd-container-modern__title.sd-title {
+      padding: 0px;
+
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sv-string-viewer {
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sd-logo__image {
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sd-title.sd-container-modern__title {
+      padding: 0px;
+    }
+  }
+
+
+  

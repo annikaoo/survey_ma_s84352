@@ -25,8 +25,8 @@ export class LoggingService {
     const test = {
       ...data,
       ...storage,
-      diagramOrder1: localStorage.getItem('diagramOrder1'),
-      diagramOrder2: localStorage.getItem('diagramOrder2'),
+      diagramOrder1: localStorage.getItem('filePaths'),
+      //diagramOrder2: localStorage.getItem('diagramOrder2'),
       bearbeitungszeit :  this.millisToMinutesAndSeconds(bearbeitungszeit),
       timestamp: this.datumZeit,
 

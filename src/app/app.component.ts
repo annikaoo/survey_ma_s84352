@@ -252,7 +252,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img1",
-         html: `<img id="img1" class="part1" src="../../assets/diagram1.png">`
+         html: `<img id="img1" class="part1 img1" src="../../assets/diagram1.png">`
       },
      /*{
       type: "image",
@@ -361,7 +361,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img2",
-         html: `<img class="part1" src="../../assets/diagram2.png">`
+         html: `<img class="part1 img2 img2" src="../../assets/diagram2.png">`
       }
     ]
    },
@@ -378,27 +378,13 @@ const surveyJson = {
         name: "question_d2_2",
         html: `
         <div>
-        <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
-              <label for="frage11">dick</label>
-              <input type="checkbox" id="d2_dick" name="d2_dick" value="dick" />
-              <input type="checkbox" id="d2_dünn" name="d2_dünn" value="dünn" />
-              <label for="frage12">dünn</label>
+        <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">aktiv</label>
+              <input type="checkbox" id="d2_aktiv" name="d2_aktiv" value="aktiv" />
+              <input type="checkbox" id="d2_passiv" name="d2_passiv" value="passiv" />
+              <label for="frage22">passiv</label>
            </section>
-           
-           <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
-              <label for="frage21">symmetrisch</label>
-              <input type="checkbox" id="d2_symm" name="d2_symm" value="symmetrisch" />
-              <input type="checkbox" id="d2_asymm" name="d2_asymm" value="asymmetrisch" />
-              <label for="frage22">asymmetrisch</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">bunt</label>
-              <input type="checkbox" id="d2_bunt" name="d2_bunt" value="bunt" />
-              <input type="checkbox" id="d2_unbunt" name="d2_unbunt" value="unbunt" />
-              <label for="frage22">unbunt</label>
-           </section>
-  
+
            <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
               <label for="frage21">komplex</label>
               <input type="checkbox" id="d2_komplex" name="d2_komplex" value="komplex" />
@@ -413,6 +399,20 @@ const surveyJson = {
               <label for="frage22">rund</label>
            </section>
   
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">klein</label>
+              <input type="checkbox" id="d2_klein" name="d2_klein" value="klein" />
+              <input type="checkbox" id="d2_groß" name="d2_groß" value="groß" />
+              <label for="frage22">groß</label>
+           </section>
+
+           <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
+              <label for="frage11">dick</label>
+              <input type="checkbox" id="d2_dick" name="d2_dick" value="dick" />
+              <input type="checkbox" id="d2_dünn" name="d2_dünn" value="dünn" />
+              <label for="frage12">dünn</label>
+           </section>
+
            <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
               <label for="frage21">harmonisch</label>
               <input type="checkbox" id="d2_harm" name="d2_harm" value="harmonisch" />
@@ -421,17 +421,17 @@ const surveyJson = {
            </section>
   
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">aktiv</label>
-              <input type="checkbox" id="d2_aktiv" name="d2_aktiv" value="aktiv" />
-              <input type="checkbox" id="d2_passiv" name="d2_passiv" value="passiv" />
-              <label for="frage22">passiv</label>
+              <label for="frage21">bunt</label>
+              <input type="checkbox" id="d2_bunt" name="d2_bunt" value="bunt" />
+              <input type="checkbox" id="d2_unbunt" name="d2_unbunt" value="unbunt" />
+              <label for="frage22">unbunt</label>
            </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">klein</label>
-              <input type="checkbox" id="d2_klein" name="d2_klein" value="klein" />
-              <input type="checkbox" id="d2_groß" name="d2_groß" value="groß" />
-              <label for="frage22">groß</label>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
+              <label for="frage21">symmetrisch</label>
+              <input type="checkbox" id="d2_symm" name="d2_symm" value="symmetrisch" />
+              <input type="checkbox" id="d2_asymm" name="d2_asymm" value="asymmetrisch" />
+              <label for="frage22">asymmetrisch</label>
            </section>
         </div>
           `
@@ -454,7 +454,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img3",
-         html: `<img class="img3" src="../../assets/diagram3.png">`
+         html: `<img class="part1 img3" src="../../assets/diagram3.png">`
       }
     ]
    },
@@ -471,13 +471,48 @@ const surveyJson = {
         name: "question_d3_2",
         html: `
         <div>
-        <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
-              <label for="frage11">dick</label>
-              <input type="checkbox" id="d3_dick" name="d3_dick" value="dick" />
-              <input type="checkbox" id="d3_dünn" name="d3_dünn" value="dünn" />
-              <label for="frage12">dünn</label>
+        <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
+              <label for="frage21">harmonisch</label>
+              <input type="checkbox" id="d3_harm" name="d3_harm" value="harmonisch" />
+              <input type="checkbox" id="d3_chaot" name="d3_chaot" value="chaotisch" />
+              <label for="frage22">chaotisch</label>
            </section>
-           
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
+              <label for="frage21">eckig</label>
+              <input type="checkbox" id="d3_eckig" name="d3_eckig" value="eckig" />
+              <input type="checkbox" id="d3_rund" name="d3_rund" value="rund" />
+              <label for="frage22">rund</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">aktiv</label>
+              <input type="checkbox" id="d3_aktiv" name="d3_aktiv" value="aktiv" />
+              <input type="checkbox" id="d3_passiv" name="d3_passiv" value="passiv" />
+              <label for="frage22">passiv</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">klein</label>
+              <input type="checkbox" id="d3_klein" name="d3_klein" value="klein" />
+              <input type="checkbox" id="d3_groß" name="d3_groß" value="groß" />
+              <label for="frage22">groß</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
+              <label for="frage21">komplex</label>
+              <input type="checkbox" id="d3_komplex" name="d3_komplex" value="komplex" />
+              <input type="checkbox" id="d3_einfach" name="d3_einfach" value="einfach" />
+              <label for="frage22">einfach</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">bunt</label>
+              <input type="checkbox" id="d3_bunt" name="d3_bunt" value="bunt" />
+              <input type="checkbox" id="d3_unbunt" name="d3_unbunt" value="unbunt" />
+              <label for="frage22">unbunt</label>
+           </section>
+
            <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
               <label for="frage21">symmetrisch</label>
               <input type="checkbox" id="d3_symm" name="d3_symm" value="symmetrisch" />
@@ -485,46 +520,11 @@ const surveyJson = {
               <label for="frage22">asymmetrisch</label>
            </section>
   
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">bunt</label>
-              <input type="checkbox" id="d3_bunt" name="d3_bunt" value="bunt" />
-              <input type="checkbox" id="d3_unbunt" name="d3_unbunt" value="unbunt" />
-              <label for="frage22">unbunt</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
-              <label for="frage21">komplex</label>
-              <input type="checkbox" id="d3_komplex" name="d3_komplex" value="komplex" />
-              <input type="checkbox" id="d3_einfach" name="d3_einfach" value="einfach" />
-              <label for="frage22">einfach</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
-              <label for="frage21">eckig</label>
-              <input type="checkbox" id="d3_eckig" name="d3_eckig" value="eckig" />
-              <input type="checkbox" id="d3_rund" name="d3_rund" value="rund" />
-              <label for="frage22">rund</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
-              <label for="frage21">harmonisch</label>
-              <input type="checkbox" id="d3_harm" name="d3_harm" value="harmonisch" />
-              <input type="checkbox" id="d3_chaot" name="d3_chaot" value="chaotisch" />
-              <label for="frage22">chaotisch</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">aktiv</label>
-              <input type="checkbox" id="d3_aktiv" name="d3_aktiv" value="aktiv" />
-              <input type="checkbox" id="d3_passiv" name="d3_passiv" value="passiv" />
-              <label for="frage22">passiv</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">klein</label>
-              <input type="checkbox" id="d3_klein" name="d3_klein" value="klein" />
-              <input type="checkbox" id="d3_groß" name="d3_groß" value="groß" />
-              <label for="frage22">groß</label>
+           <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
+              <label for="frage11">dick</label>
+              <input type="checkbox" id="d3_dick" name="d3_dick" value="dick" />
+              <input type="checkbox" id="d3_dünn" name="d3_dünn" value="dünn" />
+              <label for="frage12">dünn</label>
            </section>
         </div>
           `
@@ -547,7 +547,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img4",
-         html: `<img class="img4" src="../../assets/diagram4.png">`
+         html: `<img class="part1 img4" src="../../assets/diagram4.png">`
       }
     ]
    },
@@ -564,6 +564,13 @@ const surveyJson = {
         name: "question_d4_2",
         html: `
         <div>
+        <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
+              <label for="frage21">harmonisch</label>
+              <input type="checkbox" id="d4_harm" name="d4_harm" value="harmonisch" />
+              <input type="checkbox" id="d4_chaot" name="d4_chaot" value="chaotisch" />
+              <label for="frage22">chaotisch</label>
+           </section>
+
         <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
               <label for="frage11">dick</label>
               <input type="checkbox" id="d4_dick" name="d4_dick" value="dick" />
@@ -571,6 +578,34 @@ const surveyJson = {
               <label for="frage12">dünn</label>
            </section>
            
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">bunt</label>
+              <input type="checkbox" id="d4_bunt" name="d4_bunt" value="bunt" />
+              <input type="checkbox" id="d4_unbunt" name="d4_unbunt" value="unbunt" />
+              <label for="frage22">unbunt</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">klein</label>
+              <input type="checkbox" id="d4_klein" name="d4_klein" value="klein" />
+              <input type="checkbox" id="d4_groß" name="d4_groß" value="groß" />
+              <label for="frage22">groß</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
+              <label for="frage21">eckig</label>
+              <input type="checkbox" id="d4_eckig" name="d4_eckig" value="eckig" />
+              <input type="checkbox" id="d4_rund" name="d4_rund" value="rund" />
+              <label for="frage22">rund</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">aktiv</label>
+              <input type="checkbox" id="d4_aktiv" name="d4_aktiv" value="aktiv" />
+              <input type="checkbox" id="d4_passiv" name="d4_passiv" value="passiv" />
+              <label for="frage22">passiv</label>
+           </section>
+
            <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
               <label for="frage21">symmetrisch</label>
               <input type="checkbox" id="d4_symm" name="d4_symm" value="symmetrisch" />
@@ -578,46 +613,11 @@ const surveyJson = {
               <label for="frage22">asymmetrisch</label>
            </section>
   
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">bunt</label>
-              <input type="checkbox" id="d4_bunt" name="d4_bunt" value="bunt" />
-              <input type="checkbox" id="d4_unbunt" name="d4_unbunt" value="unbunt" />
-              <label for="frage22">unbunt</label>
-           </section>
-  
            <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
               <label for="frage21">komplex</label>
               <input type="checkbox" id="d4_komplex" name="d4_komplex" value="komplex" />
               <input type="checkbox" id="d4_einfach" name="d4_einfach" value="einfach" />
               <label for="frage22">einfach</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
-              <label for="frage21">eckig</label>
-              <input type="checkbox" id="d4_eckig" name="d4_eckig" value="eckig" />
-              <input type="checkbox" id="d4_rund" name="d4_rund" value="rund" />
-              <label for="frage22">rund</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
-              <label for="frage21">harmonisch</label>
-              <input type="checkbox" id="d4_harm" name="d4_harm" value="harmonisch" />
-              <input type="checkbox" id="d4_chaot" name="d4_chaot" value="chaotisch" />
-              <label for="frage22">chaotisch</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">aktiv</label>
-              <input type="checkbox" id="d4_aktiv" name="d4_aktiv" value="aktiv" />
-              <input type="checkbox" id="d4_passiv" name="d4_passiv" value="passiv" />
-              <label for="frage22">passiv</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">klein</label>
-              <input type="checkbox" id="d4_klein" name="d4_klein" value="klein" />
-              <input type="checkbox" id="d4_groß" name="d4_groß" value="groß" />
-              <label for="frage22">groß</label>
            </section>
         </div>
           `
@@ -640,7 +640,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img5",
-         html: `<img class="img5" src="../../assets/diagram5.png">`
+         html: `<img class="part1 img5" src="../../assets/diagram5.png">`
       }
     ]
    },
@@ -657,6 +657,41 @@ const surveyJson = {
         name: "question_d5_2",
         html: `
         <div>
+        <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">klein</label>
+              <input type="checkbox" id="d5_klein" name="d5_klein" value="klein" />
+              <input type="checkbox" id="d5_groß" name="d5_groß" value="groß" />
+              <label for="frage22">groß</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">bunt</label>
+              <input type="checkbox" id="d5_bunt" name="d5_bunt" value="bunt" />
+              <input type="checkbox" id="d5_unbunt" name="d5_unbunt" value="unbunt" />
+              <label for="frage22">unbunt</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
+              <label for="frage21">symmetrisch</label>
+              <input type="checkbox" id="d5_symm" name="d5_symm" value="symmetrisch" />
+              <input type="checkbox" id="d5_asymm" name="d5_asymm" value="asymmetrisch" />
+              <label for="frage22">asymmetrisch</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
+              <label for="frage21">harmonisch</label>
+              <input type="checkbox" id="d5_harm" name="d5_harm" value="harmonisch" />
+              <input type="checkbox" id="d5_chaot" name="d5_chaot" value="chaotisch" />
+              <label for="frage22">chaotisch</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">aktiv</label>
+              <input type="checkbox" id="d5_aktiv" name="d5_aktiv" value="aktiv" />
+              <input type="checkbox" id="d5_passiv" name="d5_passiv" value="passiv" />
+              <label for="frage22">passiv</label>
+           </section>
+
         <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
               <label for="frage11">dick</label>
               <input type="checkbox" id="d5_dick" name="d5_dick" value="dick" />
@@ -664,27 +699,6 @@ const surveyJson = {
               <label for="frage12">dünn</label>
            </section>
            
-           <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
-              <label for="frage21">symmetrisch</label>
-              <input type="checkbox" id="d5_symm" name="d5_symm" value="symmetrisch" />
-              <input type="checkbox" id="d5_asymm" name="d5_asymm" value="asymmetrisch" />
-              <label for="frage22">asymmetrisch</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">bunt</label>
-              <input type="checkbox" id="d5_bunt" name="d5_bunt" value="bunt" />
-              <input type="checkbox" id="d5_unbunt" name="d5_unbunt" value="unbunt" />
-              <label for="frage22">unbunt</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
-              <label for="frage21">komplex</label>
-              <input type="checkbox" id="d5_komplex" name="d5_komplex" value="komplex" />
-              <input type="checkbox" id="d5_einfach" name="d5_einfach" value="einfach" />
-              <label for="frage22">einfach</label>
-           </section>
-  
            <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
               <label for="frage21">eckig</label>
               <input type="checkbox" id="d5_eckig" name="d5_eckig" value="eckig" />
@@ -692,25 +706,11 @@ const surveyJson = {
               <label for="frage22">rund</label>
            </section>
   
-           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
-              <label for="frage21">harmonisch</label>
-              <input type="checkbox" id="d5_harm" name="d5_harm" value="harmonisch" />
-              <input type="checkbox" id="d5_chaot" name="d5_chaot" value="chaotisch" />
-              <label for="frage22">chaotisch</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">aktiv</label>
-              <input type="checkbox" id="d5_aktiv" name="d5_aktiv" value="aktiv" />
-              <input type="checkbox" id="d5_passiv" name="d5_passiv" value="passiv" />
-              <label for="frage22">passiv</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">klein</label>
-              <input type="checkbox" id="d5_klein" name="d5_klein" value="klein" />
-              <input type="checkbox" id="d5_groß" name="d5_groß" value="groß" />
-              <label for="frage22">groß</label>
+           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
+              <label for="frage21">komplex</label>
+              <input type="checkbox" id="d5_komplex" name="d5_komplex" value="komplex" />
+              <input type="checkbox" id="d5_einfach" name="d5_einfach" value="einfach" />
+              <label for="frage22">einfach</label>
            </section>
         </div>
           `
@@ -733,7 +733,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img6",
-         html: `<img class="img6" src="../../assets/diagram6.png">`
+         html: `<img class="part1 img6" src="../../assets/diagram6.png">`
       }
     ]
    },
@@ -750,20 +750,41 @@ const surveyJson = {
         name: "question_d6_2",
         html: `
         <div>
-        <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
+        <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
+              <label for="frage21">symmetrisch</label>
+              <input type="checkbox" id="d6_symm" name="d6_symm" value="symmetrisch" />
+              <input type="checkbox" id="d6_asymm" name="d6_asymm" value="asymmetrisch" />
+              <label for="frage22">asymmetrisch</label>
+           </section>
+           
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">aktiv</label>
+              <input type="checkbox" id="d6_aktiv" name="d6_aktiv" value="aktiv" />
+              <input type="checkbox" id="d6_passiv" name="d6_passiv" value="passiv" />
+              <label for="frage22">passiv</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
+              <label for="frage21">eckig</label>
+              <input type="checkbox" id="d6_eckig" name="d6_eckig" value="eckig" />
+              <input type="checkbox" id="d6_rund" name="d6_rund" value="rund" />
+              <label for="frage22">rund</label>
+           </section>
+
+           <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
               <label for="frage11">dick</label>
               <input type="checkbox" id="d6_dick" name="d6_dick" value="dick" />
               <input type="checkbox" id="d6_dünn" name="d6_dünn" value="dünn" />
               <label for="frage12">dünn</label>
            </section>
            
-           <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
-              <label for="frage21">symmetrisch</label>
-              <input type="checkbox" id="d6_symm" name="d6_symm" value="symmetrisch" />
-              <input type="checkbox" id="d6_asymm" name="d6_asymm" value="asymmetrisch" />
-              <label for="frage22">asymmetrisch</label>
+           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
+              <label for="frage21">harmonisch</label>
+              <input type="checkbox" id="d6_harm" name="d6_harm" value="harmonisch" />
+              <input type="checkbox" id="d6_chaot" name="d6_chaot" value="chaotisch" />
+              <label for="frage22">chaotisch</label>
            </section>
-  
+
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">bunt</label>
               <input type="checkbox" id="d6_bunt" name="d6_bunt" value="bunt" />
@@ -776,27 +797,6 @@ const surveyJson = {
               <input type="checkbox" id="d6_komplex" name="d6_komplex" value="komplex" />
               <input type="checkbox" id="d6_einfach" name="d6_einfach" value="einfach" />
               <label for="frage22">einfach</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
-              <label for="frage21">eckig</label>
-              <input type="checkbox" id="d6_eckig" name="d6_eckig" value="eckig" />
-              <input type="checkbox" id="d6_rund" name="d6_rund" value="rund" />
-              <label for="frage22">rund</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
-              <label for="frage21">harmonisch</label>
-              <input type="checkbox" id="d6_harm" name="d6_harm" value="harmonisch" />
-              <input type="checkbox" id="d6_chaot" name="d6_chaot" value="chaotisch" />
-              <label for="frage22">chaotisch</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">aktiv</label>
-              <input type="checkbox" id="d6_aktiv" name="d6_aktiv" value="aktiv" />
-              <input type="checkbox" id="d6_passiv" name="d6_passiv" value="passiv" />
-              <label for="frage22">passiv</label>
            </section>
   
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
@@ -826,7 +826,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img7",
-         html: `<img class="img7" src="../../assets/diagram7.png">`
+         html: `<img class="part1 img7" src="../../assets/diagram7.png">`
       }
     ]
    },
@@ -843,7 +843,35 @@ const surveyJson = {
         name: "question_d7_2",
         html: `
         <div>
-        <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
+        <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">aktiv</label>
+              <input type="checkbox" id="d7_aktiv" name="d7_aktiv" value="aktiv" />
+              <input type="checkbox" id="d7_passiv" name="d7_passiv" value="passiv" />
+              <label for="frage22">passiv</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
+              <label for="frage21">eckig</label>
+              <input type="checkbox" id="d7_eckig" name="d7_eckig" value="eckig" />
+              <input type="checkbox" id="d7_rund" name="d7_rund" value="rund" />
+              <label for="frage22">rund</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
+              <label for="frage21">harmonisch</label>
+              <input type="checkbox" id="d7_harm" name="d7_harm" value="harmonisch" />
+              <input type="checkbox" id="d7_chaot" name="d7_chaot" value="chaotisch" />
+              <label for="frage22">chaotisch</label>
+           </section>
+  
+           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
+              <label for="frage21">komplex</label>
+              <input type="checkbox" id="d7_komplex" name="d7_komplex" value="komplex" />
+              <input type="checkbox" id="d7_einfach" name="d7_einfach" value="einfach" />
+              <label for="frage22">einfach</label>
+           </section>
+
+            <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
               <label for="frage11">dick</label>
               <input type="checkbox" id="d7_dick" name="d7_dick" value="dick" />
               <input type="checkbox" id="d7_dünn" name="d7_dünn" value="dünn" />
@@ -862,34 +890,6 @@ const surveyJson = {
               <input type="checkbox" id="d7_bunt" name="d7_bunt" value="bunt" />
               <input type="checkbox" id="d7_unbunt" name="d7_unbunt" value="unbunt" />
               <label for="frage22">unbunt</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
-              <label for="frage21">komplex</label>
-              <input type="checkbox" id="d7_komplex" name="d7_komplex" value="komplex" />
-              <input type="checkbox" id="d7_einfach" name="d7_einfach" value="einfach" />
-              <label for="frage22">einfach</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
-              <label for="frage21">eckig</label>
-              <input type="checkbox" id="d7_eckig" name="d7_eckig" value="eckig" />
-              <input type="checkbox" id="d7_rund" name="d7_rund" value="rund" />
-              <label for="frage22">rund</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
-              <label for="frage21">harmonisch</label>
-              <input type="checkbox" id="d7_harm" name="d7_harm" value="harmonisch" />
-              <input type="checkbox" id="d7_chaot" name="d7_chaot" value="chaotisch" />
-              <label for="frage22">chaotisch</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">aktiv</label>
-              <input type="checkbox" id="d7_aktiv" name="d7_aktiv" value="aktiv" />
-              <input type="checkbox" id="d7_passiv" name="d7_passiv" value="passiv" />
-              <label for="frage22">passiv</label>
            </section>
   
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
@@ -919,7 +919,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img8",
-         html: `<img class="img8" src="../../assets/diagram8.png">`
+         html: `<img class="part1 img8" src="../../assets/diagram8.png">`
       }
     ]
    },
@@ -936,6 +936,48 @@ const surveyJson = {
         name: "question_d8_2",
         html: `
         <div>
+        <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
+              <label for="frage21">komplex</label>
+              <input type="checkbox" id="d8_komplex" name="d8_komplex" value="komplex" />
+              <input type="checkbox" id="d8_einfach" name="d8_einfach" value="einfach" />
+              <label for="frage22">einfach</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
+              <label for="frage21">harmonisch</label>
+              <input type="checkbox" id="d8_harm" name="d8_harm" value="harmonisch" />
+              <input type="checkbox" id="d8_chaot" name="d8_chaot" value="chaotisch" />
+              <label for="frage22">chaotisch</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">klein</label>
+              <input type="checkbox" id="d8_klein" name="d8_klein" value="klein" />
+              <input type="checkbox" id="d8_groß" name="d8_groß" value="groß" />
+              <label for="frage22">groß</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">aktiv</label>
+              <input type="checkbox" id="d8_aktiv" name="d8_aktiv" value="aktiv" />
+              <input type="checkbox" id="d8_passiv" name="d8_passiv" value="passiv" />
+              <label for="frage22">passiv</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">bunt</label>
+              <input type="checkbox" id="d8_bunt" name="d8_bunt" value="bunt" />
+              <input type="checkbox" id="d8_unbunt" name="d8_unbunt" value="unbunt" />
+              <label for="frage22">unbunt</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
+              <label for="frage21">symmetrisch</label>
+              <input type="checkbox" id="d8_symm" name="d8_symm" value="symmetrisch" />
+              <input type="checkbox" id="d8_asymm" name="d8_asymm" value="asymmetrisch" />
+              <label for="frage22">asymmetrisch</label>
+           </section>
+
         <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
               <label for="frage11">dick</label>
               <input type="checkbox" id="d8_dick" name="d8_dick" value="dick" />
@@ -943,53 +985,11 @@ const surveyJson = {
               <label for="frage12">dünn</label>
            </section>
            
-           <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
-              <label for="frage21">symmetrisch</label>
-              <input type="checkbox" id="d8_symm" name="d8_symm" value="symmetrisch" />
-              <input type="checkbox" id="d8_asymm" name="d8_asymm" value="asymmetrisch" />
-              <label for="frage22">asymmetrisch</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">bunt</label>
-              <input type="checkbox" id="d8_bunt" name="d8_bunt" value="bunt" />
-              <input type="checkbox" id="d8_unbunt" name="d8_unbunt" value="unbunt" />
-              <label for="frage22">unbunt</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
-              <label for="frage21">komplex</label>
-              <input type="checkbox" id="d8_komplex" name="d8_komplex" value="komplex" />
-              <input type="checkbox" id="d8_einfach" name="d8_einfach" value="einfach" />
-              <label for="frage22">einfach</label>
-           </section>
-  
            <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
               <label for="frage21">eckig</label>
               <input type="checkbox" id="d8_eckig" name="d8_eckig" value="eckig" />
               <input type="checkbox" id="d8_rund" name="d8_rund" value="rund" />
               <label for="frage22">rund</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
-              <label for="frage21">harmonisch</label>
-              <input type="checkbox" id="d8_harm" name="d8_harm" value="harmonisch" />
-              <input type="checkbox" id="d8_chaot" name="d8_chaot" value="chaotisch" />
-              <label for="frage22">chaotisch</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">aktiv</label>
-              <input type="checkbox" id="d8_aktiv" name="d8_aktiv" value="aktiv" />
-              <input type="checkbox" id="d8_passiv" name="d8_passiv" value="passiv" />
-              <label for="frage22">passiv</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">klein</label>
-              <input type="checkbox" id="d8_klein" name="d8_klein" value="klein" />
-              <input type="checkbox" id="d8_groß" name="d8_groß" value="groß" />
-              <label for="frage22">groß</label>
            </section>
         </div>
           `
@@ -1012,7 +1012,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img9",
-         html: `<img class="img9" src="../../assets/diagram9.png">`
+         html: `<img class="part1 img9" src="../../assets/diagram9.png">`
       }
     ]
    },
@@ -1029,6 +1029,20 @@ const surveyJson = {
         name: "question_d9_2",
         html: `
         <div>
+        <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">aktiv</label>
+              <input type="checkbox" id="d9_aktiv" name="d9_aktiv" value="aktiv" />
+              <input type="checkbox" id="d9_passiv" name="d9_passiv" value="passiv" />
+              <label for="frage22">passiv</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
+              <label for="frage21">komplex</label>
+              <input type="checkbox" id="d9_komplex" name="d9_komplex" value="komplex" />
+              <input type="checkbox" id="d9_einfach" name="d9_einfach" value="einfach" />
+              <label for="frage22">einfach</label>
+           </section>
+
         <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
               <label for="frage11">dick</label>
               <input type="checkbox" id="d9_dick" name="d9_dick" value="dick" />
@@ -1036,6 +1050,20 @@ const surveyJson = {
               <label for="frage12">dünn</label>
            </section>
            
+           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
+              <label for="frage21">eckig</label>
+              <input type="checkbox" id="d9_eckig" name="d9_eckig" value="eckig" />
+              <input type="checkbox" id="d9_rund" name="d9_rund" value="rund" />
+              <label for="frage22">rund</label>
+           </section>
+         
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">bunt</label>
+              <input type="checkbox" id="d9_bunt" name="d9_bunt" value="bunt" />
+              <input type="checkbox" id="d9_unbunt" name="d9_unbunt" value="unbunt" />
+              <label for="frage22">unbunt</label>
+           </section>
+
            <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
               <label for="frage21">symmetrisch</label>
               <input type="checkbox" id="d9_symm" name="d9_symm" value="symmetrisch" />
@@ -1044,45 +1072,17 @@ const surveyJson = {
            </section>
   
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">bunt</label>
-              <input type="checkbox" id="d9_bunt" name="d9_bunt" value="bunt" />
-              <input type="checkbox" id="d9_unbunt" name="d9_unbunt" value="unbunt" />
-              <label for="frage22">unbunt</label>
+              <label for="frage21">klein</label>
+              <input type="checkbox" id="d9_klein" name="d9_klein" value="klein" />
+              <input type="checkbox" id="d9_groß" name="d9_groß" value="groß" />
+              <label for="frage22">groß</label>
            </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
-              <label for="frage21">komplex</label>
-              <input type="checkbox" id="d9_komplex" name="d9_komplex" value="komplex" />
-              <input type="checkbox" id="d9_einfach" name="d9_einfach" value="einfach" />
-              <label for="frage22">einfach</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
-              <label for="frage21">eckig</label>
-              <input type="checkbox" id="d9_eckig" name="d9_eckig" value="eckig" />
-              <input type="checkbox" id="d9_rund" name="d9_rund" value="rund" />
-              <label for="frage22">rund</label>
-           </section>
-  
+
            <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
               <label for="frage21">harmonisch</label>
               <input type="checkbox" id="d9_harm" name="d9_harm" value="harmonisch" />
               <input type="checkbox" id="d9_chaot" name="d9_chaot" value="chaotisch" />
               <label for="frage22">chaotisch</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">aktiv</label>
-              <input type="checkbox" id="d9_aktiv" name="d9_aktiv" value="aktiv" />
-              <input type="checkbox" id="d9_passiv" name="d9_passiv" value="passiv" />
-              <label for="frage22">passiv</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">klein</label>
-              <input type="checkbox" id="d9_klein" name="d9_klein" value="klein" />
-              <input type="checkbox" id="d9_groß" name="d9_groß" value="groß" />
-              <label for="frage22">groß</label>
            </section>
         </div>
           `
@@ -1105,7 +1105,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img10",
-         html: `<img class="part1" src="../../assets/diagram10.png">`
+         html: `<img class="part1 img10" src="../../assets/diagram10.png">`
       }
     ]
    },
@@ -1122,6 +1122,13 @@ const surveyJson = {
         name: "question_d10_2",
         html: `
         <div>
+        <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
+              <label for="frage21">eckig</label>
+              <input type="checkbox" id="d10_eckig" name="d10_eckig" value="eckig" />
+              <input type="checkbox" id="d10_rund" name="d10_rund" value="rund" />
+              <label for="frage22">rund</label>
+           </section>
+
         <section  style="display: block; margin-bottom: 10px; margin-left: 87px;">
               <label for="frage11">dick</label>
               <input type="checkbox" id="d10_dick" name="d10_dick" value="dick" />
@@ -1129,6 +1136,20 @@ const surveyJson = {
               <label for="frage12">dünn</label>
            </section>
            
+           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
+              <label for="frage21">komplex</label>
+              <input type="checkbox" id="d10_komplex" name="d10_komplex" value="komplex" />
+              <input type="checkbox" id="d10_einfach" name="d10_einfach" value="einfach" />
+              <label for="frage22">einfach</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
+              <label for="frage21">harmonisch</label>
+              <input type="checkbox" id="d10_harm" name="d10_harm" value="harmonisch" />
+              <input type="checkbox" id="d10_chaot" name="d10_chaot" value="chaotisch" />
+              <label for="frage22">chaotisch</label>
+           </section>
+
            <section style="display: block; margin-bottom: 10px; margin-left: 20px;">
               <label for="frage21">symmetrisch</label>
               <input type="checkbox" id="d10_symm" name="d10_symm" value="symmetrisch" />
@@ -1137,47 +1158,26 @@ const surveyJson = {
            </section>
   
            <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">bunt</label>
-              <input type="checkbox" id="d10_bunt" name="d10_bunt" value="bunt" />
-              <input type="checkbox" id="d10_unbunt" name="d10_unbunt" value="unbunt" />
-              <label for="frage22">unbunt</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 52px;">
-              <label for="frage21">komplex</label>
-              <input type="checkbox" id="d10_komplex" name="d10_komplex" value="komplex" />
-              <input type="checkbox" id="d10_einfach" name="d10_einfach" value="einfach" />
-              <label for="frage22">einfach</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 78px;">
-              <label for="frage21">eckig</label>
-              <input type="checkbox" id="d10_eckig" name="d10_eckig" value="eckig" />
-              <input type="checkbox" id="d10_rund" name="d10_rund" value="rund" />
-              <label for="frage22">rund</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 27px;">
-              <label for="frage21">harmonisch</label>
-              <input type="checkbox" id="d10_harm" name="d10_harm" value="harmonisch" />
-              <input type="checkbox" id="d10_chaot" name="d10_chaot" value="chaotisch" />
-              <label for="frage22">chaotisch</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
-              <label for="frage21">aktiv</label>
-              <input type="checkbox" id="d10_aktiv" name="d10_aktiv" value="aktiv" />
-              <input type="checkbox" id="d10_passiv" name="d10_passiv" value="passiv" />
-              <label for="frage22">passiv</label>
-           </section>
-  
-           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
               <label for="frage21">klein</label>
               <input type="checkbox" id="d10_klein" name="d10_klein" value="klein" />
               <input type="checkbox" id="d10_groß" name="d10_groß" value="groß" />
               <label for="frage22">groß</label>
            </section>
-        </div>
+        
+        <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">aktiv</label>
+              <input type="checkbox" id="d10_aktiv" name="d10_aktiv" value="aktiv" />
+              <input type="checkbox" id="d10_passiv" name="d10_passiv" value="passiv" />
+              <label for="frage22">passiv</label>
+           </section>
+
+           <section style="display: block; margin-bottom: 10px; margin-left: 81px;">
+              <label for="frage21">bunt</label>
+              <input type="checkbox" id="d10_bunt" name="d10_bunt" value="bunt" />
+              <input type="checkbox" id="d10_unbunt" name="d10_unbunt" value="unbunt" />
+              <label for="frage22">unbunt</label>
+           </section>
+           </div>
           `
        }
     ]
@@ -1199,7 +1199,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img1_2",
-         html: `<img class="img1" src="../../assets/diagram1.png">`
+         html: `<img class="part2 img1" src="../../assets/diagram1.png">`
       },
      {
       type: "matrix",
@@ -1269,7 +1269,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img2_2",
-         html: `<img class="part1" src="../../assets/diagram2.png">`
+         html: `<img class="part2 img2" src="../../assets/diagram2.png">`
       },
      {
       type: "matrix",
@@ -1339,7 +1339,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img3_2",
-         html: `<img class="part1" src="../../assets/diagram3.png">`
+         html: `<img class="part2 img3" src="../../assets/diagram3.png">`
       },
      {
       type: "matrix",
@@ -1409,7 +1409,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img4_2",
-         html: `<img class="part1" src="../../assets/diagram4.png">`
+         html: `<img class="part2 img4" src="../../assets/diagram4.png">`
       },
      {
       type: "matrix",
@@ -1479,7 +1479,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img5_2",
-         html: `<img class="part1" src="../../assets/diagram5.png">`
+         html: `<img class="part2 img5" src="../../assets/diagram5.png">`
       },
      {
       type: "matrix",
@@ -1549,7 +1549,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img6_2",
-         html: `<img class="part1" src="../../assets/diagram6.png">`
+         html: `<img class="part2 img6" src="../../assets/diagram6.png">`
       },
      {
       type: "matrix",
@@ -1619,7 +1619,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img7_2",
-         html: `<img class="part1" src="../../assets/diagram7.png">`
+         html: `<img class="part2 img7" src="../../assets/diagram7.png">`
       },
      {
       type: "matrix",
@@ -1689,7 +1689,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img8_2",
-         html: `<img class="part1" src="../../assets/diagram8.png">`
+         html: `<img class="part2 img8" src="../../assets/diagram8.png">`
       },
      {
       type: "matrix",
@@ -1759,7 +1759,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img9_2",
-         html: `<img class="part1" src="../../assets/diagram9.png">`
+         html: `<img class="part2 img9" src="../../assets/diagram9.png">`
       },
      {
       type: "matrix",
@@ -1829,7 +1829,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img10_2",
-         html: `<img class="part1" src="../../assets/diagram10.png">`
+         html: `<img class="part2 img10" src="../../assets/diagram10.png">`
       },
      {
       type: "matrix",
@@ -1926,7 +1926,7 @@ const surveyJson = {
 
    var storedArray: string[];
    
-   if (localStorage.getItem("filePaths") === null) {
+   if (localStorage.getItem("filePaths") === null) {  //wenn noch kein randomisiertes Array gespeichert, dann neues erstellen
       var currentIndex = filePaths.length;
       var temp: string;
       var randomIndex: number;
@@ -1939,11 +1939,11 @@ const surveyJson = {
          filePaths[currentIndex] = filePaths[randomIndex];
          filePaths[randomIndex] = temp;
       }
-      localStorage.setItem("filePaths", JSON.stringify(filePaths));
+      localStorage.setItem("filePaths", JSON.stringify(filePaths));  //Array im LocalStorage speichern
       storedArray = filePaths;
     }
     else {
-      storedArray = JSON.parse(localStorage.getItem("filePaths") || '{}');
+      storedArray = JSON.parse(localStorage.getItem("filePaths") || '{}'); //Array aus LocalStorage speichern
     }
    options.htmlElement.querySelectorAll('.part1').forEach(function(el: any) {
        console.log(el.src);
@@ -1955,7 +1955,7 @@ const surveyJson = {
        currPage = pathArray[lastIndex].substring(7);
        currPage = currPage.split(".") [0];
 
-       el.src = storedArray[currPage-1];
+       el.src = storedArray[currPage-1];  //src des HTML-Elements auf random Diagramm ändern
        console.log(currPage);
 
        //el.src = filePaths[0];
@@ -1980,8 +1980,6 @@ export class AppComponent implements OnInit, AfterViewInit {
   timerText: string = "3";
   static declaration = [PercentageProgressBarComponent];
 
-  //constructor(private cdr: ChangeDetectorRef) {} 
-
    showTimer: boolean = false;
 
   ngOnInit(): void {
@@ -1996,6 +1994,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   if(survey.state == "starting") {
    console.log("starting");
+   //Local Storage leeren, damit bei nicht abgeschlossener Studie und neuem Versuch neue Reihenfolge erstellt wird
    localStorage.removeItem("filePaths");  //Logging: wird erste diagramOrder geloggt, dann Cache geleert oder passt das vom Timing her?
   }
   survey.onAfterRenderQuestion.add(updateStringComponents); //hier Timer starten?
@@ -2010,20 +2009,21 @@ export class AppComponent implements OnInit, AfterViewInit {
       console.log(survey.currentPage.name);
 
       console.log(survey.currentPage.name.substring(4));
-      var pageNumber = survey.currentPage.name.substring(4);
+      var pageNumber = survey.currentPage.name.substring(4);   //aktuelle pageNumber
       var diagramNumber: number;
       console.log(document.getElementById("img1"));
+
       if(pageNumber>=6 && pageNumber<=33 && pageNumber%3==0){   //andere Berechnung für Part 2
-         diagramNumber = (pageNumber-6)/3;
+         diagramNumber = (pageNumber-6)/3;   //diagramNumber bestimmen
          console.log(document.getElementById("img1"));
       }
-      if((survey.currentPage.name === 'page6') || (survey.currentPage.name === 'page9')) {
-            this.runTimer(3, () => {   
+      if((survey.currentPage.name === 'page6') || (survey.currentPage.name === 'page9') || (survey.currentPage.name === 'page12') || (survey.currentPage.name === 'page15') || (survey.currentPage.name === 'page18') || (survey.currentPage.name === 'page21') || (survey.currentPage.name === 'page24') || (survey.currentPage.name === 'page27') || (survey.currentPage.name === 'page30') || (survey.currentPage.name === 'page33')) {
+            this.runTimer(5, () => {   //Timer auf 5s stellen
             survey.nextPage();
          });
       }
-      else if ((survey.currentPage.name === 'page7') || (survey.currentPage.name === 'page10')) {
-         this.runTimer(10, () => {
+      else if ((survey.currentPage.name === 'page7') || (survey.currentPage.name === 'page10') || (survey.currentPage.name === 'page13') || (survey.currentPage.name === 'page16') || (survey.currentPage.name === 'page19') || (survey.currentPage.name === 'page22') || (survey.currentPage.name === 'page25') || (survey.currentPage.name === 'page28') || (survey.currentPage.name === 'page31') || (survey.currentPage.name === 'page34')) {
+         this.runTimer(10, () => {  //Timer auf 10s stellen
             survey.nextPage();
          });
       }
@@ -2033,7 +2033,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     });
   }
   
-  
+  //Diagramme randomisieren nach Fisher Yates-Algorithmus
+  //Array mit Dateipfaden übergeben
   randomizeDiagrams(filePaths: string[]): string[] {
    var currentIndex = filePaths.length;
    var temp: string;
@@ -2048,21 +2049,22 @@ export class AppComponent implements OnInit, AfterViewInit {
       filePaths[randomIndex] = temp;
    }
    
-   return filePaths;
+   return filePaths; //Array mit Dateipfaden in randomisierter Reihenfolge zurückgeben
   }
 
+  //Timer-Funktion, Zeit in Sekunden wird übergeben
   runTimer(secondsLeft: number, callback: () => void): void {
    this.timerText = secondsLeft.toString();
    this.showTimer = true;
    
    const timerInterval = setInterval(() => {
-       secondsLeft--;
+       secondsLeft--;   //Zeit herunterzählen
        if (secondsLeft <= 0) {
            clearInterval(timerInterval);
            console.log("timer finish");
            callback(); // Hier wird die nächste Seite aufgerufen, wenn die Zeit abgelaufen ist
        } else {
-           this.timerText = `${secondsLeft}`;
+           this.timerText = `${secondsLeft}`;   //anzuzeigende Zahl aktualisieren
        }
    }, 1000);
 }

@@ -3,3 +3,8 @@ section {
     margin-bottom: 230px; /* optional: Abstand zwischen den Abschnitten */
   }
 
+  @media (max-width: 768px) {
+    .sd-container-modern__title sd-title {
+      padding: 0;
+    }
+  }
