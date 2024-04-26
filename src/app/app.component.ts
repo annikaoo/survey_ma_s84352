@@ -1916,13 +1916,34 @@ const surveyJson = {
       var elementList = Array.prototype.slice.call(element);
       elementList.forEach(function(box){
          
-         box.addEventListener("click", function() {   //Klick-Listener an alle Checkboxen
-            console.log("klick " + box.value);  //Wert der Checkbox (Adjektiv) wird ausgegeben
-            service?.sendData({})               //Aufruf der sendData-Funktion des LoggingService
-         })
+         box.addEventListener("click", function() {
+            console.log("klick " + box.value);
+   
+            // TODO: Store and update all of this information in Local Storage
+            var id = localStorage.getItem("teilnehmerId") || 0;
+            var taskId = localStorage.getItem("taskId") || 0;
+            var diagramId = localStorage.getItem("diagramId") || 0;
+   
+            var data = {
+               "teilnehmerID": id,
+               "timestamp": Date.now(),
+               "filePaths": storedArray.toString(),
+               "event": 1,
+               "task": taskId,
+           
+               "diagramm": diagramId,
+               "begriff": box.value,
+               "bv_erfreulich": 0,
+               "bv_sympathisch": 0,
+               "bv_angenehm": 0,
+               "bv_nett": 0,
+               "bv_ansprechend": 0
+           };
+            service?.sendData(data);
+         });
       })
       
-      const filePaths: string[] = [
+   const filePaths: string[] = [
       "../../assets/diagram1.png",
       "../../assets/diagram2.png",
       "../../assets/diagram3.png",
@@ -1935,9 +1956,7 @@ const surveyJson = {
       "../../assets/diagram10.png"
       ];
 
-   
    var storedArray: string[];
-   
    
    if (localStorage.getItem("filePaths") === null) {  //wenn noch kein randomisiertes Array gespeichert, dann neues erstellen
       var currentIndex = filePaths.length;
@@ -1954,10 +1973,10 @@ const surveyJson = {
       }
       localStorage.setItem("filePaths", JSON.stringify(filePaths));  //Array im LocalStorage speichern
       storedArray = filePaths;
-    }
-    else {
+   }
+   else {
       storedArray = JSON.parse(localStorage.getItem("filePaths") || '{}'); //Array aus LocalStorage speichern
-    }
+   }
    options.htmlElement.querySelectorAll('.part1').forEach(function(el: any) {
        console.log(el.src);
        //var currPage = el.src.substring(20);
@@ -1969,13 +1988,13 @@ const surveyJson = {
        currPage = currPage.split(".") [0];
 
        el.src = storedArray[currPage-1];  //src des HTML-Elements auf random Diagramm ändern
+       localStorage.setItem("diagramId", currPage);
        console.log(currPage);
 
        //el.src = filePaths[0];
        //var paths: string[] = this.randomizedPaths;
        //console.log(JSON.stringify(storedArray, null, 1));
    });
-
  }
 
 @Component({
