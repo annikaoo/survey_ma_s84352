@@ -14,36 +14,17 @@ export class LoggingService {
   sendData(
     data: any //später Datenmodel verschicken
   ) {
-    this.endTime = new Date().getTime();  //End time
-
-    const bearbeitungszeit = this.endTime - this.startTime;
-    const timestamp = this.datumZeit;
-    console.log("Datum:", timestamp);
-
-    const storage: any = {};
-
-    const test = {
-      ...data,
-      ...storage,
-      filePaths: localStorage.getItem('filePaths'),
-      //diagramOrder2: localStorage.getItem('diagramOrder2'),
-      bearbeitungszeit :  this.millisToMinutesAndSeconds(bearbeitungszeit),
-      timestamp: this.datumZeit,
-
-
-    };
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Authorization': 'Bearer ae12bc42'
+      'Authorization': 'Bearer 123'
     });
-    console.log('data:', data );
-    console.log('test:', test);
-    /*const url = isDevMode()
-      ? 'http://localhost:3000/log/chrissy-ma'  //eigene URL? ohne Binde-/Unterstriche - model.annikap1 ...
+    console.log('data:', data);
+    const url = isDevMode()
+      ? 'http://localhost:3000/log/annikaapp'  //eigene URL? ohne Binde-/Unterstriche - model.annikap1 ...
       : 'http://itv21.informatik.htw-dresden.de:3000/log/chrissy-ma'; //chrissy-ma ersetzen durch annikap1
     this.http
-      .post(url, test , { headers: headers }) // +test
+      .post(url, data , { headers: headers }) // +test
       .pipe(take(1))
       .subscribe({
         complete: () => { console.log('Logging Success'); },
@@ -55,7 +36,7 @@ export class LoggingService {
               console.log(err.error);
           }
         }
-      });*/
+      });
   }
 
    millisToMinutesAndSeconds(millis: number) {
