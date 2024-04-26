@@ -58,11 +58,11 @@ const surveyJson = {
       ],
       choices: [
        {
-        value: "Ablehnen",
+        value: "Item 2",
         text: "Ablehnen"
        },
        {
-        value: "Annehmen",
+        value: "Item 3",
         text: "Annehmen"
        }
       ]
@@ -95,15 +95,15 @@ const surveyJson = {
      isRequired: true,
      choices: [
       {
-       value: "männlich",
+       value: "Item 1",
        text: "männlich"
       },
       {
-       value: "weiblich",
+       value: "Item 2",
        text: "weiblich"
       },
       {
-       value: "divers",
+       value: "Item 3",
        text: "divers"
       }
      ]
@@ -116,23 +116,23 @@ const surveyJson = {
      isRequired: true,
      choices: [
       {
-       value: "Student:in",
+       value: "Item 1",
        text: "Student:in"
       },
       {
-       value: "Auszubildende:r",
+       value: "Item 2",
        text: "Auszubildende:r"
       },
       {
-       value: "Schüler:in",
+       value: "Item 3",
        text: "Schüler:in"
       },
       {
-       value: "Berufstätig",
+       value: "Item 4",
        text: "Berufstätig"
       },
       {
-       value: "Arbeitssuchend",
+       value: "Item 5",
        text: "Arbeitssuchend"
       }
      ],
@@ -1912,36 +1912,6 @@ const surveyJson = {
  }
 
  function updateStringComponents(_: any, options: any) {
-   var element = document.getElementsByClassName("cb"); 
-      var elementList = Array.prototype.slice.call(element);
-      elementList.forEach(function(box){
-         
-         box.addEventListener("click", function() {
-            console.log("klick " + box.value);
-   
-            // TODO: Store and update all of this information in Local Storage
-            var id = localStorage.getItem("teilnehmerId") || 0;
-            var taskId = localStorage.getItem("taskId") || 0;
-            var diagramId = localStorage.getItem("diagramId") || 0;
-   
-            var data = {
-               "teilnehmerID": id,
-               "timestamp": Date.now(),
-               "filePaths": storedArray.toString(),
-               "event": 1,
-               "task": taskId,
-           
-               "diagramm": diagramId,
-               "begriff": box.value,
-               "bv_erfreulich": 0,
-               "bv_sympathisch": 0,
-               "bv_angenehm": 0,
-               "bv_nett": 0,
-               "bv_ansprechend": 0
-           };
-            service?.sendData(data);
-         });
-      })
       
    const filePaths: string[] = [
       "../../assets/diagram1.png",
@@ -1995,6 +1965,37 @@ const surveyJson = {
        //var paths: string[] = this.randomizedPaths;
        //console.log(JSON.stringify(storedArray, null, 1));
    });
+
+   var element = document.getElementsByClassName("cb"); 
+      var elementList = Array.prototype.slice.call(element);
+      elementList.forEach(function(box){
+         
+         box.addEventListener("click", function() {
+            console.log("klick " + box.value);
+   
+            // TODO: Store and update all of this information in Local Storage
+            var id = localStorage.getItem("teilnehmerId") || 0;
+            var taskId = localStorage.getItem("taskId") || 0;
+            var diagramId = localStorage.getItem("diagramId") || 0;
+   
+            var data = {
+               "teilnehmerID": id,
+               "timestamp": Date.now(),
+               "filePaths": storedArray.toString(),
+               "event": 1,
+               "task": taskId,
+           
+               "diagramm": diagramId,
+               "begriff": box.value,
+               "bv_erfreulich": 0,
+               "bv_sympathisch": 0,
+               "bv_angenehm": 0,
+               "bv_nett": 0,
+               "bv_ansprechend": 0
+           };
+            service?.sendData(data);
+         });
+      })
  }
 
 @Component({
