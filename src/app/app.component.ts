@@ -58,11 +58,11 @@ const surveyJson = {
       ],
       choices: [
        {
-        value: "Item 2",
+        value: "Ablehnen",
         text: "Ablehnen"
        },
        {
-        value: "Item 3",
+        value: "Annehmen",
         text: "Annehmen"
        }
       ]
@@ -95,15 +95,15 @@ const surveyJson = {
      isRequired: true,
      choices: [
       {
-       value: "Item 1",
+       value: "männlich",
        text: "männlich"
       },
       {
-       value: "Item 2",
+       value: "weiblich",
        text: "weiblich"
       },
       {
-       value: "Item 3",
+       value: "divers",
        text: "divers"
       }
      ]
@@ -116,23 +116,23 @@ const surveyJson = {
      isRequired: true,
      choices: [
       {
-       value: "Item 1",
+       value: "Student:in",
        text: "Student:in"
       },
       {
-       value: "Item 2",
+       value: "Auszubildende:r",
        text: "Auszubildende:r"
       },
       {
-       value: "Item 4",
+       value: "Schüler:in",
        text: "Schüler:in"
       },
       {
-       value: "Item 3",
+       value: "Berufstätig",
        text: "Berufstätig"
       },
       {
-       value: "Item 5",
+       value: "Arbeitssuchend",
        text: "Arbeitssuchend"
       }
      ],
@@ -1916,9 +1916,9 @@ const surveyJson = {
       var elementList = Array.prototype.slice.call(element);
       elementList.forEach(function(box){
          
-         box.addEventListener("click", function() {
-            console.log("klick " + box.value);
-            service?.sendData({})
+         box.addEventListener("click", function() {   //Klick-Listener an alle Checkboxen
+            console.log("klick " + box.value);  //Wert der Checkbox (Adjektiv) wird ausgegeben
+            service?.sendData({})               //Aufruf der sendData-Funktion des LoggingService
          })
       })
       
@@ -1935,6 +1935,7 @@ const surveyJson = {
       "../../assets/diagram10.png"
       ];
 
+   
    var storedArray: string[];
    
    
@@ -1975,7 +1976,6 @@ const surveyJson = {
        //console.log(JSON.stringify(storedArray, null, 1));
    });
 
-   
  }
 
 @Component({
