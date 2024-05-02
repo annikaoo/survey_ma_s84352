@@ -12,7 +12,7 @@ export class LoggingService {
   constructor(public http: HttpClient) {}
 
   sendData(
-    data: any //später Datenmodel verschicken
+    data: any, table: string
   ) {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
@@ -21,8 +21,8 @@ export class LoggingService {
     });
     console.log('data:', data);
     const url = isDevMode()
-      ? 'http://localhost:3000/log/annikaapp'  //eigene URL? ohne Binde-/Unterstriche - model.annikap1 ...
-      : 'http://itv21.informatik.htw-dresden.de:3000/log/chrissy-ma'; //chrissy-ma ersetzen durch annikap1
+      ? 'http://localhost:3000/log/' + table  //eigene URL? ohne Binde-/Unterstriche - model.annikap1 ...
+      : 'http://itv21.informatik.htw-dresden.de:3000/log/' + table;
     this.http
       .post(url, data , { headers: headers }) // +test
       .pipe(take(1))
@@ -39,7 +39,7 @@ export class LoggingService {
       });
   }
 
-   millisToMinutesAndSeconds(millis: number) {
+  millisToMinutesAndSeconds(millis: number) {
     var minutes = Math.floor(millis / 60000);
     var seconds = Number(((millis % 60000) / 1000).toFixed(0));
     return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;

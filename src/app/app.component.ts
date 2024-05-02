@@ -14,6 +14,7 @@ import { PercentageProgressBarComponent } from "./progressbar-percentage.compone
 import { HostListener } from '@angular/core';
 import { elementAt, last } from 'rxjs';
 import { LoggingService } from './logging.service';
+import { v4 as uuidv4 } from 'uuid';
 
 var service : LoggingService | null = null;
 
@@ -111,34 +112,48 @@ const surveyJson = {
     {
      type: "radiogroup",
      name: "question9",
-     title: "Tätigkeit",
+     title: "Höchster Bildungsgrad",
      hideNumber: true,
      isRequired: true,
      choices: [
       {
        value: "Item 1",
-       text: "Student:in"
-      },
-      {
-       value: "Item 2",
-       text: "Auszubildende:r"
-      },
-      {
-       value: "Item 3",
        text: "Schüler:in"
       },
       {
+       value: "Item 2",
+       text: "Hauptschulabschluss"
+      },
+      {
+       value: "Item 3",
+       text: "Realschulabschluss oder vergleichbare"
+      },
+      {
        value: "Item 4",
-       text: "Berufstätig"
+       text: "Abitur"
       },
       {
        value: "Item 5",
-       text: "Arbeitssuchend"
+       text: "Berufsausbildung"
+      },
+      {
+       value: "Item 6",
+       text: "Bachelor"
+      },
+      {
+       value: "Item 7",
+       text: "Diplom"
+      },
+      {
+       value: "Item 8",
+       text: "Master"
+      },
+      {
+       value: "Item 9",
+       text: "Promotion"
       }
      ],
-     showOtherItem: true,
-     noneText: "Keine der oben genannten",
-     otherText: "Sonstige Tätigkeit:"
+     showOtherItem: false
     },
     {
      type: "matrix",
@@ -165,7 +180,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question10",
-      html: "<h6>Studienablauf - Teil 1</h6><br>\nIm Folgenden werden Ihnen verschiedene <b>Diagramme und beschreibende Adjektive</b> gezeigt.<br>\nZunächst wird Ihnen<b> 3s</b> lang ein <b>Diagramm</b> gezeigt. Nach Ablauf der Zeit werden 16 Adjektive aufgelistet. Entscheiden Sie innerhalb von <b>10s</b> ganz intuitiv, welche <b>Begriffe</b>, das zuvor dargestellte Diagramm Ihrer Meinung nach am besten beschreiben.<br>\nEs gibt keine Mindest- oder Maximalanzahl auszuwählender Wörter, versuchen Sie jedoch bitte <b>mindestens ein Adjektiv</b> zu wählen."
+      html: "<h6>Studienablauf - Teil 1</h6><br>\nIm Folgenden werden Ihnen verschiedene <b>Diagramme und beschreibende Adjektive</b> gezeigt.<br>\nZunächst wird Ihnen<b> 3s</b> lang ein <b>Diagramm</b> gezeigt. Nach Ablauf der Zeit werden 16 Adjektive aufgelistet. Entscheiden Sie innerhalb von <b>10s</b> ganz intuitiv, welche <b>Begriffe</b> das zuvor dargestellte Diagramm Ihrer Meinung nach am besten beschreiben.<br>\nEs gibt keine Mindest- oder Maximalanzahl auszuwählender Wörter, versuchen Sie jedoch bitte <b>mindestens ein Adjektiv</b> zu wählen."
      },
      {
       type: "html",
@@ -1406,7 +1421,7 @@ const surveyJson = {
     ]
    },   //Bewertung Diagramm 4
    {
-    name: "page38",
+    name: "page39",
     elements: [
       {
          type: "html",
@@ -1476,7 +1491,7 @@ const surveyJson = {
     ]
    },   //Bewertung Diagramm 5
    {
-    name: "page39",
+    name: "page40",
     elements: [
       {
          type: "html",
@@ -1546,7 +1561,7 @@ const surveyJson = {
     ]
    },   //Bewertung Diagramm 6
    {
-    name: "page40",
+    name: "page41",
     elements: [
       {
          type: "html",
@@ -1616,7 +1631,7 @@ const surveyJson = {
     ]
    },   //Bewrtung Diagramm 7
    {
-    name: "page41",
+    name: "page42",
     elements: [
       {
          type: "html",
@@ -1686,7 +1701,7 @@ const surveyJson = {
     ]
    },   //Bewertung Diagramm 8
    {
-    name: "page42",
+    name: "page43",
     elements: [
       {
          type: "html",
@@ -1756,7 +1771,7 @@ const surveyJson = {
     ]
    },   //Bewertung Diagramm 9
    {
-    name: "page43",
+    name: "page44",
     elements: [
       {
          type: "html",
@@ -1826,7 +1841,7 @@ const surveyJson = {
     ]
    },   //Bewertung Diagramm 10
    {
-    name: "page44",
+    name: "page45",
     elements: [
       {
          type: "html",
@@ -1895,7 +1910,7 @@ const surveyJson = {
     ]
    },
    {
-    name: "page45",
+    name: "page46",
     elements: [
      {
       type: "html",
@@ -1909,6 +1924,39 @@ const surveyJson = {
   //maxTimeToFinish: 25,
   //maxTimeToFinishPage: 10,
   //showTimerPanel: "top"
+ }
+
+ function generateTeilnehmerId(_: any, options: any) {
+   /*var require: any;
+   const { uuid } = require("uuid/v4");
+   uuidv4();
+   console.log(uuid);*/
+
+   const byteArray = new Uint32Array(1);
+   const max = 500000;
+   const min = 1;
+   window.crypto.getRandomValues(byteArray);
+   const range = max-min;
+   const maxRange = Math.pow(2,32);
+   var teilnehmerId = min+Math.floor((byteArray[0]/maxRange) * range);
+
+   console.log(teilnehmerId);
+
+   if (localStorage.getItem("teilnehmerId") === null) {  //wenn noch keine randomisierte teilnehmerId gespeichert, dann neue erstellen
+      const byteArray = new Uint32Array(1);
+      const max = 500000;
+      const min = 1;
+      window.crypto.getRandomValues(byteArray);
+      const range = max-min;
+      const maxRange = Math.pow(2,32);
+      var teilnehmerId = min+Math.floor((byteArray[0]/maxRange) * range);
+      
+      localStorage.setItem("teilnehmerId", teilnehmerId.toString());  //Id im LocalStorage speichern
+      //storedId = teilnehmerId;
+   }
+   else {
+      teilnehmerId = JSON.parse(localStorage.getItem("teilnehmerId") || '{}'); //Array aus LocalStorage speichern
+   }
  }
 
  function updateStringComponents(_: any, options: any) {
@@ -1993,7 +2041,8 @@ const surveyJson = {
                "bv_nett": 0,
                "bv_ansprechend": 0
            };
-            service?.sendData(data);
+           console.log(data);
+            service?.sendData(data, 'annikaapp');
          });
       })
  }
@@ -2037,12 +2086,30 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
   survey.onAfterRenderQuestion.add(updateStringComponents); //hier Timer starten?
 
+  survey.onAfterRenderQuestion.add(generateTeilnehmerId);
+
     //survey.applyTheme(themeJson);
     survey.onComplete.add((sender, options) => {
       console.log(JSON.stringify(sender.data, null, 3));
+         var data20 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 4,
+            "task": 0,
+        
+            "diagramm": 0,
+            "begriff": "",
+            "bv_erfreulich": 0,
+            "bv_sympathisch": 0,
+            "bv_angenehm": 0,
+            "bv_nett": 0,
+            "bv_ansprechend": 0
+        };
+         service?.sendData(data20, 'annikaapp');
     });
     this.surveyModel = survey;
-    
+
     survey.onCurrentPageChanged.add( (sender, options) => {
       console.log(survey.currentPage.name);
 
@@ -2068,6 +2135,405 @@ export class AppComponent implements OnInit, AfterViewInit {
       else {
          this.showTimer = false;
       }
+      if(4 == pageNumber){   //Demographische Daten
+         var data2 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 3,
+            "task": pageNumber,
+            "Datenschutzerklärung": true,
+            "Alter": survey.data["question7"],
+            "Geschlecht": survey.data["question8"],
+            "Tätigkeit": survey.data["question9"],
+            "InteresseUmwelt": survey.data["question21"]["Interessegrad"]
+        };
+        
+        console.log()
+        console.log(data2);
+         service?.sendData(data2, 'annikaappsubjects');
+      }
+      if(survey.currentPage.name === 'page36'){   //Start Part 2
+         var data14 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 7,
+            "task": pageNumber,
+        
+            "diagramm": 0,
+            "begriff": "",
+            "bv_erfreulich": 0,
+            "bv_sympathisch": 0,
+            "bv_angenehm": 0,
+            "bv_nett": 0,
+            "bv_ansprechend": 0
+        };
+         service?.sendData(data14, 'annikaapp');
+      }
+      if(37 == pageNumber){   //1
+         var data3 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 2,
+            "task": pageNumber,
+        
+            "diagramm": 1,
+            "begriff": "",
+            "bv_erfreulich": survey.data["question20"]["Row 1"].substring(6),
+            "bv_sympathisch": survey.data["question20"]["Row 2"].substring(6),
+            "bv_angenehm": survey.data["question20"]["Row 3"].substring(6),
+            "bv_nett": survey.data["question20"]["Row 4"].substring(6),
+            "bv_ansprechend": survey.data["question20"]["Row 5"].substring(6)
+        };
+        console.log(data3);
+         service?.sendData(data3, 'annikaapp');
+      }
+      if(38 == pageNumber){   //2
+         var data4 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 2,
+            "task": pageNumber,
+        
+            "diagramm": 2,
+            "begriff": "",
+            "bv_erfreulich": survey.data["question22"]["Row 1"].substring(6),
+            "bv_sympathisch": survey.data["question22"]["Row 2"].substring(6),
+            "bv_angenehm": survey.data["question22"]["Row 3"].substring(6),
+            "bv_nett": survey.data["question22"]["Row 4"].substring(6),
+            "bv_ansprechend": survey.data["question22"]["Row 5"].substring(6)
+        };
+         service?.sendData(data4, 'annikaapp');
+      }
+      if(39 == pageNumber){   //3
+         var data5 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 2,
+            "task": pageNumber,
+        
+            "diagramm": 3,
+            "begriff": "",
+            "bv_erfreulich": survey.data["question24"]["Row 1"].substring(6),
+            "bv_sympathisch": survey.data["question24"]["Row 2"].substring(6),
+            "bv_angenehm": survey.data["question24"]["Row 3"].substring(6),
+            "bv_nett": survey.data["question24"]["Row 4"].substring(6),
+            "bv_ansprechend": survey.data["question24"]["Row 5"].substring(6)
+        };
+         service?.sendData(data5, 'annikaapp');
+      }
+      if(40 == pageNumber){   //4
+         var data6 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 2,
+            "task": pageNumber,
+        
+            "diagramm": 4,
+            "begriff": "",
+            "bv_erfreulich": survey.data["question26"]["Row 1"].substring(6),
+            "bv_sympathisch": survey.data["question26"]["Row 2"].substring(6),
+            "bv_angenehm": survey.data["question26"]["Row 3"].substring(6),
+            "bv_nett": survey.data["question26"]["Row 4"].substring(6),
+            "bv_ansprechend": survey.data["question26"]["Row 5"].substring(6)
+        };
+         service?.sendData(data6, 'annikaapp');
+      }
+      if(41 == pageNumber){   //5
+         var data7 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 2,
+            "task": pageNumber,
+        
+            "diagramm": 5,
+            "begriff": "",
+            "bv_erfreulich": survey.data["question28"]["Row 1"].substring(6),
+            "bv_sympathisch": survey.data["question28"]["Row 2"].substring(6),
+            "bv_angenehm": survey.data["question28"]["Row 3"].substring(6),
+            "bv_nett": survey.data["question28"]["Row 4"].substring(6),
+            "bv_ansprechend": survey.data["question28"]["Row 5"].substring(6)
+        };
+         service?.sendData(data7, 'annikaapp');
+      }
+      if(42 == pageNumber){   //6
+         var data8 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 2,
+            "task": pageNumber,
+        
+            "diagramm": 6,
+            "begriff": "",
+            "bv_erfreulich": survey.data["question30"]["Row 1"].substring(6),
+            "bv_sympathisch": survey.data["question30"]["Row 2"].substring(6),
+            "bv_angenehm": survey.data["question30"]["Row 3"].substring(6),
+            "bv_nett": survey.data["question30"]["Row 4"].substring(6),
+            "bv_ansprechend": survey.data["question30"]["Row 5"].substring(6)
+        };
+         service?.sendData(data8, 'annikaapp');
+      }
+      if(43 == pageNumber){   //7
+         var data9 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 2,
+            "task": pageNumber,
+        
+            "diagramm": 7,
+            "begriff": "",
+            "bv_erfreulich": survey.data["question32"]["Row 1"].substring(6),
+            "bv_sympathisch": survey.data["question32"]["Row 2"].substring(6),
+            "bv_angenehm": survey.data["question32"]["Row 3"].substring(6),
+            "bv_nett": survey.data["question32"]["Row 4"].substring(6),
+            "bv_ansprechend": survey.data["question32"]["Row 5"].substring(6)
+        };
+         service?.sendData(data9, 'annikaapp');
+      }
+      if(44 == pageNumber){   //8
+         var data10 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 2,
+            "task": pageNumber,
+        
+            "diagramm": 8,
+            "begriff": "",
+            "bv_erfreulich": survey.data["question34"]["Row 1"].substring(6),
+            "bv_sympathisch": survey.data["question34"]["Row 2"].substring(6),
+            "bv_angenehm": survey.data["question34"]["Row 3"].substring(6),
+            "bv_nett": survey.data["question34"]["Row 4"].substring(6),
+            "bv_ansprechend": survey.data["question34"]["Row 5"].substring(6)
+        };
+         service?.sendData(data10, 'annikaapp');
+      }
+      if(45 == pageNumber){   //9
+         var data11 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 2,
+            "task": pageNumber,
+        
+            "diagramm": 9,
+            "begriff": "",
+            "bv_erfreulich": survey.data["question36"]["Row 1"].substring(6),
+            "bv_sympathisch": survey.data["question36"]["Row 2"].substring(6),
+            "bv_angenehm": survey.data["question36"]["Row 3"].substring(6),
+            "bv_nett": survey.data["question36"]["Row 4"].substring(6),
+            "bv_ansprechend": survey.data["question36"]["Row 5"].substring(6)
+        };
+         service?.sendData(data11, 'annikaapp');
+      }
+      if(46 == pageNumber){   //10
+         var data12 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 2,
+            "task": pageNumber,
+        
+            "diagramm": 10,
+            "begriff": "",
+            "bv_erfreulich": survey.data["question38"]["Row 1"].substring(6),
+            "bv_sympathisch": survey.data["question38"]["Row 2"].substring(6),
+            "bv_angenehm": survey.data["question38"]["Row 3"].substring(6),
+            "bv_nett": survey.data["question38"]["Row 4"].substring(6),
+            "bv_ansprechend": survey.data["question38"]["Row 5"].substring(6)
+        };
+         service?.sendData(data12, 'annikaapp');
+      }
+
+      //Logging Timestamps Part 1
+      if((survey.currentPage.name === 'page6') || (survey.currentPage.name === 'page9') || (survey.currentPage.name === 'page12') || (survey.currentPage.name === 'page15') || (survey.currentPage.name === 'page18') || (survey.currentPage.name === 'page21') || (survey.currentPage.name === 'page24') || (survey.currentPage.name === 'page27') || (survey.currentPage.name === 'page30') || (survey.currentPage.name === 'page33')){   //Start zeigen
+         var data13 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 5,
+            "task": pageNumber,
+        
+            "diagramm": 0,
+            "begriff": "",
+            "bv_erfreulich": 0,
+            "bv_sympathisch": 0,
+            "bv_angenehm": 0,
+            "bv_nett": 0,
+            "bv_ansprechend": 0
+        };
+         service?.sendData(data13, 'annikaapp');
+      }
+      if((survey.currentPage.name === 'page8') || (survey.currentPage.name === 'page11') || (survey.currentPage.name === 'page14') || (survey.currentPage.name === 'page17') || (survey.currentPage.name === 'page20') || (survey.currentPage.name === 'page23') || (survey.currentPage.name === 'page26') || (survey.currentPage.name === 'page29') || (survey.currentPage.name === 'page32') || (survey.currentPage.name === 'page35')){   //Ende bewerten
+         var data14 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 6,
+            "task": pageNumber,
+        
+            "diagramm": 0,
+            "begriff": "",
+            "bv_erfreulich": 0,
+            "bv_sympathisch": 0,
+            "bv_angenehm": 0,
+            "bv_nett": 0,
+            "bv_ansprechend": 0
+        };
+         service?.sendData(data14, 'annikaapp');
+      }
+      /*if(9 == pageNumber){   //Start D2 zeigen
+         var data13 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 5,
+            "task": 9,
+        
+            "diagramm": 0,
+            "begriff": "",
+            "bv_erfreulich": 0,
+            "bv_sympathisch": 0,
+            "bv_angenehm": 0,
+            "bv_nett": 0,
+            "bv_ansprechend": 0
+        };
+         service?.sendData(data13, 'annikaapp');
+      }
+      if(11 == pageNumber){   //Ende D2 bewerten
+         var data14 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 6,
+            "task": 11,
+        
+            "diagramm": 0,
+            "begriff": "",
+            "bv_erfreulich": 0,
+            "bv_sympathisch": 0,
+            "bv_angenehm": 0,
+            "bv_nett": 0,
+            "bv_ansprechend": 0
+        };
+         service?.sendData(data14, 'annikaapp');
+      }
+      if(12 == pageNumber){   //
+         var data13 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 5,
+            "task": 12,
+        
+            "diagramm": 0,
+            "begriff": "",
+            "bv_erfreulich": 0,
+            "bv_sympathisch": 0,
+            "bv_angenehm": 0,
+            "bv_nett": 0,
+            "bv_ansprechend": 0
+        };
+         service?.sendData(data13, 'annikaapp');
+      }
+      if(14 == pageNumber){   //
+         var data14 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 6,
+            "task": 14,
+        
+            "diagramm": 0,
+            "begriff": "",
+            "bv_erfreulich": 0,
+            "bv_sympathisch": 0,
+            "bv_angenehm": 0,
+            "bv_nett": 0,
+            "bv_ansprechend": 0
+        };
+         service?.sendData(data14, 'annikaapp');
+      }
+      if(15 == pageNumber){   //
+         var data15 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 5,
+            "task": 15,
+        
+            "diagramm": 0,
+            "begriff": "",
+            "bv_erfreulich": 0,
+            "bv_sympathisch": 0,
+            "bv_angenehm": 0,
+            "bv_nett": 0,
+            "bv_ansprechend": 0
+        };
+         service?.sendData(data15, 'annikaapp');
+      }
+      if(17 == pageNumber){   //
+         var data16 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 6,
+            "task": 17,
+        
+            "diagramm": 0,
+            "begriff": "",
+            "bv_erfreulich": 0,
+            "bv_sympathisch": 0,
+            "bv_angenehm": 0,
+            "bv_nett": 0,
+            "bv_ansprechend": 0
+        };
+         service?.sendData(data16, 'annikaapp');
+      }
+      if(18 == pageNumber){   //
+         var data17 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 5,
+            "task": 12,
+        
+            "diagramm": 0,
+            "begriff": "",
+            "bv_erfreulich": 0,
+            "bv_sympathisch": 0,
+            "bv_angenehm": 0,
+            "bv_nett": 0,
+            "bv_ansprechend": 0
+        };
+         service?.sendData(data17, 'annikaapp');
+      }
+      if(20 == pageNumber){   //
+         var data18 = {
+            "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
+            "timestamp": Date.now(),
+            "filePaths": "",
+            "event": 6,
+            "task": 14,
+        
+            "diagramm": 0,
+            "begriff": "",
+            "bv_erfreulich": 0,
+            "bv_sympathisch": 0,
+            "bv_angenehm": 0,
+            "bv_nett": 0,
+            "bv_ansprechend": 0
+        };
+         service?.sendData(data18, 'annikaapp');
+      }*/
     });
   }
   
