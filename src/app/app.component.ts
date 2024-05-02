@@ -250,8 +250,7 @@ const surveyJson = {
       </div>
         `
      }
-    ],
-    //navigationButtonsVisibility: "hide"
+    ]
    },
    {
     name: "page5",
@@ -270,7 +269,7 @@ const surveyJson = {
          type: "html",
          name: "question_img1",
          html: `<img id="img1" class="part1 img1" src="../../assets/diagram1.png">`
-      },
+      }
      /*{
       type: "image",
       name: "question2",
@@ -287,7 +286,8 @@ const surveyJson = {
          {{timerText}}
       </div>`
      } */
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },
    {
     name: "page7",
@@ -360,7 +360,8 @@ const surveyJson = {
       </div>
         `
      }
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },   //Diagramm 2
    {
     name: "page8",
@@ -380,7 +381,8 @@ const surveyJson = {
          name: "question_img2",
          html: `<img class="part1 img2 img2" src="../../assets/diagram2.png">`
       }
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },
    {
     name: "page10",
@@ -453,7 +455,8 @@ const surveyJson = {
         </div>
           `
        }
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },   //Diagramm 3
    {
     name: "page11",
@@ -473,7 +476,8 @@ const surveyJson = {
          name: "question_img3",
          html: `<img class="part1 img3" src="../../assets/diagram3.png">`
       }
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },
    {
     name: "page13",
@@ -546,7 +550,8 @@ const surveyJson = {
         </div>
           `
        }
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },   //Diagramm 4
    {
     name: "page14",
@@ -566,7 +571,8 @@ const surveyJson = {
          name: "question_img4",
          html: `<img class="part1 img4" src="../../assets/diagram4.png">`
       }
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },
    {
     name: "page16",
@@ -639,7 +645,8 @@ const surveyJson = {
         </div>
           `
        }
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },   //Diagramm 5
    {
     name: "page17",
@@ -659,7 +666,8 @@ const surveyJson = {
          name: "question_img5",
          html: `<img class="part1 img5" src="../../assets/diagram5.png">`
       }
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },
    {
     name: "page19",
@@ -732,7 +740,8 @@ const surveyJson = {
         </div>
           `
        }
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },   //Diagramm 6
    {
     name: "page20",
@@ -752,7 +761,8 @@ const surveyJson = {
          name: "question_img6",
          html: `<img class="part1 img6" src="../../assets/diagram6.png">`
       }
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },
    {
     name: "page22",
@@ -825,7 +835,8 @@ const surveyJson = {
         </div>
           `
        }
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },   //Diagramm 7
    {
     name: "page23",
@@ -845,7 +856,8 @@ const surveyJson = {
          name: "question_img7",
          html: `<img class="part1 img7" src="../../assets/diagram7.png">`
       }
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },
    {
     name: "page25",
@@ -918,7 +930,8 @@ const surveyJson = {
         </div>
           `
        }
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },   //Diagramm 8
    {
     name: "page26",
@@ -938,7 +951,8 @@ const surveyJson = {
          name: "question_img8",
          html: `<img class="part1 img8" src="../../assets/diagram8.png">`
       }
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },
    {
     name: "page28",
@@ -1011,7 +1025,8 @@ const surveyJson = {
         </div>
           `
        }
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },   //Diagramm 9
    {
     name: "page29",
@@ -1031,7 +1046,8 @@ const surveyJson = {
          name: "question_img9",
          html: `<img class="part1 img9" src="../../assets/diagram9.png">`
       }
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },
    {
     name: "page31",
@@ -1104,7 +1120,8 @@ const surveyJson = {
         </div>
           `
        }
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },   //Diagramm 10
    {
     name: "page32",
@@ -1124,7 +1141,8 @@ const surveyJson = {
          name: "question_img10",
          html: `<img class="part1 img10" src="../../assets/diagram10.png">`
       }
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },
    {
     name: "page34",
@@ -1197,7 +1215,8 @@ const surveyJson = {
            </div>
           `
        }
-    ]
+    ],
+    navigationButtonsVisibility: "hide"
    },   //Anfang Teil 2 der Studie
    {
     name: "page35",
@@ -2006,12 +2025,13 @@ const surveyJson = {
        currPage = currPage.split(".") [0];
 
        el.src = storedArray[currPage-1];  //src des HTML-Elements auf random Diagramm ändern
-       localStorage.setItem("diagramId", currPage);
-       console.log(currPage);
+      
+       var t = el.src.split("/");
+       var t2 = t[t.length - 1];
+       var diaIdLocalStorage = t2.substring(7, t2.length -4);
+       console.log("Diagram Id: " +diaIdLocalStorage);
 
-       //el.src = filePaths[0];
-       //var paths: string[] = this.randomizedPaths;
-       //console.log(JSON.stringify(storedArray, null, 1));
+       localStorage.setItem("diagramId", diaIdLocalStorage);
    });
 
    var element = document.getElementsByClassName("cb"); 
@@ -2029,7 +2049,7 @@ const surveyJson = {
             var data = {
                "teilnehmerID": id,
                "timestamp": Date.now(),
-               "filePaths": storedArray.toString(),
+               "filePaths": "",
                "event": 1,
                "task": taskId,
            
@@ -2139,7 +2159,7 @@ export class AppComponent implements OnInit, AfterViewInit {
          var data2 = {
             "teilnehmerID": localStorage.getItem("teilnehmerId") || 0,
             "timestamp": Date.now(),
-            "filePaths": "",
+            "filePaths": JSON.parse(localStorage.getItem("filePaths") || '{}').toString(),
             "event": 3,
             "task": pageNumber,
             "Datenschutzerklärung": true,
