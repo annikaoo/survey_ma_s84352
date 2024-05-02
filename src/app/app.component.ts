@@ -2033,7 +2033,7 @@ const surveyJson = {
                "event": 1,
                "task": taskId,
            
-               "diagramm": diagramId,
+               "diagramm": Number(diagramId),
                "begriff": box.value,
                "bv_erfreulich": 0,
                "bv_sympathisch": 0,
