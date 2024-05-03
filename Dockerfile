@@ -5,7 +5,7 @@ RUN npm cache clean --force
 COPY . .
 RUN npm install -g @angular/cli
 RUN npm install
-RUN npm run build --configuration=production
+RUN ng build --configuration=production --base-href /surveyterms/
 
 ### STAGE 2:RUN ###
 # Defining nginx image to be used

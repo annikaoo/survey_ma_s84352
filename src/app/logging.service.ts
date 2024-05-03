@@ -17,12 +17,12 @@ export class LoggingService {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Authorization': 'Bearer 123'
+      'Authorization': 'Bearer ae12bc42'
     });
     console.log('data:', data);
     const url = isDevMode()
       ? 'http://localhost:3000/log/' + table  //eigene URL? ohne Binde-/Unterstriche - model.annikap1 ...
-      : 'http://itv21.informatik.htw-dresden.de:3000/log/' + table;
+      : 'https://itv21.informatik.htw-dresden.de/logger/log/' + table;
     this.http
       .post(url, data , { headers: headers }) // +test
       .pipe(take(1))
