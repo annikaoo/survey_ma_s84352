@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit  } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Model, SurveyModel } from "survey-core";
 import * as Survey from 'survey-core';
@@ -268,7 +268,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img1",
-         html: `<img id="img1" class="part1 img1" src="../../assets/diagram1.png">`
+         html: `<img id="img1" class="part1 img1" src="/assets/diagram1.png">`
       }
      /*{
       type: "image",
@@ -379,7 +379,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img2",
-         html: `<img class="part1 img2 img2" src="../../assets/diagram2.png">`
+         html: `<img class="part1 img2 img2" src="/assets/diagram2.png">`
       }
     ],
     navigationButtonsVisibility: "hide"
@@ -474,7 +474,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img3",
-         html: `<img class="part1 img3" src="../../assets/diagram3.png">`
+         html: `<img class="part1 img3" src="/assets/diagram3.png">`
       }
     ],
     navigationButtonsVisibility: "hide"
@@ -569,7 +569,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img4",
-         html: `<img class="part1 img4" src="../../assets/diagram4.png">`
+         html: `<img class="part1 img4" src="/assets/diagram4.png">`
       }
     ],
     navigationButtonsVisibility: "hide"
@@ -664,7 +664,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img5",
-         html: `<img class="part1 img5" src="../../assets/diagram5.png">`
+         html: `<img class="part1 img5" src="/assets/diagram5.png">`
       }
     ],
     navigationButtonsVisibility: "hide"
@@ -759,7 +759,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img6",
-         html: `<img class="part1 img6" src="../../assets/diagram6.png">`
+         html: `<img class="part1 img6" src="/assets/diagram6.png">`
       }
     ],
     navigationButtonsVisibility: "hide"
@@ -854,7 +854,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img7",
-         html: `<img class="part1 img7" src="../../assets/diagram7.png">`
+         html: `<img class="part1 img7" src="/assets/diagram7.png">`
       }
     ],
     navigationButtonsVisibility: "hide"
@@ -949,7 +949,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img8",
-         html: `<img class="part1 img8" src="../../assets/diagram8.png">`
+         html: `<img class="part1 img8" src="/assets/diagram8.png">`
       }
     ],
     navigationButtonsVisibility: "hide"
@@ -1044,7 +1044,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img9",
-         html: `<img class="part1 img9" src="../../assets/diagram9.png">`
+         html: `<img class="part1 img9" src="/assets/diagram9.png">`
       }
     ],
     navigationButtonsVisibility: "hide"
@@ -1139,7 +1139,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img10",
-         html: `<img class="part1 img10" src="../../assets/diagram10.png">`
+         html: `<img class="part1 img10" src="/assets/diagram10.png">`
       }
     ],
     navigationButtonsVisibility: "hide"
@@ -1235,7 +1235,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img1_2",
-         html: `<img class="part2 img1" src="../../assets/diagram1.png">`
+         html: `<img class="part2 img1" src="/assets/diagram1.png">`
       },
      {
       type: "matrix",
@@ -1305,7 +1305,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img2_2",
-         html: `<img class="part2 img2" src="../../assets/diagram2.png">`
+         html: `<img class="part2 img2" src="/assets/diagram2.png">`
       },
      {
       type: "matrix",
@@ -1375,7 +1375,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img3_2",
-         html: `<img class="part2 img3" src="../../assets/diagram3.png">`
+         html: `<img class="part2 img3" src="/assets/diagram3.png">`
       },
      {
       type: "matrix",
@@ -1445,7 +1445,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img4_2",
-         html: `<img class="part2 img4" src="../../assets/diagram4.png">`
+         html: `<img class="part2 img4" src="/assets/diagram4.png">`
       },
      {
       type: "matrix",
@@ -1515,7 +1515,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img5_2",
-         html: `<img class="part2 img5" src="../../assets/diagram5.png">`
+         html: `<img class="part2 img5" src="/assets/diagram5.png">`
       },
      {
       type: "matrix",
@@ -1585,7 +1585,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img6_2",
-         html: `<img class="part2 img6" src="../../assets/diagram6.png">`
+         html: `<img class="part2 img6" src="/assets/diagram6.png">`
       },
      {
       type: "matrix",
@@ -1655,7 +1655,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img7_2",
-         html: `<img class="part2 img7" src="../../assets/diagram7.png">`
+         html: `<img class="part2 img7" src="/assets/diagram7.png">`
       },
      {
       type: "matrix",
@@ -1725,7 +1725,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img8_2",
-         html: `<img class="part2 img8" src="../../assets/diagram8.png">`
+         html: `<img class="part2 img8" src="/assets/diagram8.png">`
       },
      {
       type: "matrix",
@@ -1795,7 +1795,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img9_2",
-         html: `<img class="part2 img9" src="../../assets/diagram9.png">`
+         html: `<img class="part2 img9" src="/assets/diagram9.png">`
       },
      {
       type: "matrix",
@@ -1865,7 +1865,7 @@ const surveyJson = {
       {
          type: "html",
          name: "question_img10_2",
-         html: `<img class="part2 img10" src="../../assets/diagram10.png">`
+         html: `<img class="part2 img10" src="/assets/diagram10.png">`
       },
      {
       type: "matrix",
@@ -1979,19 +1979,19 @@ const surveyJson = {
  }
 
  function updateStringComponents(_: any, options: any) {
-      
-   const filePaths: string[] = [
-      "../../assets/diagram1.png",
-      "../../assets/diagram2.png",
-      "../../assets/diagram3.png",
-      "../../assets/diagram4.png",
-      "../../assets/diagram5.png",
-      "../../assets/diagram6.png",   
-      "../../assets/diagram7.png",
-      "../../assets/diagram8.png",
-      "../../assets/diagram9.png",
-      "../../assets/diagram10.png"
-      ];
+
+   const filePaths : string[] = [
+         "/assets/diagram1.png",
+         "/assets/diagram2.png",
+         "/assets/diagram3.png",
+         "/assets/diagram4.png",
+         "/assets/diagram5.png",
+         "/assets/diagram6.png",   
+         "/assets/diagram7.png",
+         "/assets/diagram8.png",
+         "/assets/diagram9.png",
+         "/assets/diagram10.png"
+   ];
 
    var storedArray: string[];
    
