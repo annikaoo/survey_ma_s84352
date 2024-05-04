@@ -180,7 +180,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question10",
-      html: "<h6>Studienablauf - Teil 1</h6><br>\nIm Folgenden werden Ihnen verschiedene <b>Diagramme und beschreibende Adjektive</b> gezeigt.<br>\nZunächst wird Ihnen<b> 3s</b> lang ein <b>Diagramm</b> gezeigt. Nach Ablauf der Zeit werden 16 Adjektive aufgelistet. Entscheiden Sie innerhalb von <b>10s</b> ganz intuitiv, welche <b>Begriffe</b> das zuvor dargestellte Diagramm Ihrer Meinung nach am besten beschreiben.<br>\nEs gibt keine Mindest- oder Maximalanzahl auszuwählender Wörter, versuchen Sie jedoch bitte <b>mindestens ein Adjektiv</b> zu wählen."
+      html: "<h6>Studienablauf - Teil 1</h6><br>\nIm Folgenden werden Ihnen verschiedene <b>Diagramme und beschreibende Adjektive</b> gezeigt.<br>\nZunächst wird Ihnen<b> 5s</b> lang ein <b>Diagramm</b> gezeigt. Nach Ablauf der Zeit werden 16 Adjektive aufgelistet. Entscheiden Sie innerhalb von <b>10s</b> ganz intuitiv, welche <b>Begriffe</b> das zuvor dargestellte Diagramm Ihrer Meinung nach am besten beschreiben.<br>\nEs gibt keine Mindest- oder Maximalanzahl auszuwählender Wörter, versuchen Sie jedoch bitte <b>mindestens ein Adjektiv</b> zu wählen."
      },
      {
       type: "html",
@@ -258,7 +258,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question13",
-      html: "Mit Klick auf <b>„Weiter“</b> beginnt die Studie und das erste Diagramm wird gezeigt."
+      html: "Mit Klick auf <b>„Next“</b> beginnt die Studie und das erste Diagramm wird gezeigt."
      }
     ]
    },   //Diagramm 1
@@ -369,7 +369,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question15",
-      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Next“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
      }
     ]
    },
@@ -464,7 +464,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question15",
-      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Next“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
      }
     ]
    },
@@ -559,7 +559,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question15",
-      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Next“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
      }
     ]
    },
@@ -654,7 +654,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question15",
-      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Next“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
      }
     ]
    },
@@ -749,7 +749,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question15",
-      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Next“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
      }
     ]
    },
@@ -844,7 +844,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question15",
-      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Next“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
      }
     ]
    },
@@ -939,7 +939,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question15",
-      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Next“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
      }
     ]
    },
@@ -1034,7 +1034,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question15",
-      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Next“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
      }
     ]
    },
@@ -1129,7 +1129,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question15",
-      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Weiter“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
+      html: "<h6>Bereit für die nächste Aufgabe?</h6>Mit Klick auf <b>„Next“</b> wird das nächste Diagramm gezeigt. Im Anschluss sind wieder die passendsten Begriffe zu wählen."
      }
     ]
    },
@@ -1224,7 +1224,7 @@ const surveyJson = {
      {
       type: "html",
       name: "question18",
-      html: "<h6>Studienablauf - Teil 2</h6><br>\nNun werden Ihnen die Diagramme erneut gezeigt. <b>Bewerten</b> Sie diese bitte anhand der <b>vorgegebenen Kriterien</b>. Bei dieser Aufgabe gibt es <b>keine Zeitbeschränkung</b>."
+      html: "<h6>Studienablauf - Teil 2</h6><br>\nNun werden Ihnen die Diagramme erneut gezeigt. <b>Bewerten</b> Sie diese bitte anhand der <b>vorgegebenen Kriterien</b> auf einer Skala von 1 (trifft überhaupt nicht zu) bis 7 (trifft voll und ganz zu). Bei dieser Aufgabe gibt es <b>keine Zeitbeschränkung</b>."
      }
     ]
    },   //Bewertung Diagramm 1
@@ -1939,7 +1939,8 @@ const surveyJson = {
     ]
    }
   ],
-  firstPageIsStarted: true, 
+  firstPageIsStarted: true,
+  showPrevButton: false 
   //maxTimeToFinish: 25,
   //maxTimeToFinishPage: 10,
   //showTimerPanel: "top"
